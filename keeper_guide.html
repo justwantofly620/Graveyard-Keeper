@@ -105,15 +105,15 @@
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>全模組完整收錄：主線神器、材料獲得、問答速查、主線任務、科技解鎖、鍊金與經營全書</p>
+    <p>玩家提問全收錄：宣傳單、筆記分解、被毀書籍、主線神器、科技解鎖與鍊金全書</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「傳送門」、「血書」、「釘子」、「印章」、「藍點」、「養蜜蜂」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「宣傳單」、「筆記分解」、「被毀的書籍」、「釘子」、「印章」、「紅骷髏」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
-      <button class="cat-btn" data-cat="mainquest">主線道具與材料</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
+      <button class="cat-btn" data-cat="mainquest">主線道具與材料</button>
       <button class="cat-btn" data-cat="tech">七大科技與生產流水線</button>
       <button class="cat-btn" data-cat="npc">全NPC完整任務鏈</button>
       <button class="cat-btn" data-cat="corpse">解剖防腐與墓園評分</button>
@@ -124,6 +124,197 @@
   </div>
 
   <div class="guide-list" id="guideList">
+
+    <!-- FAQ 0: 宣傳單製作全流程 -->
+    <div class="card" data-cat="faq" data-keywords="審判官 宣傳單 傳單 怎麼做 製作 書桌 作家 墨水 羽毛筆 乾淨紙張 10張">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：審判官需要的「宣傳單」怎麼製作？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、前置需求與設備：</span></p>
+        <ul>
+          <li><b>製作設備：</b>教堂地下室的<b>寫作書桌 (Desk)</b>。</li>
+          <li><b>科技前置：</b>科技樹「神學 / 寫作」分支解鎖<b>作家 (Writer)</b> 或 <b>記者 (Journalist)</b>。</li>
+          <li><b>任務數量：</b>審判官共需要 <b>10 份宣傳單</b>。</li>
+        </ul>
+
+        <p><span class="highlight-text">二、合成配方與產量：</span></p>
+        <p>在寫作書桌上製作一次宣傳單：</p>
+        <ul>
+          <li><b>消耗：乾淨紙張 × 1 + 墨水與羽毛筆 × 1</b>（羽毛筆扣耐久，不完全消耗）。</li>
+          <li><b>產出：宣傳單 × 5</b>。</li>
+          <li><b>結論：只需準備 2 張乾淨紙張，並使用墨水筆製作 2 次，即可剛好獲得 10 份宣傳單。</b></li>
+        </ul>
+
+        <p><span class="highlight-text">三、材料快速取得捷徑：</span></p>
+        <ol>
+          <li><b>乾淨紙張：</b>解剖切下屍體皮膚，在教堂工作台做成豬皮紙再切成紙張；或在月亮日找燈塔占星家購買。</li>
+          <li><b>墨水與羽毛筆：</b>最省事是在月亮日直接向燈塔占星家購買現成羽毛筆；或向雞舍婆婆買羽毛，搭配黑顏料合成墨水再組裝。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- FAQ 0.5: 筆記分解與星級機制 -->
+    <div class="card" data-cat="faq" data-keywords="筆記 分解 研究台 科學點 銅星 銀星 金星 浪費 故事 章節 書籍">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：筆記可以分解嗎？分解有什麼注意事項？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、答案是「可以」，但有特定規則：</span></p>
+        <ul>
+          <li><b>分解地點：</b>教堂地下室的<b>研究台 (Study Table)</b>。</li>
+          <li><b>產出成果：</b>每分解 1 份筆記，固定產出 <b>2 點科學點數</b>（無需消耗信仰）。</li>
+          <li><b>星級完全無差別：</b>無論你分解無星、銅星、銀星還是金星筆記，<b>通通只會獲得 2 點科學點數</b>。</li>
+        </ul>
+
+        <p><span class="highlight-text">二、重要避坑提醒：</span></p>
+        <ul>
+          <li><b>切勿分解銀星與金星筆記：</b>銀星/金星筆記是合成高級章節、金星書籍以及終極祈禱詞的稀有素材，拿去分解成 2 點科學點極度浪費！</li>
+          <li><b>獲取科學點的最優解：</b>缺少科學點時，請只分解<b>乾淨紙張</b>或手滑做出的<b>無星廢筆記</b>。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ 0.8: 被毀的書籍修復 -->
+    <div class="card" data-cat="faq" data-keywords="被毀的書籍 研究台 無法分解 寫作書桌 河流沙子 乾淨紙張 科學點 砂紙 分解 拆解">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：為什麼研究台沒辦法分解「被毀的書籍」？如何拆解成紙張？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、原因：被毀的書籍不能直接放上研究台</span></p>
+        <p>研究台的「分解」功能只接受<b>乾淨紙張、筆記、章節或書籍</b>。「被毀的書籍」屬於破損原料，無法直接分解出科學點。</p>
+
+        <p><span class="highlight-text">二、正確處理步驟（在書桌清洗還原為紙張）：</span></p>
+        <ol>
+          <li><b>採集沙子：</b>墓園左側河邊有沙堆，徒手採集 <b>河流沙子 (River Sand)</b>。</li>
+          <li><b>在書桌加工：</b>前往教堂地下室的<b>寫作書桌 (Desk)</b>，選擇修復紙張配方：
+            <br>消耗：<b>被毀的書籍 × 1 + 河流沙子 × 1</b> → 產出 <b>乾淨紙張</b>。
+          </li>
+          <li><b>移至研究台分解：</b>拿做好的<b>乾淨紙張</b>放到研究台點擊「分解」，即可產出 2 點科學點數。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- FAQ 1: 釘子與印章 -->
+    <div class="card" data-cat="faq" data-keywords="釘子 印章 鐵匠 皇家守衛 老蛇 偽造 鍛造 鐵錠 肉類 審批 哪裡拿 哪裡找">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：釘子哪裡拿？印章哪裡找？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、釘子（Nails）三大來源：</span></p>
+        <ul>
+          <li><b>自己敲（最主要）：</b>自家院子鐵砧上，消耗 <b>1 塊鐵錠</b> 製作成 <b>6 根釘子</b>。</li>
+          <li><b>向鐵匠購買：</b>村莊東邊鐵匠克雷茲沃德有販售現成釘子，初期應急可直接買。</li>
+          <li><b>拆除舊雜物：</b>清理自家地窖、地下室或院子破木桶/破架子時機率掉落。</li>
+        </ul>
+        <p><span class="highlight-text">二、印章（Stamp，用於審批人肉出售）：</span></p>
+        <ul>
+          <li><b>購買正版（合法路線）：</b>成為「合法公民」後，在審判山入口向<b>皇家守衛</b>花費 <b>50 銀幣</b> 購買。</li>
+          <li><b>老蛇代辦（免費偽造）：</b>提升老蛇好感度（給 5 信仰後），老蛇會主動提出幫忙弄偽造印章（需交一瓶優質葡萄酒），效果與正版完全一致。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ 2: 解鎖鐵匠與進入地下室 -->
+    <div class="card" data-cat="faq" data-keywords="解鎖鐵匠 史萊姆 鐵砧 熔爐 進入教堂地下室 地窖 捷徑 瓦礫 墓園5分 太陽日 怎麼進">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：如何解鎖「鐵匠」與進入教堂地下室？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、如何解鎖「鐵匠」科技：</span></p>
+        <ol>
+          <li>前往村莊<b>死馬酒館</b>，向老闆霍拉德里克領取「寄給鐵匠的信」。</li>
+          <li>往東南方過橋找到鐵匠克雷茲沃德，把信交給他。</li>
+          <li>裝備他給予的生鏽之劍，殺死鐵匠鋪後方樹林的 <b>2 隻綠色史萊姆</b>，拾取史萊姆膠質回報。</li>
+          <li>鐵匠傳授鍛造技術，解鎖科技樹「鐵匠/鍛造」，並獲得木質鐵砧與熔爐的建造圖紙。</li>
+        </ol>
+        <p><span class="highlight-text">二、如何進入教堂地下室：</span></p>
+        <ol>
+          <li><b>前提條件：</b>週日（太陽日）主教要求將墓園修復至 <b>評分 +5</b>。完成後與主教對話正式開放教堂。</li>
+          <li><b>通道一（教堂直達）：</b>進入教堂內部，講台右側有階梯可直接走進地下室。</li>
+          <li><b>通道二（自家地窖連通）：</b>進入自家地窖往右走，清理路障瓦礫（木楔×2、木板×4、簡單鐵件×4），即可直接步行連通教堂地下室與老蛇密室。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- FAQ 3: 墓園評分用途與藍點獲得 -->
+    <div class="card" data-cat="faq" data-keywords="墓園評分用途 藍點 藍色科技點 占星家 研究台 信仰 科學 紙張 捐款 佈道 紫色信仰光球">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：墓園評分用途？紫色信仰光球？藍點如何源源不絕？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、紫色信仰光球怎麼獲得：</span></p>
+        <p>每週太陽日站在教堂講台上拿著禱文佈道，佈道完地上會噴出紫色光球，走過去觸碰即可收進背包。<b>教堂內部的裝飾點數越高、禱文等級越高，噴出的信仰光球就越多</b>。</p>
+
+        <p><span class="highlight-text">二、墓園評分的核心用途：</span></p>
+        <ul>
+          <li><b>決定週日佈道捐款金錢：</b>墓園評分越高，信徒打賞的錢越多（評分達 100~200+，每次禮拜固定入帳數枚銀幣）。<i>※ 教堂內部評分決定「信仰產出」，戶外墓園評分決定「金錢收入」。</i></li>
+          <li><b>推進主教主線與升級：</b>開放教堂門檻為 +5，升級教堂門檻為 +30、+100、+200，分數達標才可晉升貴族。</li>
+        </ul>
+
+        <p><span class="highlight-text">三、藍點（藍色科技點）取得指南：</span></p>
+        <ul>
+          <li><b>占星家捷徑（前期必備）：</b>初次在月亮日找燈塔占星家對話免費送 <b>25 點</b>；占星家每週常駐販售藍色科技書（一本約 5 銀，直接吃得 25 點）。</li>
+          <li><b>地下室研究台（最核心來源）：</b>備齊「信仰點數」+「乾淨紙張分解的科學點數」，研究<b>所有墓碑/圍欄</b>與<b>屍體器官（心、腦、腸等）</b>，初次研究每樣直接給予 20~100+ 藍點。</li>
+          <li><b>手工製造（可重複刷）：</b>在切石台雕刻石碑/大理石十字架，或在案台製作章節與書籍，每次合成均會獎勵數點藍點。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ 4: 釣竿、挖掘許可、做紙與養蜂 -->
+    <div class="card" data-cat="faq" data-keywords="釣竿 挖掘許可 做紙 養蜜蜂 守墓人日記 蜂蜜 蜂蠟 蜂巢 人皮 乾淨紙張 占星家 老蛇 祭壇 信仰 飛蛾 燈塔">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：釣竿怎麼拿、挖掘許可、做紙、養蜂與守墓人日記</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、釣竿怎麼拿：</span></p>
+        <p>往地圖最東邊海灘走到底到達燈塔，白天與燈塔守衛（老漁夫）對話即可免費領取一把「簡易釣竿」。解鎖採集昆蟲技能後，夜晚採花可抓到 6 隻飛蛾交給他換魚餌。</p>
+
+        <p><span class="highlight-text">二、挖掘許可的功用：</span></p>
+        <p>在教堂門口皇家信箱以 1 銀 75 銅購買。主要用途是合法挖出前期下葬的「低品質垃圾屍體」，拿去火化或扔河裡沖走，清空墓穴重新埋入 12 白星完美屍體衝高墓園評分。</p>
+
+        <p><span class="highlight-text">三、如何做紙（科學點數來源）：</span></p>
+        <ol>
+          <li>科技樹解鎖「神學/紙張製作」，在地下室建造「教堂工作台」。</li>
+          <li>解剖屍體剝下<b>皮膚</b>（或打蝙蝠掉落翅膀）。</li>
+          <li>在工作台上將 1 皮膚做成 4 豬皮紙，再將 1 豬皮紙裁切成 <b>4 張乾淨紙張</b>（1 皮膚可做 16 張紙）。拿到研究台分解即可產出海量科學點。</li>
+        </ol>
+
+        <p><span class="highlight-text">四、如何養蜜蜂（蜂蜜與蜂蠟）：</span></p>
+        <p>點出農業「養蜂」，向北邊養蜂人買蜜蜂或摘野蜂樹，在院子藍圖台建造<b>蜂巢</b>（蜜蜂×4、木板×4、釘子×4、簡單鐵件×2），全自動產出蜂蜜與做蠟燭用的蜂蠟。</p>
+
+        <p><span class="highlight-text">五、守墓人日記取得方式：</span></p>
+        <p>接占星家任務後，週三夜間到地下通道給老蛇 <b>5 點信仰</b> 開啟鐵柵欄門，走入後方黑暗祭壇，在案台上即可拾取「守墓人日記」帶回給占星家。</p>
+      </div>
+    </div>
 
     <!-- 0. 主線通關六大神器與傳送門建造材料表 -->
     <div class="card" data-cat="mainquest" data-keywords="主線 道具 材料 獲得方式 製作方式 傳送門 六大物品 光明十字架 死刑犯契約 永恆之鏡 金色角 項鍊 永恆之鹽 發射器 槍管">
@@ -182,135 +373,6 @@
           <tr><td><b>女巫香水</b></td><td>查姆夫人</td><td>沼澤女巫克洛索任務獎勵（需幫女巫採集坩堝或帶南瓜）。</td></tr>
           <tr><td><b>華麗珠寶</b></td><td>查姆夫人</td><td>珠寶匠台製造：消耗 <b>金錠×1 + 鑽石×1</b>（鑽石可在地牢 11~15 層開採或跟商人購買）。</td></tr>
         </table>
-      </div>
-    </div>
-
-    <!-- FAQ 1: 釘子與印章 -->
-    <div class="card" data-cat="faq" data-keywords="釘子 印章 鐵匠 皇家守衛 老蛇 偽造 鍛造 鐵錠 肉類 審批">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">常見問答：釘子哪裡拿？印章哪裡找？</span>
-          <span class="tag">必備問答速查</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <p><span class="highlight-text">一、釘子（Nails）三大來源：</span></p>
-        <ul>
-          <li><b>自己敲（最主要）：</b>自家院子鐵砧上，消耗 <b>1 塊鐵錠</b> 製作成 <b>6 根釘子</b>。</li>
-          <li><b>向鐵匠購買：</b>村莊東邊鐵匠克雷茲沃德有販售現成釘子，初期應急可直接買。</li>
-          <li><b>拆除舊雜物：</b>清理自家地窖、地下室或院子破木桶/破架子時機率掉落。</li>
-        </ul>
-        <p><span class="highlight-text">二、印章（Stamp，用於審批人肉出售）：</span></p>
-        <ul>
-          <li><b>購買正版（合法路線）：</b>成為「合法公民」後，在審判山入口向<b>皇家守衛</b>花費 <b>50 銀幣</b> 購買。</li>
-          <li><b>老蛇代辦（免費偽造）：</b>提升老蛇好感度（給 5 信仰後），老蛇會主動提出幫忙弄偽造印章（需交一瓶優質葡萄酒），效果與正版完全一致。</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- FAQ 2: 解鎖鐵匠與進入地下室 -->
-    <div class="card" data-cat="faq" data-keywords="解鎖鐵匠 史萊姆 鐵砧 熔爐 進入教堂地下室 地窖 捷徑 瓦礫 墓園5分 太陽日">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">常見問答：如何解鎖「鐵匠」與進入教堂地下室？</span>
-          <span class="tag">必備問答速查</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <p><span class="highlight-text">一、如何解鎖「鐵匠」科技：</span></p>
-        <ol>
-          <li>前往村莊<b>死馬酒館</b>，向老闆霍拉德里克領取「寄給鐵匠的信」。</li>
-          <li>往東南方過橋找到鐵匠克雷茲沃德，把信交給他。</li>
-          <li>裝備他給予的生鏽之劍，殺死鐵匠鋪後方樹林的 <b>2 隻綠色史萊姆</b>，拾取史萊姆膠質回報。</li>
-          <li>鐵匠傳授鍛造技術，解鎖科技樹「鐵匠/鍛造」，並獲得木質鐵砧與熔爐的建造圖紙。</li>
-        </ol>
-        <p><span class="highlight-text">二、如何進入教堂地下室：</span></p>
-        <ol>
-          <li><b>前提條件：</b>週日（太陽日）主教要求將墓園修復至 <b>評分 +5</b>。完成後與主教對話正式開放教堂。</li>
-          <li><b>通道一（教堂直達）：</b>進入教堂內部，講台右側有階梯可直接走進地下室。</li>
-          <li><b>通道二（自家地窖連通）：</b>進入自家地窖往右走，清理路障瓦礫（木楔×2、木板×4、簡單鐵件×4），即可直接步行連通教堂地下室與老蛇密室。</li>
-        </ol>
-      </div>
-    </div>
-
-    <!-- FAQ 3: 墓園評分用途與藍點獲得 -->
-    <div class="card" data-cat="faq" data-keywords="墓園評分用途 藍點 藍色科技點 占星家 研究台 信仰 科學 紙張 捐款 佈道">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">常見問答：墓園評分用途？藍點如何源源不絕獲得？</span>
-          <span class="tag">必備問答速查</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <p><span class="highlight-text">一、墓園評分的核心用途：</span></p>
-        <ul>
-          <li><b>決定週日佈道捐款金錢：</b>墓園評分越高，信徒打賞的錢越多（評分達 100~200+，每次禮拜固定入帳數枚銀幣）。<i>※ 教堂內部評分決定「信仰產出」，戶外墓園評分決定「金錢收入」。</i></li>
-          <li><b>推進主教主線與升級：</b>開放教堂門檻為 +5，升級教堂門檻為 +30、+100、+200，分數達標才可晉升貴族。</li>
-        </ul>
-        <p><span class="highlight-text">二、藍點（藍色科技點）取得指南：</span></p>
-        <ul>
-          <li><b>占星家捷徑（前期必備）：</b>初次在月亮日找燈塔占星家對話免費送 <b>25 點</b>；占星家每週常駐販售藍色科技書（一本約 5 銀，直接吃得 25 點）。</li>
-          <li><b>地下室研究台（最核心來源）：</b>備齊「信仰點數」+「乾淨紙張分解的科學點數」，研究<b>所有墓碑/圍欄</b>與<b>屍體器官（心、腦、腸等）</b>，初次研究每樣直接給予 20~100+ 藍點。</li>
-          <li><b>手工製造（可重複刷）：</b>在切石台雕刻石碑/大理石十字架，或在案台製作章節與書籍，每次合成均會獎勵數點藍點。</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- FAQ 4: 養蜜蜂、做紙與守墓人日記 -->
-    <div class="card" data-cat="faq" data-keywords="養蜜蜂 做紙 守墓人日記 蜂蜜 蜂蠟 蜂巢 人皮 乾淨紙張 占星家 老蛇 祭壇 信仰 釣竿 飛蛾 燈塔 挖掘許可 挖屍體">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">常見問答：釣竿、挖掘許可、做紙、養蜂與守墓人日記</span>
-          <span class="tag">必備問答速查</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <p><span class="highlight-text">一、釣竿怎麼拿：</span></p>
-        <p>往地圖最東邊海灘走到底到達燈塔，白天與燈塔守衛（老漁夫）對話即可免費領取一把「簡易釣竿」。解鎖採集昆蟲技能後，夜晚採花可抓到 6 隻飛蛾交給他換魚餌。</p>
-
-        <p><span class="highlight-text">二、挖掘許可的功用：</span></p>
-        <p>在教堂門口皇家信箱以 1 銀 75 銅購買。主要用途是合法挖出前期下葬的「低品質垃圾屍體」，拿去火化或扔河裡沖走，清空墓穴重新埋入 12 白星完美屍體衝高墓園評分。</p>
-
-        <p><span class="highlight-text">三、如何做紙（科學點數來源）：</span></p>
-        <ol>
-          <li>科技樹解鎖「神學/紙張製作」，在地下室建造「教堂工作台」。</li>
-          <li>解剖屍體剝下<b>皮膚</b>（或打蝙蝠掉落翅膀）。</li>
-          <li>在工作台上將 1 皮膚做成 4 豬皮紙，再將 1 豬皮紙裁切成 <b>4 張乾淨紙張</b>（1 皮膚可做 16 張紙）。拿到研究台分解即可產出海量科學點。</li>
-        </ol>
-
-        <p><span class="highlight-text">四、如何養蜜蜂（蜂蜜與蜂蠟）：</span></p>
-        <p>點出農業「養蜂」，向北邊養蜂人買蜜蜂或摘野蜂樹，在院子藍圖台建造<b>蜂巢</b>（蜜蜂×4、木板×4、釘子×4、簡單鐵件×2），全自動產出蜂蜜與做蠟燭用的蜂蠟。</p>
-
-        <p><span class="highlight-text">五、守墓人日記取得方式：</span></p>
-        <p>接占星家任務後，週三夜間到地下通道給老蛇 <b>5 點信仰</b> 開啟鐵柵欄門，走入後方黑暗祭壇，在案台上即可拾取「守墓人日記」帶回給占星家。</p>
-      </div>
-    </div>
-
-    <!-- FAQ 5: 被毀的書籍修復 -->
-    <div class="card" data-cat="faq" data-keywords="被毀的書籍 研究台 無法分解 寫作書桌 河流沙子 乾淨紙張 科學點 砂紙 分解">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">常見問答：為什麼研究台沒辦法分解「被毀的書籍」？</span>
-          <span class="tag">必備問答速查</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <p><span class="highlight-text">一、原因：被毀的書籍不能直接放上研究台</span></p>
-        <p>研究台的「分解/獲取科學點」功能只支援<b>乾淨紙張、筆記、章節或書籍</b>。「被毀的書籍」屬於粗製素材，無法直接分解。</p>
-
-        <p><span class="highlight-text">二、正確處理步驟（書桌還原紙張）：</span></p>
-        <ol>
-          <li><b>採集沙子：</b>去墓園西側河流旁的沙堆挖取 <b>河流沙子 (River Sand)</b>。</li>
-          <li><b>在書桌加工：</b>前往教堂地下室的<b>寫作書桌 (Desk)</b>，選擇紙張修復配方：
-            <br>消耗：<b>被毀的書籍×1 + 河流沙子×1</b> → 獲得 <b>乾淨紙張</b>。
-          </li>
-          <li><b>移至研究台分解：</b>將清洗好的<b>乾淨紙張</b>放上研究台點擊「分解」，即可產出科學點數。</li>
-        </ol>
       </div>
     </div>
 
@@ -396,7 +458,7 @@
     </div>
 
     <!-- 3. 審判官完整任務鏈 -->
-    <div class="card" data-cat="npc" data-keywords="審判官 女人日 憤怒 女巫嶺 火刑 木柴 漢堡 啤酒 暗黑心臟 死刑犯契約 守衛">
+    <div class="card" data-cat="npc" data-keywords="審判官 女人日 憤怒 女巫嶺 火刑 木柴 漢堡 啤酒 暗黑心臟 死刑犯契約 守衛 宣傳單">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">主線任務：審判官（Inquisitor / 憤怒）全階段流程</span>
@@ -508,7 +570,7 @@
     </div>
 
     <!-- 8. 屍體解剖防腐數學全矩陣 -->
-    <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 16白 26白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏 範圍">
+    <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 16白 26白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏 範圍 小於等於2 大於等於2">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">屍體解剖與防腐室注射順序精算（必成 12~26 白骷髏）</span>
@@ -652,14 +714,14 @@
     let currentCategory = 'all';
     let isComposing = false;
 
-    // 點擊標題手動收合/展開
+    // 點擊手動展開/收合
     cards.forEach(card => {
       card.querySelector('.card-header').addEventListener('click', () => {
         card.classList.toggle('open');
       });
     });
 
-    // 類別過濾
+    // 標籤篩選
     categoryBar.addEventListener('click', (e) => {
       if (!e.target.classList.contains('cat-btn')) return;
       catButtons.forEach(btn => btn.classList.remove('active'));
@@ -668,7 +730,7 @@
       filterCards();
     });
 
-    // 解決中文/注音輸入法未選字前觸發的 bug
+    // 注音/拼音輸入保護
     searchInput.addEventListener('compositionstart', () => { isComposing = true; });
     searchInput.addEventListener('compositionend', () => { 
       isComposing = false; 
