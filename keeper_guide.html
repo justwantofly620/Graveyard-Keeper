@@ -105,25 +105,85 @@
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>全模組完整收錄：問答速查、主線任務、科技解鎖、鍊金與經營全書</p>
+    <p>全模組完整收錄：主線神器、材料獲得、問答速查、主線任務、科技解鎖、鍊金與經營全書</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「釘子」、「印章」、「藍點」、「養蜜蜂」、「日記」、「老蛇」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「傳送門」、「血書」、「釘子」、「印章」、「藍點」、「養蜜蜂」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
+      <button class="cat-btn" data-cat="mainquest">主線道具與材料</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
-      <button class="cat-btn" data-cat="beginner">開荒指南與避坑</button>
+      <button class="cat-btn" data-cat="tech">七大科技與生產流水線</button>
       <button class="cat-btn" data-cat="npc">全NPC完整任務鏈</button>
       <button class="cat-btn" data-cat="corpse">解剖防腐與墓園評分</button>
       <button class="cat-btn" data-cat="alchemy">鍊金拆解與全藥劑</button>
       <button class="cat-btn" data-cat="dungeon">地牢探索與地圖捷徑</button>
       <button class="cat-btn" data-cat="economy">農業經營與賺錢套路</button>
-      <button class="cat-btn" data-cat="economy">全七大科技樹指南</button>
     </div>
   </div>
 
   <div class="guide-list" id="guideList">
+
+    <!-- 0. 主線通關六大神器與傳送門建造材料表 -->
+    <div class="card" data-cat="mainquest" data-keywords="主線 道具 材料 獲得方式 製作方式 傳送門 六大物品 光明十字架 死刑犯契約 永恆之鏡 金色角 項鍊 永恆之鹽 發射器 槍管">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">主線通關：六大神器與傳送門（Portal）啟動全材料表</span>
+          <span class="tag">主線道具與材料</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、主線通關必備「六大核心神器」取得途徑：</span></p>
+        <table>
+          <tr><th>神器名稱</th><th>持有 NPC</th><th>完成條件與關鍵材料</th></tr>
+          <tr><td><b>光明十字架 (Cross of Light)</b></td><td>主教 (傲慢)</td><td>晉升貴族、捐獻 1 個金星大理石雕像 + 金星香爐。</td></tr>
+          <tr><td><b>死刑犯契約 (Citation)</b></td><td>審判官 (憤怒)</td><td>開設小吃攤（5漢堡+5金星啤酒），協助防守老蛇密室。</td></tr>
+          <tr><td><b>永恆之鏡 (Endless Mirror)</b></td><td>老蛇 (暴食)</td><td>交付死靈之書、血杯、深色心臟完成血腥祭壇召喚。</td></tr>
+          <tr><td><b>金色角 (Golden Angle)</b></td><td>占星家 (怠惰)</td><td>交付 1 本銀星書與 1 本金星書，化解與查姆夫人的關係。</td></tr>
+          <tr><td><b>家族項鍊 (Necklace)</b></td><td>查姆夫人 (色慾)</td><td>用 1 金錠 + 1 鑽石打造珠寶，動用貴族特權獲准劇院演出。</td></tr>
+          <tr><td><b>永恆之鹽 (Salt of Eternity)</b></td><td>商人 (貪婪)</td><td>醫治打嗝頑疾，出資幫其贖回家族首飾，建立蔬菜外銷。</td></tr>
+        </table>
+
+        <p><span class="highlight-text">二、傳送門兩大核心配件製作配方（在女巫嶺西側傳送門台座合成）：</span></p>
+        <ul>
+          <li><b>傳送門發射器 (Portal Emitter)：</b>
+            <br>消耗：<b>死刑犯契約</b>×1 + <b>永恆之鏡</b>×1 + <b>永恆之鹽</b>×1。
+          </li>
+          <li><b>傳送門槍管 (Portal Barrel)：</b>
+            <br>消耗：<b>光明十字架</b>×1 + <b>金色角</b>×1 + <b>家族項鍊</b>×1。
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 0.1 主線全流程重要材料製作與獲取彙總 -->
+    <div class="card" data-cat="mainquest" data-keywords="主線材料 製作方法 骨頭鑰匙 金鑰匙 活性金杯 血杯 死靈之書 酸液 止嗝草 漢堡 啤酒 假金幣 銀星書 金星書 珠寶 香水">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">主線任務推進關鍵道具、材料取得與製作全彙整</span>
+          <span class="tag">主線道具與材料</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <table>
+          <tr><th>主線需求材料</th><th>用途對象</th><th>具體取得與製作方式</th></tr>
+          <tr><td><b>金鑰匙與骨頭鑰匙</b></td><td>老蛇（開地牢）</td><td>向占星家拿金鑰匙圖紙，在教堂地下室工作台用 <b>金塊×1 + 信仰×2</b> 製作；骨頭鑰匙用 <b>頭骨×1 + 骨頭×2 + 信仰×2</b> 製作。</td></tr>
+          <tr><td><b>血杯 (Cup of Blood)</b></td><td>老蛇</td><td>進入地下迷宮（地牢）擊殺魔物，前進至 <b>第 5 層</b> 祭壇寶箱直接開出。</td></tr>
+          <tr><td><b>死靈之書（血書）</b></td><td>老蛇</td><td>占星家保管中。提升占星家好感並幫他開箱或交付材料後贈予。</td></tr>
+          <tr><td><b>暗黑心臟</b></td><td>老蛇</td><td>審判官任務推進到中後期後解鎖暗黑器官，在解剖台從帶有深色光澤的屍體上摘除。</td></tr>
+          <tr><td><b>酸液 (Acid)</b></td><td>占星家</td><td>鍊金工作台製造：<b>毒性粉末 + 混亂溶液</b>；或在沼澤找女巫克洛索直接購買。</td></tr>
+          <tr><td><b>銀星書 / 金星書</b></td><td>占星家</td><td>在案台用銀星/金星章節 + 軟/硬封面裝訂（具備劇作家/小說家技能大幅提升金星率）。</td></tr>
+          <tr><td><b>止嗝草 (Hiccup Grass)</b></td><td>商人</td><td>生長在女巫沼澤水窪邊緣，外觀為藍綠色小草，徒手即可採集。</td></tr>
+          <tr><td><b>漢堡與啤酒</b></td><td>審判官小吃攤</td><td>漢堡在廚房烤箱製作（生肉做成肉餅烤肉 + 麵包×2 + 洋蔥×1）；啤酒在酒窖啤酒桶消耗啤酒花與小麥發酵。</td></tr>
+          <tr><td><b>假金幣</b></td><td>查姆夫人</td><td>地下室老蛇代為鑄造，完成老蛇給予的委託即可獲得。</td></tr>
+          <tr><td><b>女巫香水</b></td><td>查姆夫人</td><td>沼澤女巫克洛索任務獎勵（需幫女巫採集坩堝或帶南瓜）。</td></tr>
+          <tr><td><b>華麗珠寶</b></td><td>查姆夫人</td><td>珠寶匠台製造：消耗 <b>金錠×1 + 鑽石×1</b>（鑽石可在地牢 11~15 層開採或跟商人購買）。</td></tr>
+        </table>
+      </div>
+    </div>
 
     <!-- FAQ 1: 釘子與印章 -->
     <div class="card" data-cat="faq" data-keywords="釘子 印章 鐵匠 皇家守衛 老蛇 偽造 鍛造 鐵錠 肉類 審批">
@@ -200,34 +260,71 @@
     </div>
 
     <!-- FAQ 4: 養蜜蜂、做紙與守墓人日記 -->
-    <div class="card" data-cat="faq" data-keywords="養蜜蜂 做紙 守墓人日記 蜂蜜 蜂蠟 蜂巢 人皮 乾淨紙張 占星家 老蛇 祭壇 信仰">
+    <div class="card" data-cat="faq" data-keywords="養蜜蜂 做紙 守墓人日記 蜂蜜 蜂蠟 蜂巢 人皮 乾淨紙張 占星家 老蛇 祭壇 信仰 釣竿 飛蛾 燈塔 挖掘許可 挖屍體">
       <div class="card-header">
         <div class="card-title-group">
-          <span class="card-title">常見問答：怎麼養蜜蜂？做紙？守墓人日記如何取得？</span>
+          <span class="card-title">常見問答：釣竿、挖掘許可、做紙、養蜂與守墓人日記</span>
           <span class="tag">必備問答速查</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p><span class="highlight-text">一、如何做紙（科學點數來源）：</span></p>
+        <p><span class="highlight-text">一、釣竿怎麼拿：</span></p>
+        <p>往地圖最東邊海灘走到底到達燈塔，白天與燈塔守衛（老漁夫）對話即可免費領取一把「簡易釣竿」。解鎖採集昆蟲技能後，夜晚採花可抓到 6 隻飛蛾交給他換魚餌。</p>
+
+        <p><span class="highlight-text">二、挖掘許可的功用：</span></p>
+        <p>在教堂門口皇家信箱以 1 銀 75 銅購買。主要用途是合法挖出前期下葬的「低品質垃圾屍體」，拿去火化或扔河裡沖走，清空墓穴重新埋入 12 白星完美屍體衝高墓園評分。</p>
+
+        <p><span class="highlight-text">三、如何做紙（科學點數來源）：</span></p>
         <ol>
           <li>科技樹解鎖「神學/紙張製作」，在地下室建造「教堂工作台」。</li>
           <li>解剖屍體剝下<b>皮膚</b>（或打蝙蝠掉落翅膀）。</li>
           <li>在工作台上將 1 皮膚做成 4 豬皮紙，再將 1 豬皮紙裁切成 <b>4 張乾淨紙張</b>（1 皮膚可做 16 張紙）。拿到研究台分解即可產出海量科學點。</li>
         </ol>
-        <p><span class="highlight-text">二、如何養蜜蜂（蜂蜜與蜂蠟）：</span></p>
+
+        <p><span class="highlight-text">四、如何養蜜蜂（蜂蜜與蜂蠟）：</span></p>
+        <p>點出農業「養蜂」，向北邊養蜂人買蜜蜂或摘野蜂樹，在院子藍圖台建造<b>蜂巢</b>（蜜蜂×4、木板×4、釘子×4、簡單鐵件×2），全自動產出蜂蜜與做蠟燭用的蜂蠟。</p>
+
+        <p><span class="highlight-text">五、守墓人日記取得方式：</span></p>
+        <p>接占星家任務後，週三夜間到地下通道給老蛇 <b>5 點信仰</b> 開啟鐵柵欄門，走入後方黑暗祭壇，在案台上即可拾取「守墓人日記」帶回給占星家。</p>
+      </div>
+    </div>
+
+    <!-- 12. 全七大科技樹指南 -->
+    <div class="card" data-cat="tech" data-keywords="科技樹 神學 鍛造 寫作 煉金 解剖 建築 農業 烹飪 技能 優先級 蛋糕 藍點分配 木工工作台 鋸木架">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">七大科技樹分支詳解、木工台建造與最優加點順序</span>
+          <span class="tag">七大科技與生產流水線</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、木工工作台製作步驟：</span></p>
         <ol>
-          <li>農業科技點出「養蜂」，解鎖蜂巢藍圖。</li>
-          <li>取得活蜜蜂：到村莊北邊找養蜂人購買，或採集野外蜂樹（採集時會扣血）。</li>
-          <li>在院子藍圖台建造<b>蜂巢</b>（需蜜蜂×4、木板×4、釘子×4、簡單鐵件×2），全自動定期產出蜂蜜與蜂蠟（做蠟燭衝教堂分）。</li>
+          <li>解鎖科技：建築分頁「木材概念」→「鋸木」→「木工」。</li>
+          <li>先用 8 根木棍建造前置<b>鋸木架 (Sawhorse)</b>，將原木加工出<b>側板 (Flitch)</b>。</li>
+          <li>院子藍圖台放置木工工作台虛影，消耗 <b>側板×4 + 簡單鐵件×2</b> 敲打完成。</li>
         </ol>
-        <p><span class="highlight-text">三、守墓人日記取得方式：</span></p>
-        <ol>
-          <li>月亮日去燈塔找占星家接尋找日記任務。</li>
-          <li>週三男人日夜間到地下通道找<b>老蛇</b>交涉。</li>
-          <li>給予老蛇 <b>5 點信仰</b> 提升好感，老蛇打開鐵柵欄門。</li>
-          <li>走入後方黑暗祭壇，在祭壇案台上即可拾取<b>「守墓人日記」</b>，帶回燈塔交給占星家。</li>
-        </ol>
+
+        <p><span class="highlight-text">二、七大科技核心定位與優先級：</span></p>
+        <table>
+          <tr><th>科技分支</th><th>代表解鎖項目</th><th>加點建議與備註</th></tr>
+          <tr><td><b>解剖與煉金</b></td><td>外科手術、暗黑器官、各階防腐液、鍊金台</td><td><b>最高</b>。決定屍體骷髏上限與高級藥水調配。</td></tr>
+          <tr><td><b>神學 (宗教)</b></td><td>墓碑/墓圍欄、教堂長椅、紙張製作、進階祈禱</td><td><b>最高</b>。衝墓園評分、擴大週日佈道信仰與收入。</td></tr>
+          <tr><td><b>鍛造 (鐵匠)</b></td><td>鋼鐵工具、複雜鐵件、鋼劍、珠寶台</td><td><b>高</b>。提升採集伐木效率，產出耐用工具與金飾。</td></tr>
+          <tr><td><b>建築 (鍛工)</b></td><td>鋸木架、木樑、石材加工、大理石切割</td><td><b>高</b>。解鎖基地各設施與打通地圖橋樑路障。</td></tr>
+          <tr><td><b>農業與自然</b></td><td>堆肥、優質肥料、蜂巢、葡萄園、酒窖壓榨機</td><td><b>中高</b>。中後期外銷蔬菜與金星葡萄酒致富必備。</td></tr>
+          <tr><td><b>寫作 (圖書)</b></td><td>筆記、章節、軟硬封面、銀/金星書籍</td><td><b>中期</b>。完成占星家任務、合成強力組合祈禱詞。</td></tr>
+          <tr><td><b>烹飪</b></td><td>麵包、洋蔥圈、烤肉、<b>蛋糕 (Cake)</b></td><td>點出<b>蛋糕</b>即可（研究前吃可獲研究狂Buff加點數）。</td></tr>
+        </table>
+
+        <p><span class="highlight-text">三、前中期加點節奏避坑：</span></p>
+        <ul>
+          <li><b>紅綠點開荒期：</b>鋸木架 → 鐵砧 → 泥炭與胡蘿蔔種植 → 簡易木質十字架修復。</li>
+          <li><b>第一批藍點（極關鍵）：</b>找占星家拿到 25 藍點後，<b>務必先點「紙張製作」與「石碑」</b>。有紙才能做科學點，有石碑才能研究產出幾百點藍點。</li>
+          <li><b>中期滾雪球期：</b>解鎖「外科手術」避免解剖手抖失誤 → 點出切石機與大理石 → 點出蛋糕研發進階祈禱詞。</li>
+        </ul>
       </div>
     </div>
 
@@ -493,7 +590,7 @@
     </div>
 
     <!-- 11. 農業與致富 -->
-    <div class="card" data-cat="economy" data-keywords="賺錢 石墨 葡萄酒 蔬菜箱 貿易 肥料 泥炭 金幣 鐵匠">
+    <div class="card" data-cat="economy" data-keywords="賺錢 石墨 葡萄酒 蔬菜箱 貿易 肥料 泥炭 金幣 鐵匠 挖掘許可">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">全期致富套路：煤炭燒石墨、金星酒與貿易箱</span>
@@ -509,37 +606,6 @@
         </ul>
       </div>
     </div>
-    
-    <!-- 12. 全七大科技樹指南 -->
-    <div class="card" data-cat="tech" data-keywords="科技樹 神學 鍛造 寫作 煉金 解剖 建築 農業 烹飪 技能 優先級 蛋糕 藍點分配">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">七大科技樹分支詳解與最優加點順序</span>
-          <span class="tag">七大科技與生產流水線</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <p><span class="highlight-text">一、七大科技核心定位與優先級：</span></p>
-        <table>
-          <tr><th>科技分支</th><th>代表解鎖項目</th><th>加點建議與備註</th></tr>
-          <tr><td><b>解剖與煉金</b></td><td>外科手術、暗黑器官、各階防腐液、鍊金台</td><td><b>最高</b>。決定屍體骷髏上限與高級藥水調配。</td></tr>
-          <tr><td><b>神學 (宗教)</b></td><td>墓碑/墓圍欄、教堂長椅、紙張製作、進階祈禱</td><td><b>最高</b>。衝墓園評分、擴大週日佈道信仰與收入。</td></tr>
-          <tr><td><b>鍛造 (鐵匠)</b></td><td>鋼鐵工具、複雜鐵件、鋼劍、珠寶台</td><td><b>高</b>。提升採集伐木效率，產出耐用工具與金飾。</td></tr>
-          <tr><td><b>建築 (鍛工)</b></td><td>鋸木架、木樑、石材加工、大理石切割</td><td><b>高</b>。解鎖基地各設施與打通地圖橋樑路障。</td></tr>
-          <tr><td><b>農業與自然</b></td><td>堆肥、優質肥料、蜂巢、葡萄園、酒窖壓榨機</td><td><b>中高</b>。中後期外銷蔬菜與金星葡萄酒致富必備。</td></tr>
-          <tr><td><b>寫作 (圖書)</b></td><td>筆記、章節、軟硬封面、銀/金星書籍</td><td><b>中期</b>。完成占星家任務、合成強力組合祈禱詞。</td></tr>
-          <tr><td><b>烹飪</b></td><td>麵包、洋蔥圈、烤肉、<b>蛋糕 (Cake)</b></td><td>點出<b>蛋糕</b>即可（研究前吃可獲研究狂Buff加點數）。</td></tr>
-        </table>
-
-        <p><span class="highlight-text">二、前中期黃金加點順序：</span></p>
-        <ol>
-          <li><b>紅綠點開荒期：</b>鋸木架 $\rightarrow$ 鍛造鐵砧 $\rightarrow$ 泥炭與胡蘿蔔種植 $\rightarrow$ 簡易木質十字架修復。</li>
-          <li><b>第一批藍點（極關鍵）：</b>找占星家拿到 25 藍點後，<b>務必先點「紙張製作」與「石碑」</b>。切勿點花俏裝飾，有紙才能做科學點，有石碑才能研究產出幾百點藍點。</li>
-          <li><b>中期滾雪球期：</b>解鎖「外科手術」避免解剖手抖失誤 $\rightarrow$ 點出切石機與大理石 $\rightarrow$ 點出蛋糕研發進階祈禱詞。</li>
-        </ol>
-      </div>
-    </div>
 
   </div>
 
@@ -552,7 +618,7 @@
     const cards = document.querySelectorAll('.card');
     const emptyState = document.getElementById('emptyState');
     let currentCategory = 'all';
-    let isComposing = false; // 追蹤輸入法組字狀態
+    let isComposing = false;
 
     // 點擊標題手動收合/展開
     cards.forEach(card => {
@@ -581,7 +647,6 @@
     });
 
     function filterCards() {
-      // 正規化過濾空白與大小寫
       const q = searchInput.value.replace(/\u00a0/g, ' ').trim().toLowerCase();
       let count = 0;
 
@@ -597,7 +662,6 @@
         if (matchesCat && matchesQ) {
           card.style.display = 'block';
           count++;
-          // 搜尋有字時自動展開內容，方便查閱；若清空搜尋則恢復預設折疊
           if (q) {
             card.classList.add('open');
           } else {
