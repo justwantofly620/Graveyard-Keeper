@@ -105,11 +105,11 @@
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>玩家提問全收錄：火葬放水流、宣傳單、筆記分解、被毀書籍、主線神器與鍊金全書</p>
+    <p>玩家提問全收錄：河流沙子、初始技能、火葬放水流、宣傳單、筆記分解與鍊金全書</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「火葬」、「放水流」、「宣傳單」、「筆記分解」、「釘子」、「印章」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「河流沙子」、「初始技能」、「火葬」、「宣傳單」、「筆記分解」、「釘子」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
@@ -124,6 +124,58 @@
   </div>
 
   <div class="guide-list" id="guideList">
+
+    <!-- FAQ -3: 河流沙子採集指南 -->
+    <div class="card" data-cat="faq" data-keywords="河流沙子 採集 沙堆 黏土 主教 玻璃 玻璃瓶 修復書籍 挖沙 地圖位置 河邊">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：如何能夠採集「河流沙子」？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、前置對話與解鎖權限：</span></p>
+        <ul>
+          <li><b>對話解鎖：</b>在週日（太陽日）與教堂門口的<b>主教</b>對話，推進修復教堂任務時，主教提及黏土與修繕需求，即可點亮地圖上的沙堆與黏土堆採集互動。</li>
+          <li><b>採集工具：</b>徒手靠近沙堆即可按互動鍵挖掘（自動使用鐵鍬），每次挖掘消耗體力，資源點無限刷新。</li>
+        </ul>
+
+        <p><span class="highlight-text">二、沙堆具體位置：</span></p>
+        <p>從墓園往西（左邊）一路直走來到河流邊。在河岸兩側（南北向河流沿岸、木橋南邊與瀑布上方區塊）能看到明顯的小沙堆，靠近互動即可挖出<b>河流沙子 (River Sand)</b>。</p>
+
+        <p><span class="highlight-text">三、三大核心用途：</span></p>
+        <ol>
+          <li><b>書桌清洗書籍：</b>在地下室寫作書桌用「被毀的書籍 + 河流沙子」合成乾淨紙張。</li>
+          <li><b>二級熔爐燒玻璃：</b>消耗沙子燒出玻璃，用來做鍊金燒杯與墨水瓶。</li>
+          <li><b>製作高級石雕/大理石：</b>中後期建造墓圍欄與大理石十字架的必要輔助材料。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- FAQ -2: 七大科技樹初始技能開啟條件 -->
+    <div class="card" data-cat="faq" data-keywords="七大科技樹 初始技能 開啟 解鎖 第一個技能 第一刀 信仰概念 鐵匠 木材概念 農業 烹飪 前置">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：七大科技樹「初始技能」如何開啟？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">七大分支第一個技能的解鎖條件與觸發方式：</span></p>
+        <table>
+          <tr><th>科技分支</th><th>初始節點名稱</th><th>解鎖途徑與觸發條件</th></tr>
+          <tr><td><b>1. 解剖與鍊金</b></td><td>第一刀 (First Slice)</td><td><b>開局教學</b>：跟隨骷髏頭蓋瑞指導，從第一具屍體割下生肉即自動解鎖。</td></tr>
+          <tr><td><b>2. 神學 (宗教)</b></td><td>信仰概念 (The Concept of Faith)</td><td><b>主教日解鎖</b>：墓園品質達到 +5，主教揭幕教堂任命為神職後開放。</td></tr>
+          <tr><td><b>3. 寫作 (圖書)</b></td><td>紙張製作 (Paper Craft)</td><td><b>占星家對話</b>：月亮日與燈塔占星家對話，或消耗基礎科技點數點亮。</td></tr>
+          <tr><td><b>4. 鍛造 (鐵匠)</b></td><td>鐵匠 (Smithing)</td><td><b>鐵匠任務</b>：幫村莊鐵匠殺死鋪子後方 2 隻綠色史萊姆後免費傳授。</td></tr>
+          <tr><td><b>5. 建築 (建造)</b></td><td>木材概念 (The Concept of Wood)</td><td><b>開局自帶</b>：遊戲一開始就擁有，可用紅點向下研發鋸木與切石台。</td></tr>
+          <tr><td><b>6. 農業與自然</b></td><td>農業概念 (The Concept of Farming)</td><td><b>菜園地契</b>：調查南邊廢棄花園，找酒館老闆領取地契後點亮。</td></tr>
+          <tr><td><b>7. 烹飪</b></td><td>烹飪基礎 (Sweet Home / Cooking)</td><td><b>廚房爐灶</b>：進自家小屋調查爐灶/烤箱，即可用紅點研發。</td></tr>
+        </table>
+      </div>
+    </div>
 
     <!-- FAQ -1: 火葬 vs 放水流 -->
     <div class="card" data-cat="faq" data-keywords="不要的屍體 火葬 放水流 丟河裡 推薦 哪一個 埋葬證明 灰燼 鹽 骨灰甕 賺錢 木柴">
@@ -406,7 +458,7 @@
     </div>
 
     <!-- 12. 全七大科技樹指南 -->
-    <div class="card" data-cat="tech" data-keywords="科技樹 神學 鍛造 寫作 煉金 解剖 建築 農業 烹飪 技能 優先級 蛋糕 藍點分配 木工工作台 鋸木架">
+    <div class="card" data-cat="tech" data-keywords="科技樹 神學 鍛造 寫作 煉金 解剖 建築 農業 烹飪 技能 優先級 蛋糕 藍點分配 木工工作台 鋸木架 初始技能">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">七大科技樹分支詳解、木工台建造與最優加點順序</span>
