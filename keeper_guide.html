@@ -105,11 +105,11 @@
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>玩家提問全收錄：墨水筆、黑色顏料、燒瓶、種子油、河流沙子、初始技能與鍊金全書</p>
+    <p>玩家提問全收錄：採石場進入、火葬場數量、墨水筆、黑色顏料、燒瓶、種子油與鍊金全書</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「墨水筆」、「燒瓶」、「黑色顏料」、「種子油」、「河流沙子」、「釘子」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「採石場」、「修橋」、「木樑」、「火葬場」、「墨水筆」、「燒瓶」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
@@ -124,6 +124,59 @@
   </div>
 
   <div class="guide-list" id="guideList">
+
+    <!-- FAQ -7: 採石場進入路線與修橋材料 -->
+    <div class="card" data-cat="faq" data-keywords="採石場 怎麼進 如何進入 木橋 修橋 材料 木樑 複雜鐵件 煤礦 石墨 大理石 傳送石 小屋 睡覺">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：採石場如何進入？路線與修橋材料清單</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、行進路線：</span></p>
+        <ol>
+          <li>從自家小屋或院子一路<b>往正北方的森林</b>前進。</li>
+          <li>沿著山壁往西北方走，會看到一條阻斷去路的河流與<b>損毀的木橋</b>。</li>
+          <li>修好木橋後過河，沿著唯一的山路一直<b>向西（左邊）延伸走到底</b>，即到達採石場。</li>
+        </ol>
+
+        <p><span class="highlight-text">二、修復木橋所需材料：</span></p>
+        <ul>
+          <li><b>木板 (Plank) × 4</b>（木工工作台製作）</li>
+          <li><b>木樑 (Wooden beam) × 2</b>（需科技解鎖木工大師，木工工作台製作）</li>
+          <li><b>複雜鐵件 (Complex iron parts) × 2</b>（鐵砧消耗鐵錠製作）</li>
+        </ul>
+
+        <p><span class="highlight-text">三、採石場三大核心價值：</span></p>
+        <ul>
+          <li><b>無限礦脈：</b>擁有無限煤炭礦、無限大理石礦與石材礦，是燒製石墨賺大錢與升級大教堂的基礎。</li>
+          <li><b>自帶床鋪與存檔點：</b>採石場旁附設破舊小木屋，裡面有床可隨時睡覺回體與存檔。</li>
+          <li><b>傳送石直達：</b>酒館買的傳送石可直接選擇傳送到採石場，省下長途奔波時間。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ -6: 火葬場建造數量與消耗規則 -->
+    <div class="card" data-cat="faq" data-keywords="火葬場 建造 數量 四個 單獨 一個 槽位 木柴 消耗品 重複使用 柴堆 灰燼">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：火葬場固定一次都要建造四個嗎？還是可以單獨蓋一個？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">結論：可以單獨蓋一個，完全不需要一次蓋四個！</span></p>
+        <ul>
+          <li><b>槽位獨立性：</b>停屍間南邊的火化空地共有 <b>4 個預留插槽</b>。這 4 個位置彼此獨立，你可以只蓋 1 個、2 個或蓋滿 4 個。</li>
+          <li><b>一次性消耗機制：</b>戶外柴堆是一次性設施，<b>每燒完 1 具屍體，該座柴堆就會連同屍體一起消失</b>，留下灰燼與鹽。下次要燒新的屍體時，必須重新在空位上建造一座新柴堆。</li>
+          <li><b>建造花費：</b>單個柴堆固定消耗 <b>木柴（木塊 / Wood billet）× 8</b>。</li>
+          <li><b>操作建議：</b>前期木材吃緊時，身上帶 8 塊木柴現場單獨蓋 1 個來燒；中後期木材富餘時，可以一次把 4 個槽位都蓋好備用，送來屍體就能直接點火。</li>
+        </ul>
+      </div>
+    </div>
 
     <!-- FAQ -5: 墨水筆、燒瓶、黑色顏料全指南 -->
     <div class="card" data-cat="faq" data-keywords="墨水筆 墨水與羽毛筆 燒瓶 錐形瓶 黑色顏料 占星家 灰燼 油 石墨 羽毛 雞舍 玻璃 熔爐 怎麼做 哪裡買">
