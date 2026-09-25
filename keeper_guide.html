@@ -105,11 +105,11 @@
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>玩家提問全收錄：河流沙子、初始技能、火葬放水流、宣傳單、筆記分解與鍊金全書</p>
+    <p>玩家提問全收錄：種子油、河流沙子、初始技能、火葬放水流、宣傳單、筆記分解與鍊金全書</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「河流沙子」、「初始技能」、「火葬」、「宣傳單」、「筆記分解」、「釘子」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「種子油」、「驢子」、「河流沙子」、「初始技能」、「火葬」、「宣傳單」、「釘子」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
@@ -124,6 +124,36 @@
   </div>
 
   <div class="guide-list" id="guideList">
+
+    <!-- FAQ -4: 種子油取得方式與驢子車輪 -->
+    <div class="card" data-cat="faq" data-keywords="種子油 油 迪格 流浪漢 驢子罷工 車輪 麻種子 壓榨機 脂肪 潤滑油 怎麼拿 哪裡買">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：種子油（Seed Oil）如何取得？驢子推車怎麼修？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、兩種取得方式：</span></p>
+        <ul>
+          <li><b>向流浪漢「迪格 (Dig)」購買（前期最快推薦）：</b>
+            <br>迪格住在村莊東北邊帳篷（前往女巫嶺山腳下的坡道旁）。他常駐販售現成的<b>種子油 (Seed Oil)</b>，前期花幾十銅幣買 1 瓶交差即可。
+          </li>
+          <li><b>自家壓榨機自行製作（長期來源）：</b>
+            <br>解鎖壓榨機後，在自家地窖或院子建造<b>壓榨機 (Press)</b>：
+            <br>• 消耗 <b>麻種子 (Hemp seeds) × 4</b> → 壓出種子油。
+            <br>• 消耗解剖得到的 <b>脂肪 (Fat) × 1</b> → 壓出油。
+          </li>
+        </ul>
+
+        <p><span class="highlight-text">二、驢子罷工機制注意事項：</span></p>
+        <ul>
+          <li><b>油只需給 1 次：</b>當驢子推車輪軸吱吱作響時，親手交付 1 瓶油給牠修輪子即可，<b>以後永遠不需要再給油</b>。</li>
+          <li><b>胡蘿蔔是常態消耗：</b>修好輪子後，驢子每運送 1 具屍體固定消耗 <b>5 根胡蘿蔔</b>（放入停屍間門口的胡蘿蔔投遞箱）。</li>
+        </ul>
+      </div>
+    </div>
 
     <!-- FAQ -3: 河流沙子採集指南 -->
     <div class="card" data-cat="faq" data-keywords="河流沙子 採集 沙堆 黏土 主教 玻璃 玻璃瓶 修復書籍 挖沙 地圖位置 河邊">
@@ -496,7 +526,7 @@
     </div>
 
     <!-- 1. 開荒新手避坑 -->
-    <div class="card" data-cat="faq" data-keywords="新手 開局 避坑 驢子 胡蘿蔔 體力 墓園評分 傳送石 磨刀石">
+    <div class="card" data-cat="faq" data-keywords="新手 開局 避坑 驢子 胡蘿蔔 種子油 體力 墓園評分 傳送石 磨刀石">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">新手開荒關鍵節奏與十大常見避坑指南</span>
@@ -507,7 +537,7 @@
       <div class="card-body">
         <ul>
           <li><span class="highlight-text">1. 必買傳送石：</span>去死馬酒館花 2 銀幣向老闆霍拉德里克購買「傳送石」，冷卻時間短，可無限傳送於家、酒館、燈塔與採石場，省去大半跑步時間。</li>
-          <li><span class="highlight-text">2. 驢子罷工與胡蘿蔔：</span>前期送幾具屍體後，驢子會罷工並要求油與胡蘿蔔。必須先在自家菜園種植胡蘿蔔，放入停屍間門口的胡蘿蔔箱（每具消耗 5 個胡蘿蔔 + 1 種子油），驢子才會繼續送屍體。</li>
+          <li><span class="highlight-text">2. 驢子罷工與胡蘿蔔：</span>前期送幾具屍體後，驢子會罷工並要求<b>油（潤滑車輪，只需給 1 次）</b>與<b>胡蘿蔔</b>。油可找流浪漢迪格買；在自家菜園種胡蘿蔔放入箱子（每具屍體常態消耗 5 個胡蘿蔔），驢子才會持續送屍體。</li>
           <li><span class="highlight-text">3. 藍點千萬別亂花：</span>前期從占星家或吃蛋糕研究墓碑取得的第一批藍點，優先點出「紙張製作」與「墓地研究」，切忌點無關緊要的裝飾。</li>
           <li><span class="highlight-text">4. 切忌亂埋劣質屍體：</span>送來的屍體如果紅骷髏多於 3 顆且沒有白骷髏，前期直接拉去河邊扔掉或解鎖火葬燒掉，絕不要埋入墓地拉低整體評分。</li>
           <li><span class="highlight-text">5. 工具修復：</span>鐵匠鋪購買磨刀石，不要等工具壞了重新做，直接在工具台上用磨刀石修復耐久。</li>
