@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>守墓人 (Graveyard Keeper) 攻略大全百科庫</title>
+  <style>
+    :root {
+      --bg: #0d0f14;
+      --card-bg: #151822;
+      --card-border: #242938;
+      --accent: #5e81ac;
+      --accent-hover: #81a1c1;
+      --text-main: #eceff4;
+      --text-sub: #d8dee9;
+      --text-muted: #707b91;
+      --highlight: #ebcb8b;
+      --tag-bg: #1c2130;
+      --red: #bf616a;
+      --green: #a3be8c;
+      --blue: #88c0d0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 12px;
+      padding-bottom: 90px;
+    }
+    header { text-align: center; margin-bottom: 12px; }
+    header h1 { font-size: 1.35rem; color: var(--highlight); }
+    header p { font-size: 0.76rem; color: var(--text-muted); }
+    .controls-container {
+      position: sticky; top: 0; background: var(--bg);
+      padding: 6px 0; z-index: 100; border-bottom: 1px solid var(--card-border);
+    }
+    .search-box {
+      width: 100%; padding: 11px 13px; border-radius: 9px;
+      border: 1px solid var(--card-border); background-color: var(--card-bg);
+      color: var(--text-main); font-size: 0.92rem; margin-bottom: 6px; outline: none;
+    }
+    .search-box:focus { border-color: var(--accent); }
+    .categories-bar {
+      display: flex; gap: 5px; overflow-x: auto; padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    }
+    .categories-bar::-webkit-scrollbar { display: none; }
+    .cat-btn {
+      white-space: nowrap; padding: 5px 11px; border-radius: 14px;
+      border: 1px solid var(--card-border); background: var(--tag-bg);
+      color: var(--text-sub); font-size: 0.76rem; cursor: pointer; transition: 0.2s;
+    }
+    .cat-btn.active {
+      background: var(--accent); color: #fff; font-weight: bold; border-color: var(--accent-hover);
+    }
+    .guide-list { display: flex; flex-direction: column; gap: 9px; margin-top: 10px; }
+    .card {
+      background-color: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: 9px; overflow: hidden;
+    }
+    .card.open { border-color: var(--accent); }
+    .card-header {
+      padding: 12px 14px; cursor: pointer; display: flex;
+      justify-content: space-between; align-items: center; user-select: none;
+    }
+    .card-title-group { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+    .card-title { font-size: 0.94rem; font-weight: 600; color: var(--text-main); }
+    .tag {
+      font-size: 0.66rem; background: var(--tag-bg); color: var(--text-muted);
+      padding: 2px 6px; border-radius: 4px; border: 1px solid var(--card-border);
+    }
+    .arrow-icon {
+      font-size: 0.72rem; color: var(--text-muted); transition: transform 0.2s ease;
+    }
+    .card.open .arrow-icon { transform: rotate(180deg); color: var(--accent); }
+    .card-body {
+      display: none; padding: 0 14px 14px 14px;
+      border-top: 1px solid rgba(255,255,255,0.03); color: var(--text-sub); font-size: 0.85rem;
+    }
+    .card.open .card-body { display: block; }
+    .card-body p { margin-top: 7px; }
+    .card-body ul, .card-body ol { margin-top: 5px; padding-left: 18px; }
+    .card-body li { margin-bottom: 5px; }
+    .highlight-text { color: var(--highlight); font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; margin-top: 7px; font-size: 0.78rem; }
+    th, td { border: 1px solid var(--card-border); padding: 6px; text-align: left; }
+    th { background-color: var(--tag-bg); color: var(--highlight); }
+    .empty-state { text-align: center; padding: 35px; color: var(--text-muted); display: none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
+    <p>整理自娛樂計程車全套攻略彙集（全NPC任務線、全鍊金、防腐數學、各科技全收錄）</p>
+  </header>
+
+  <div class="controls-container">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「老蛇」、「酸液」、「完美屍體」、「大主教」、「地牢5層」...">
+    <div class="categories-bar" id="categoryBar">
+      <button class="cat-btn active" data-cat="all">全部攻略</button>
+      <button class="cat-btn" data-cat="beginner">開荒指南與避坑</button>
+      <button class="cat-btn" data-cat="npc">全NPC完整任務鏈</button>
+      <button class="cat-btn" data-cat="corpse">解剖防腐與墓園評分</button>
+      <button class="cat-btn" data-cat="alchemy">鍊金拆解與全藥劑</button>
+      <button class="cat-btn" data-cat="tech">七大科技與生產流水線</button>
+      <button class="cat-btn" data-cat="dungeon">地牢探索與地圖捷徑</button>
+      <button class="cat-btn" data-cat="economy">農業經營與賺錢套路</button>
+    </div>
+  </div>
+
+  <div class="guide-list" id="guideList">
+
+    <!-- 1. 開荒新手避坑 -->
+    <div class="card" data-cat="beginner" data-keywords="新手 開局 避坑 驢子 胡蘿蔔 體力 墓園評分 傳送石 磨刀石">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">新手開荒關鍵節奏與十大常見避坑指南</span>
+          <span class="tag">開荒指南與避坑</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><span class="highlight-text">1. 必買傳送石：</span>去死馬酒館花 2 銀幣向老闆霍拉德里克購買「傳送石」，冷卻時間短，可無限傳送於家、酒館、燈塔與採石場，省去大半跑步時間。</li>
+          <li><span class="highlight-text">2. 驢子罷工與胡蘿蔔：</span>前期送幾具屍體後，驢子會罷工並要求油與胡蘿蔔。必須先在自家菜園種植胡蘿蔔，放入停屍間門口的胡蘿蔔箱（每具消耗 5 個胡蘿蔔 + 1 種子油），驢子才會繼續送屍體。</li>
+          <li><span class="highlight-text">3. 藍點千萬別亂花：</span>前期從占星家或吃蛋糕研究墓碑取得的第一批藍點，優先點出「紙張製作」與「墓地研究」，切忌點無關緊要的裝飾。</li>
+          <li><span class="highlight-text">4. 切忌亂埋劣質屍體：</span>送來的屍體如果紅骷髏多於 3 顆且沒有白骷髏，前期直接拉去河邊扔掉或解鎖火葬燒掉，絕不要埋入墓地拉低整體評分。</li>
+          <li><span class="highlight-text">5. 工具修復：</span>鐵匠鋪購買磨刀石，不要等工具壞了重新做，直接在工具台上用磨刀石修復耐久。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. 主教完整任務鏈 -->
+    <div class="card" data-cat="npc" data-keywords="主教 主線 太陽日 傲慢 魚湯 裝飾 大教堂 雕像 貴族特權 光明十字架 香爐">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">主線任務：主教（Bishop / 傲慢）全階段流程</span>
+          <span class="tag">全NPC完整任務鏈</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p>現身時間：每週<b>太陽日 ☀️</b>（教堂門口）。推進步驟如下：</p>
+        <ol>
+          <li><b>墓園修繕 (+5)：</b>拔除雜草、用木質修理工具修復損壞墓碑，評分達到 +5，主教揭幕教堂並任命你為牧師。</li>
+          <li><b>20 碗優質魚湯：</b>向老漁夫學釣魚，做出 20 碗魚湯（或直接交付 4 條金星鯛魚）。</li>
+          <li><b>第一次升級教堂：</b>墓園評分達到 +30，教堂內部評分達到 +20，升級為二級教堂。</li>
+          <li><b>合法公民身份：</b>在教堂門口皇家信箱花 50 銅買「平民證明」，再花 3 銀買「公民證明」。</li>
+          <li><b>第二次升級大教堂：</b>要求墓園評分達到 +100，教堂內部評分達到 +50，交付 4 個銀星大理石雕像。</li>
+          <li><b>貴族身分與授勳：</b>在信箱花費 12 金幣購買貴族特權證書，並製作 1 個金星大理石雕像與金星香爐。</li>
+          <li><b>獲得通關神器：</b><b>光明十字架 (Cross of Light)</b>。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 3. 審判官完整任務鏈 -->
+    <div class="card" data-cat="npc" data-keywords="審判官 女人日 憤怒 女巫嶺 火刑 木柴 漢堡 啤酒 暗黑心臟 死刑犯契約 守衛">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">主線任務：審判官（Inquisitor / 憤怒）全階段流程</span>
+          <span class="tag">全NPC完整任務鏈</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p>現身時間：每週<b>女人日 ♀</b>（女巫嶺審判台）。推進步驟如下：</p>
+        <ol>
+          <li><b>整修審判嶺刑場：</b>運送 20 份木柴至女巫嶺，並在地下室案台製作 10 份宣傳單交給他。</li>
+          <li><b>開設小吃攤：</b>在刑場旁建造小吃攤，提供 5 瓶金星啤酒與 5 個漢堡，舉辦兩次火刑觀禮活動。</li>
+          <li><b>查緝女巫偷窺狂：</b>夜間在女巫嶺西側帳篷附近抓捕偷窺者，審問後回報。</li>
+          <li><b>解鎖暗黑器官：</b>完成上述任務後，審判官會授予許可，解剖台將可以切除深色心臟、深色腸子與深色大腦。</li>
+          <li><b>保護老蛇與處決抉擇：</b>審判官最終要求搜捕地下室異教徒，必須利用老蛇的防禦機關擊退審判官的衛兵。</li>
+          <li><b>獲得通關神器：</b><b>死刑犯契約 (Executioner's Citation)</b>。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 4. 老蛇完整任務鏈 -->
+    <div class="card" data-cat="npc" data-keywords="老蛇 男人日 暴食 地下室 信仰 骨頭鑰匙 血杯 死靈之書 暗黑心臟 永恆之鏡 印章">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">主線任務：老蛇（Snake / 暴食）全階段流程</span>
+          <span class="tag">全NPC完整任務鏈</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p>現身時間：每週<b>男人日 ♂ 夜間</b>（教堂地下暗道柵欄處）。推進步驟如下：</p>
+        <ol>
+          <li><b>交付 5 點信仰：</b>展示神職實力，老蛇好感上升並為你打開鐵柵欄門。</li>
+          <li><b>交付守墓人日記：</b>將占星家遺失的日記交給老蛇閱讀。</li>
+          <li><b>死靈之書（沾血的書）：</b>向海邊燈塔占星家交涉取回死靈之書，交給老蛇準備召喚。</li>
+          <li><b>金鑰匙與骨頭鑰匙：</b>解剖死者取得頭骨，在教堂工作台合成骨頭鑰匙，打開地下迷宮（地牢）大門。</li>
+          <li><b>取回血杯：</b>下地牢第 5 層擊殺怪物，在祭壇箱子中拿到血杯交給老蛇。</li>
+          <li><b>暗黑心臟祭祀：</b>切除屍體的深色心臟（需審判官線解鎖），在血腥祭壇舉行儀式。</li>
+          <li><b>獲得通關神器：</b><b>永恆之鏡 (Endless Mirror)</b>，並附贈偽造肉類印章。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 5. 占星家完整任務鏈 -->
+    <div class="card" data-cat="npc" data-keywords="占星家 新月日 怠惰 燈塔 日記 酸液 查姆夫人 假金幣 金色角 銀星書 金星書">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">主線任務：占星家（Astrologer / 怠惰）全階段流程</span>
+          <span class="tag">全NPC完整任務鏈</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p>現身時間：每週<b>新月日 🌙</b>（地圖最東邊燈塔旁）。推進步驟如下：</p>
+        <ol>
+          <li><b>提供紙筆：</b>給予 1 個羽毛筆墨水與 1 張乾淨紙張，占星家贈送 25 點初始藍點。</li>
+          <li><b>尋找日記：</b>要求前往地下密室從老蛇手中取回守墓人日記。</li>
+          <li><b>酸液開箱：</b>使用鍊金製作的酸液與修復工具，打開海邊撿到的鎖死箱子。</li>
+          <li><b>名望提升：</b>依序撰寫並交付 1 本銀星書籍與 1 本金星書籍。</li>
+          <li><b>查姆夫人的身世：</b>協助查明查姆夫人的親生父親，解開燈塔舊照謎團。</li>
+          <li><b>貴族信件與和解：</b>拿取貴族信件，促成父女相認。</li>
+          <li><b>獲得通關神器：</b><b>金色角 (Golden Angle)</b>。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 6. 查姆夫人完整任務鏈 -->
+    <div class="card" data-cat="npc" data-keywords="查姆夫人 節日日 色慾 酒館 詩人 香水 假幣 珠寶 劇院 項鍊">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">主線任務：查姆夫人（Ms. Charm / 色慾）全階段流程</span>
+          <span class="tag">全NPC完整任務鏈</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p>現身時間：每週<b>節日日 ♉ 夜間</b>（死馬酒館包廂）。推進步驟如下：</p>
+        <ol>
+          <li><b>交付 5 枚假金幣：</b>請地下室老蛇代為製作假硬幣交給她。</li>
+          <li><b>詩人情書：</b>找酒館門口的詩人代寫情書（需給詩人提供酒或毒蘑菇酒提神）。</li>
+          <li><b>女巫香水：</b>穿過沼澤找到女巫克洛索，完成女巫任務獲得頂級香水交給查姆。</li>
+          <li><b>華麗珠寶：</b>在珠寶匠台消耗 1 金錠 + 1 鑽石，打造精美珠寶交給她。</li>
+          <li><b>取得貴族演出特權：</b>動用貴族身分，說服主教與審判官同意在城內舉辦個人演唱劇院。</li>
+          <li><b>獲得通關神器：</b><b>家族項鍊 (Necklace)</b>。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 7. 商人完整任務鏈 -->
+    <div class="card" data-cat="npc" data-keywords="商人 錢包日 貪婪 打嗝 止嗝草 貿易公司 蔬菜出口 1金幣 永恆之鹽">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">主線任務：商人（Merchant / 貪婪）全階段流程</span>
+          <span class="tag">全NPC完整任務鏈</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p>現身時間：每週<b>錢包日 👛</b>（死馬酒館南側馬車旁）。推進步驟如下：</p>
+        <ol>
+          <li><b>借款與農作物：</b>交付 12 個金星捲心菜、12 個胡蘿蔔、12 個甜菜給商人。</li>
+          <li><b>治癒打嗝頑疾：</b>前往女巫沼澤採集「止嗝草」，調製成解藥交給商人飲用。</li>
+          <li><b>購買貿易許可證：</b>在教堂信箱花費 1 金幣購買商業許可證交給商人。</li>
+          <li><b>外銷蔬菜箱流水線：</b>在菜園搭建包裝台，每週錢包日前裝載滿滿的箱裝南瓜/洋蔥/扁豆供其馬車出口。</li>
+          <li><b>贖回家族珠寶：</b>出資幫商人贖回抵押在查姆夫人手中的傳家首飾。</li>
+          <li><b>獲得通關神器：</b><b>永恆之鹽 (Salt of Eternity)</b>。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 8. 屍體解剖防腐數學全矩陣 -->
+    <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 16白 26白 鹼性 膠水 銀 金 注射順序 墓穴評分">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">屍體解剖與防腐室注射順序精算（必成 12~26 白骷髏）</span>
+          <span class="tag">解剖防腐與墓園評分</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、各器官切除精確數值變動：</span></p>
+        <table>
+          <tr><th>切除部位</th><th>紅骷髏</th><th>白骷髏</th><th>核心用途</th></tr>
+          <tr><td><b>血液 (Blood)</b></td><td style="color:var(--green)">-1</td><td style="color:var(--green)">+1</td><td>調配藥劑、黑色顏料、注射液</td></tr>
+          <tr><td><b>脂肪 (Fat)</b></td><td style="color:var(--green)">-1</td><td style="color:var(--green)">+1</td><td>提煉油脂、製作白蠟燭</td></tr>
+          <tr><td><b>皮膚 (Skin)</b></td><td style="color:var(--red)">+1</td><td style="color:var(--red)">-1</td><td>製作生皮紙（非做紙勿拔）</td></tr>
+          <tr><td><b>肉塊 (Flesh)</b></td><td>0</td><td style="color:var(--red)">-1</td><td>加印章做包裝肉（勿輕易拔）</td></tr>
+          <tr><td><b>頭骨 (Skull)</b></td><td style="color:var(--red)">+1</td><td>0</td><td>老蛇祭壇、骨頭鑰匙原料</td></tr>
+          <tr><td><b>骨頭 (Bone)</b></td><td>0</td><td>0</td><td>研磨白色粉末、白色顏料</td></tr>
+          <tr><td><b>三大件 (腦/心/腸)</b></td><td>浮動</td><td>浮動</td><td>天生屬性固定，拼極限用</td></tr>
+        </table>
+
+        <p><span class="highlight-text">二、標準 12 白 0 紅必成注射 SOP（無 DLC）：</span></p>
+        <ol>
+          <li><b>篩選屍體：</b>送來的屍體天生必須有 $\ge 2$ 顆紅骷髏，且白骷髏 $\ge 4$。</li>
+          <li><b>切勿提前動刀：</b>先搬上防腐台，依序注入：
+            <br>① <b>鹼性注射液</b> (+1紅, +1白)
+            <br>② <b>膠水注射液</b> (+1白)
+            <br>③ <b>銀色注射液</b> (-1紅, +1白)
+            <br>④ <b>金色注射液</b> (-2紅, +2白)
+          </li>
+          <li><b>上手術台切除：</b>拔掉 <b>血液</b> (-1紅, +1白) 和 <b>脂肪</b> (-1紅, +1白)。</li>
+          <li><b>結算：</b>所有紅骷髏清空，白骷髏額外增加 6 顆，達成滿分 12 白 0 紅！</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 9. 鍊金全拆解庫 -->
+    <div class="card" data-cat="alchemy" data-keywords="鍊金 原料 研磨 粉末 溶液 精華 黑色顏料 白色顏料 提速藥 酸 殭屍果汁 鹼性 金色 長生不老藥">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">鍊金原料全拆解對照與藥劑配方全表</span>
+          <span class="tag">鍊金拆解與全藥劑</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <table>
+          <tr><th>素材名稱</th><th>研磨機（產出粉末）</th><th>攪拌機（產出溶液）</th><th>蒸餾器（產出精華）</th></tr>
+          <tr><td>作物廢料 / 南瓜</td><td>健康粉末</td><td>—</td><td>健康精華 (限南瓜)</td></tr>
+          <tr><td>捲心菜 / 胡蘿蔔</td><td>健康粉末 (捲心菜)</td><td>健康溶液</td><td>—</td></tr>
+          <tr><td>紅蘑菇 / 洋蔥</td><td>毒性粉末</td><td>毒性溶液 (紅菇)</td><td>毒性精華 (洋蔥)</td></tr>
+          <tr><td>蜘蛛網 / 啤酒花</td><td>減速粉末</td><td>減速溶液 (啤酒花)</td><td>減速精華 (蜘蛛網)</td></tr>
+          <tr><td>蜂蠟 / 脂肪</td><td>—</td><td>減速溶液</td><td>減速精華 (蜂蠟)</td></tr>
+          <tr><td>大麻 / 蜂蜜</td><td>加速粉末</td><td>加速溶液</td><td>加速精華 (限大麻)</td></tr>
+          <tr><td>腸子 / 硫磺</td><td>生命粉末</td><td>—</td><td>—</td></tr>
+          <tr><td>腦髓 / 蛆 / 黃花</td><td>—</td><td>生命溶液</td><td>生命精華 (蛆、黃花)</td></tr>
+          <tr><td>蝙蝠翅膀 / 蛾</td><td>混亂粉末 (翅膀)</td><td>混亂溶液</td><td>混亂精華 (蛾)</td></tr>
+          <tr><td>血液 (Blood)</td><td>—</td><td>—</td><td>混亂精華</td></tr>
+          <tr><td>骨頭 / 石灰石</td><td>白色粉末</td><td>—</td><td>—</td></tr>
+          <tr><td>金塊 / 銀塊</td><td>金色粉末 / 銀色粉末</td><td>—</td><td>—</td></tr>
+        </table>
+        <p><span class="highlight-text">★ 常用藥劑與注射液合成配方：</span></p>
+        <ul>
+          <li><b>黑色顏料：</b>灰燼 + 水（或碳黑 + 油）。墨水原料。</li>
+          <li><b>白色顏料：</b>白色粉末 + 油。白紙原料。</li>
+          <li><b>提速藥水：</b>加速粉末 + 混亂溶液 + 血液。大幅加跑速。</li>
+          <li><b>酸液：</b>毒性粉末 + 混亂溶液。開箱與任務用。</li>
+          <li><b>殭屍果汁：</b>健康粉末 + 血液。復活殭屍必備。</li>
+          <li><b>鹼性注射液：</b>鹼性試劑 (生命粉末+毒性溶液+水) + 血液 + 水。</li>
+          <li><b>膠水注射液：</b>膠水 (健康溶液+生命粉末) + 血液 + 水。</li>
+          <li><b>銀色注射液：</b>銀色長生不老藥 (銀粉+混亂溶液+秩序精華) + 血液 + 水。</li>
+          <li><b>金色注射液：</b>金色長生不老藥 (金粉+毒性溶液+混亂精華) + 血液 + 水。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 10. 地牢 1-15 層 -->
+    <div class="card" data-cat="dungeon" data-keywords="地牢 15層 血杯 骨頭鑰匙 怪物 鋼劍 鑽石 金礦 硫磺 銀礦">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">地下地牢（迷宮）1-15 層全怪物掉落與通關裝備</span>
+          <span class="tag">地牢探索與地圖捷徑</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><b>開啟方法：</b>完成老蛇前置，使用占星家的金鑰匙藍圖 + 頭骨做成骨頭鑰匙開門。</li>
+          <li><b>層數物產分佈：</b>
+            <ul>
+              <li><b>1 - 4 層：</b>蝙蝠、綠色史萊姆。主要掉落蝙蝠翅膀、果凍與鐵礦石。</li>
+              <li><b>5 層：</b>祭壇固定寶箱，拾取老蛇主線道具<b>血杯 (Cup of Blood)</b>。</li>
+              <li><b>6 - 10 層：</b>出現重甲幽靈與蜘蛛，主要掉落蜘蛛網、硫磺與<b>銀礦石</b>。</li>
+              <li><b>11 - 15 層：</b>高階魔物與黑史萊姆，大量產出<b>金礦石</b>與<b>鑽石 (Diamond)</b>（打造金星珠寶必備）。</li>
+            </ul>
+          </li>
+          <li><b>推薦戰鬥配置：</b>手持<b>鋼劍</b>，身上穿戴鐵甲，快捷欄常備 20 個洋蔥圈或 10 瓶止血藥水。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 11. 農業與致富 -->
+    <div class="card" data-cat="economy" data-keywords="賺錢 石墨 葡萄酒 蔬菜箱 貿易 肥料 泥炭 金幣 鐵匠">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">全期致富套路：煤炭燒石墨、金星酒與貿易箱</span>
+          <span class="tag">農業經營與賺錢套路</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><span class="highlight-text">前期（火葬證明）：</span>每具不適合下葬的屍體拉去火葬場，拿到一張埋葬證明直接賣給酒館老闆換取 1 銀 50 銅。</li>
+          <li><span class="highlight-text">中期（煤炭燒石墨）：</span>
+            <br>去西北採石場無限挖煤炭，在二級熔爐燒製成<b>石墨 (Graphite)</b>，大量賣給鐵匠（價格幾乎不隨銷量遞減貶值），單次穩定撈幾十銀幣。</li>
+          <li><span class="highlight-text">後期（金星葡萄酒與蔬菜箱）：</span>
+            <br>女巫嶺種植葡萄，地窖釀造成金星葡萄酒，每週賣給酒館老闆；在花園包裝金星南瓜/洋蔥箱出口給商人，每週被動收入 2~4 枚金幣。</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="empty-state" id="emptyState">未找到符合條件的詞條，請嘗試更換關鍵字。</div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryBar = document.getElementById('categoryBar');
+    const catButtons = document.querySelectorAll('.cat-btn');
+    const cards = document.querySelectorAll('.card');
+    const emptyState = document.getElementById('emptyState');
+    let currentCategory = 'all';
+
+    cards.forEach(card => {
+      card.querySelector('.card-header').addEventListener('click', () => {
+        card.classList.toggle('open');
+      });
+    });
+
+    categoryBar.addEventListener('click', (e) => {
+      if (!e.target.classList.contains('cat-btn')) return;
+      catButtons.forEach(btn => btn.classList.remove('active'));
+      e.target.classList.add('active');
+      currentCategory = e.target.getAttribute('data-cat');
+      filterCards();
+    });
+
+    searchInput.addEventListener('input', filterCards);
+
+    function filterCards() {
+      const q = searchInput.value.trim().toLowerCase();
+      let count = 0;
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-cat');
+        const kw = (card.getAttribute('data-keywords') + ' ' + card.innerText).toLowerCase();
+        const matchesCat = (currentCategory === 'all' || cat === currentCategory);
+        const matchesQ = !q || kw.includes(q);
+        if (matchesCat && matchesQ) {
+          card.style.display = 'block'; count++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      emptyState.style.display = count === 0 ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
