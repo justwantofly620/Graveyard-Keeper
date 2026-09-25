@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>守墓人 (Graveyard Keeper) 攻略大全百科庫</title>
+  
   <!-- 瀏覽器分頁圖示 -->
   <link rel="icon" type="image/png" href="icon.png">
   
@@ -13,6 +14,7 @@
   <!-- 全螢幕 App 模式設定 -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
   <style>
     :root {
       --bg: #0d0f14;
@@ -67,7 +69,7 @@
     .guide-list { display: flex; flex-direction: column; gap: 9px; margin-top: 10px; }
     .card {
       background-color: var(--card-bg); border: 1px solid var(--card-border);
-      border-radius: 9px; overflow: hidden;
+      border-radius: 9px; overflow: hidden; transition: border-color 0.2s;
     }
     .card.open { border-color: var(--accent); }
     .card-header {
@@ -103,24 +105,130 @@
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>整理自娛樂計程車全套攻略彙集（全NPC任務線、全鍊金、防腐數學、各科技全收錄）</p>
+    <p>全模組完整收錄：問答速查、主線任務、科技解鎖、鍊金與經營全書</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「老蛇」、「酸液」、「完美屍體」、「大主教」、「地牢5層」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「釘子」、「印章」、「藍點」、「養蜜蜂」、「日記」、「老蛇」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
+      <button class="cat-btn" data-cat="faq">必備問答速查</button>
       <button class="cat-btn" data-cat="beginner">開荒指南與避坑</button>
       <button class="cat-btn" data-cat="npc">全NPC完整任務鏈</button>
       <button class="cat-btn" data-cat="corpse">解剖防腐與墓園評分</button>
       <button class="cat-btn" data-cat="alchemy">鍊金拆解與全藥劑</button>
-      <button class="cat-btn" data-cat="tech">七大科技與生產流水線</button>
       <button class="cat-btn" data-cat="dungeon">地牢探索與地圖捷徑</button>
       <button class="cat-btn" data-cat="economy">農業經營與賺錢套路</button>
     </div>
   </div>
 
   <div class="guide-list" id="guideList">
+
+    <!-- FAQ 1: 釘子與印章 -->
+    <div class="card" data-cat="faq" data-keywords="釘子 印章 鐵匠 皇家守衛 老蛇 偽造 鍛造 鐵錠 肉類 審批">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：釘子哪裡拿？印章哪裡找？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、釘子（Nails）三大來源：</span></p>
+        <ul>
+          <li><b>自己敲（最主要）：</b>自家院子鐵砧上，消耗 <b>1 塊鐵錠</b> 製作成 <b>6 根釘子</b>。</li>
+          <li><b>向鐵匠購買：</b>村莊東邊鐵匠克雷茲沃德有販售現成釘子，初期應急可直接買。</li>
+          <li><b>拆除舊雜物：</b>清理自家地窖、地下室或院子破木桶/破架子時機率掉落。</li>
+        </ul>
+        <p><span class="highlight-text">二、印章（Stamp，用於審批人肉出售）：</span></p>
+        <ul>
+          <li><b>購買正版（合法路線）：</b>成為「合法公民」後，在審判山入口向<b>皇家守衛</b>花費 <b>50 銀幣</b> 購買。</li>
+          <li><b>老蛇代辦（免費偽造）：</b>提升老蛇好感度（給 5 信仰後），老蛇會主動提出幫忙弄偽造印章（需交一瓶優質葡萄酒），效果與正版完全一致。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ 2: 解鎖鐵匠與進入地下室 -->
+    <div class="card" data-cat="faq" data-keywords="解鎖鐵匠 史萊姆 鐵砧 熔爐 進入教堂地下室 地窖 捷徑 瓦礫 墓園5分 太陽日">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：如何解鎖「鐵匠」與進入教堂地下室？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、如何解鎖「鐵匠」科技：</span></p>
+        <ol>
+          <li>前往村莊<b>死馬酒館</b>，向老闆霍拉德里克領取「寄給鐵匠的信」。</li>
+          <li>往東南方過橋找到鐵匠克雷茲沃德，把信交給他。</li>
+          <li>裝備他給予的生鏽之劍，殺死鐵匠鋪後方樹林的 <b>2 隻綠色史萊姆</b>，拾取史萊姆膠質回報。</li>
+          <li>鐵匠傳授鍛造技術，解鎖科技樹「鐵匠/鍛造」，並獲得木質鐵砧與熔爐的建造圖紙。</li>
+        </ol>
+        <p><span class="highlight-text">二、如何進入教堂地下室：</span></p>
+        <ol>
+          <li><b>前提條件：</b>週日（太陽日）主教要求將墓園修復至 <b>評分 +5</b>。完成後與主教對話正式開放教堂。</li>
+          <li><b>通道一（教堂直達）：</b>進入教堂內部，講台右側有階梯可直接走進地下室。</li>
+          <li><b>通道二（自家地窖連通）：</b>進入自家地窖往右走，清理路障瓦礫（木楔×2、木板×4、簡單鐵件×4），即可直接步行連通教堂地下室與老蛇密室。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- FAQ 3: 墓園評分用途與藍點獲得 -->
+    <div class="card" data-cat="faq" data-keywords="墓園評分用途 藍點 藍色科技點 占星家 研究台 信仰 科學 紙張 捐款 佈道">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：墓園評分用途？藍點如何源源不絕獲得？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、墓園評分的核心用途：</span></p>
+        <ul>
+          <li><b>決定週日佈道捐款金錢：</b>墓園評分越高，信徒打賞的錢越多（評分達 100~200+，每次禮拜固定入帳數枚銀幣）。<i>※ 教堂內部評分決定「信仰產出」，戶外墓園評分決定「金錢收入」。</i></li>
+          <li><b>推進主教主線與升級：</b>開放教堂門檻為 +5，升級教堂門檻為 +30、+100、+200，分數達標才可晉升貴族。</li>
+        </ul>
+        <p><span class="highlight-text">二、藍點（藍色科技點）取得指南：</span></p>
+        <ul>
+          <li><b>占星家捷徑（前期必備）：</b>初次在月亮日找燈塔占星家對話免費送 <b>25 點</b>；占星家每週常駐販售藍色科技書（一本約 5 銀，直接吃得 25 點）。</li>
+          <li><b>地下室研究台（最核心來源）：</b>備齊「信仰點數」+「乾淨紙張分解的科學點數」，研究<b>所有墓碑/圍欄</b>與<b>屍體器官（心、腦、腸等）</b>，初次研究每樣直接給予 20~100+ 藍點。</li>
+          <li><b>手工製造（可重複刷）：</b>在切石台雕刻石碑/大理石十字架，或在案台製作章節與書籍，每次合成均會獎勵數點藍點。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ 4: 養蜜蜂、做紙與守墓人日記 -->
+    <div class="card" data-cat="faq" data-keywords="養蜜蜂 做紙 守墓人日記 蜂蜜 蜂蠟 蜂巢 人皮 乾淨紙張 占星家 老蛇 祭壇 信仰">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：怎麼養蜜蜂？做紙？守墓人日記如何取得？</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、如何做紙（科學點數來源）：</span></p>
+        <ol>
+          <li>科技樹解鎖「神學/紙張製作」，在地下室建造「教堂工作台」。</li>
+          <li>解剖屍體剝下<b>皮膚</b>（或打蝙蝠掉落翅膀）。</li>
+          <li>在工作台上將 1 皮膚做成 4 豬皮紙，再將 1 豬皮紙裁切成 <b>4 張乾淨紙張</b>（1 皮膚可做 16 張紙）。拿到研究台分解即可產出海量科學點。</li>
+        </ol>
+        <p><span class="highlight-text">二、如何養蜜蜂（蜂蜜與蜂蠟）：</span></p>
+        <ol>
+          <li>農業科技點出「養蜂」，解鎖蜂巢藍圖。</li>
+          <li>取得活蜜蜂：到村莊北邊找養蜂人購買，或採集野外蜂樹（採集時會扣血）。</li>
+          <li>在院子藍圖台建造<b>蜂巢</b>（需蜜蜂×4、木板×4、釘子×4、簡單鐵件×2），全自動定期產出蜂蜜與蜂蠟（做蠟燭衝教堂分）。</li>
+        </ol>
+        <p><span class="highlight-text">三、守墓人日記取得方式：</span></p>
+        <ol>
+          <li>月亮日去燈塔找占星家接尋找日記任務。</li>
+          <li>週三男人日夜間到地下通道找<b>老蛇</b>交涉。</li>
+          <li>給予老蛇 <b>5 點信仰</b> 提升好感，老蛇打開鐵柵欄門。</li>
+          <li>走入後方黑暗祭壇，在祭壇案台上即可拾取<b>「守墓人日記」</b>，帶回燈塔交給占星家。</li>
+        </ol>
+      </div>
+    </div>
 
     <!-- 1. 開荒新手避坑 -->
     <div class="card" data-cat="beginner" data-keywords="新手 開局 避坑 驢子 胡蘿蔔 體力 墓園評分 傳送石 磨刀石">
@@ -301,7 +409,7 @@
 
         <p><span class="highlight-text">二、標準 12 白 0 紅必成注射 SOP（無 DLC）：</span></p>
         <ol>
-          <li><b>篩選屍體：</b>送來的屍體天生必須有 $\ge 2$ 顆紅骷髏，且白骷髏 $\ge 4$。</li>
+          <li><b>篩選屍體：</b>送來的屍體天生必須有 ≥ 2 顆紅骷髏，且白骷髏 ≥ 4。</li>
           <li><b>切勿提前動刀：</b>先搬上防腐台，依序注入：
             <br>① <b>鹼性注射液</b> (+1紅, +1白)
             <br>② <b>膠水注射液</b> (+1白)
@@ -354,28 +462,32 @@
       </div>
     </div>
 
-    <!-- 10. 地牢 1-15 層 -->
-    <div class="card" data-cat="dungeon" data-keywords="地牢 15層 血杯 骨頭鑰匙 怪物 鋼劍 鑽石 金礦 硫磺 銀礦">
+    <!-- 10. 地牢 1-15 層與地圖捷徑 -->
+    <div class="card" data-cat="dungeon" data-keywords="地牢 15層 血杯 骨頭鑰匙 怪物 鋼劍 鑽石 金礦 硫磺 銀礦 路障 採石場 捷徑">
       <div class="card-header">
         <div class="card-title-group">
-          <span class="card-title">地下地牢（迷宮）1-15 層全怪物掉落與通關裝備</span>
+          <span class="card-title">地下迷宮 1-15 層掉落與全圖捷徑路障打通指南</span>
           <span class="tag">地牢探索與地圖捷徑</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
+        <p><span class="highlight-text">一、地牢物產與怪物分佈：</span></p>
         <ul>
-          <li><b>開啟方法：</b>完成老蛇前置，使用占星家的金鑰匙藍圖 + 頭骨做成骨頭鑰匙開門。</li>
-          <li><b>層數物產分佈：</b>
-            <ul>
-              <li><b>1 - 4 層：</b>蝙蝠、綠色史萊姆。主要掉落蝙蝠翅膀、果凍與鐵礦石。</li>
-              <li><b>5 層：</b>祭壇固定寶箱，拾取老蛇主線道具<b>血杯 (Cup of Blood)</b>。</li>
-              <li><b>6 - 10 層：</b>出現重甲幽靈與蜘蛛，主要掉落蜘蛛網、硫磺與<b>銀礦石</b>。</li>
-              <li><b>11 - 15 層：</b>高階魔物與黑史萊姆，大量產出<b>金礦石</b>與<b>鑽石 (Diamond)</b>（打造金星珠寶必備）。</li>
-            </ul>
-          </li>
-          <li><b>推薦戰鬥配置：</b>手持<b>鋼劍</b>，身上穿戴鐵甲，快捷欄常備 20 個洋蔥圈或 10 瓶止血藥水。</li>
+          <li><b>1 - 4 層：</b>蝙蝠、綠色史萊姆。主要掉落蝙蝠翅膀、果凍與鐵礦石。</li>
+          <li><b>5 層：</b>祭壇固定寶箱，拾取老蛇主線道具<b>血杯 (Cup of Blood)</b>。</li>
+          <li><b>6 - 10 層：</b>重甲幽靈與蜘蛛，掉落蜘蛛網、硫磺與<b>銀礦石</b>。</li>
+          <li><b>11 - 15 層：</b>高階魔物與黑史萊姆，大量產出<b>金礦石</b>與<b>鑽石 (Diamond)</b>。</li>
+          <li><b>推薦戰鬥配置：</b>手持鋼劍，身上穿戴鐵甲，快捷欄常備 20 個洋蔥圈或 10 瓶止血藥水。</li>
         </ul>
+        <p><span class="highlight-text">二、全圖關鍵捷徑解鎖材料：</span></p>
+        <table>
+          <tr><th>路障地點</th><th>連通捷徑</th><th>需要材料</th></tr>
+          <tr><td><b>自家地窖右側瓦礫</b></td><td>直達教堂地下室與老蛇密室</td><td>木楔×2、木板×4、簡單鐵件×4</td></tr>
+          <tr><td><b>西北森林木橋</b></td><td>直通無限採石場與煤礦區</td><td>木板×4、木樑×2、複雜鐵件×2</td></tr>
+          <tr><td><b>教堂西邊河道木橋</b></td><td>連接女巫嶺西側與泥炭沼澤</td><td>木板×6、木材×3、釘子×10</td></tr>
+          <tr><td><b>自家南邊沼澤修復道</b></td><td>直通女巫克洛索小屋</td><td>木板×6、木楔×4、釘子×8</td></tr>
+        </table>
       </div>
     </div>
 
@@ -391,10 +503,8 @@
       <div class="card-body">
         <ul>
           <li><span class="highlight-text">前期（火葬證明）：</span>每具不適合下葬的屍體拉去火葬場，拿到一張埋葬證明直接賣給酒館老闆換取 1 銀 50 銅。</li>
-          <li><span class="highlight-text">中期（煤炭燒石墨）：</span>
-            <br>去西北採石場無限挖煤炭，在二級熔爐燒製成<b>石墨 (Graphite)</b>，大量賣給鐵匠（價格幾乎不隨銷量遞減貶值），單次穩定撈幾十銀幣。</li>
-          <li><span class="highlight-text">後期（金星葡萄酒與蔬菜箱）：</span>
-            <br>女巫嶺種植葡萄，地窖釀造成金星葡萄酒，每週賣給酒館老闆；在花園包裝金星南瓜/洋蔥箱出口給商人，每週被動收入 2~4 枚金幣。</li>
+          <li><span class="highlight-text">中期（煤炭燒石墨）：</span>去西北採石場挖煤炭，在二級熔爐燒製成<b>石墨 (Graphite)</b>大量賣給鐵匠（價格不隨銷量遞減貶值），單次穩定賺取幾十銀幣。</li>
+          <li><span class="highlight-text">後期（金星葡萄酒與蔬菜箱）：</span>女巫嶺種植葡萄，地窖釀造金星葡萄酒賣給酒館老闆；在花園包裝金星南瓜/洋蔥箱出口給商人，每週被動入帳 2~4 枚金幣。</li>
         </ul>
       </div>
     </div>
@@ -410,13 +520,16 @@
     const cards = document.querySelectorAll('.card');
     const emptyState = document.getElementById('emptyState');
     let currentCategory = 'all';
+    let isComposing = false; // 追蹤輸入法組字狀態
 
+    // 點擊標題手動收合/展開
     cards.forEach(card => {
       card.querySelector('.card-header').addEventListener('click', () => {
         card.classList.toggle('open');
       });
     });
 
+    // 類別過濾
     categoryBar.addEventListener('click', (e) => {
       if (!e.target.classList.contains('cat-btn')) return;
       catButtons.forEach(btn => btn.classList.remove('active'));
@@ -425,23 +538,46 @@
       filterCards();
     });
 
-    searchInput.addEventListener('input', filterCards);
+    // 解決中文/注音輸入法未選字前觸發的 bug
+    searchInput.addEventListener('compositionstart', () => { isComposing = true; });
+    searchInput.addEventListener('compositionend', () => { 
+      isComposing = false; 
+      filterCards(); 
+    });
+    searchInput.addEventListener('input', () => {
+      if (!isComposing) filterCards();
+    });
 
     function filterCards() {
-      const q = searchInput.value.trim().toLowerCase();
+      // 正規化過濾空白與大小寫
+      const q = searchInput.value.replace(/\u00a0/g, ' ').trim().toLowerCase();
       let count = 0;
+
       cards.forEach(card => {
         const cat = card.getAttribute('data-cat');
-        const kw = (card.getAttribute('data-keywords') + ' ' + card.innerText).toLowerCase();
+        const kwAttr = card.getAttribute('data-keywords') || '';
+        const cardText = card.innerText || '';
+        const allText = (kwAttr + ' ' + cardText).toLowerCase();
+
         const matchesCat = (currentCategory === 'all' || cat === currentCategory);
-        const matchesQ = !q || kw.includes(q);
+        const matchesQ = (!q || allText.includes(q));
+
         if (matchesCat && matchesQ) {
-          card.style.display = 'block'; count++;
+          card.style.display = 'block';
+          count++;
+          // 搜尋有字時自動展開內容，方便查閱；若清空搜尋則恢復預設折疊
+          if (q) {
+            card.classList.add('open');
+          } else {
+            card.classList.remove('open');
+          }
         } else {
           card.style.display = 'none';
+          card.classList.remove('open');
         }
       });
-      emptyState.style.display = count === 0 ? 'block' : 'none';
+
+      emptyState.style.display = (count === 0) ? 'block' : 'none';
     }
   </script>
 </body>
