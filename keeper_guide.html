@@ -128,20 +128,20 @@
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>全系統收錄：各類素材加工配方、官方六日行事曆、地下室擺設圖、種子循環、解剖防腐與主線全攻略</p>
+    <p>全系統收錄：各類素材加工配方、鍊金原料取得地點、官方六日行事曆、地下室擺設圖、解剖防腐與主線全攻略</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「材料作法」、「木樑」、「鐵件」、「Pride」、「胡蘿蔔」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「鍊金材料」、「地點」、「硫磺」、「木樑」、「胡蘿蔔」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
       <button class="cat-btn" data-cat="tech">材料作法與加工配方</button>
+      <button class="cat-btn" data-cat="alchemy">鍊金拆解與全藥劑</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
       <button class="cat-btn" data-cat="church">教堂與地窖專題</button>
       <button class="cat-btn" data-cat="npc">全NPC完整任務鏈</button>
       <button class="cat-btn" data-cat="mainquest">主線道具與材料</button>
       <button class="cat-btn" data-cat="corpse">解剖防腐與墓園評分</button>
-      <button class="cat-btn" data-cat="alchemy">鍊金拆解與全藥劑</button>
       <button class="cat-btn" data-cat="dungeon">地牢探索與地圖捷徑</button>
       <button class="cat-btn" data-cat="economy">農業經營與賺錢套路</button>
     </div>
@@ -200,7 +200,65 @@
       </div>
     </div>
 
-    <!-- 1. 胡蘿蔔種子循環專題 -->
+    <!-- 鍊金原料拆解與全藥劑 + 下方加入取得方式及地點 -->
+    <div class="card" data-cat="alchemy" data-keywords="鍊金 原料 研磨 粉末 溶液 精華 黑色顏料 白色顏料 提速藥 酸 鹼性 金色 取得方式 地點 掉落 硫磺 蛆 蜘蛛網 蝴蝶 蛾 啤酒花 大麻 蜂蠟">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">鍊金原料全拆解對照、藥劑配方與各材料取得地點一覽</span>
+          <span class="tag">鍊金拆解與全藥劑</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、原料加工拆解三態表（研磨機／攪拌機／蒸餾器）：</span></p>
+        <table>
+          <tr><th>素材名稱</th><th>研磨機（產出粉末）</th><th>攪拌機（產出溶液）</th><th>蒸餾器（產出精華）</th></tr>
+          <tr><td>作物廢料 / 南瓜</td><td>健康粉末</td><td>—</td><td>健康精華 (限南瓜)</td></tr>
+          <tr><td>捲心菜 / 胡蘿蔔</td><td>健康粉末 (捲心菜)</td><td>健康溶液</td><td>—</td></tr>
+          <tr><td>紅蘑菇 / 洋蔥</td><td>毒性粉末</td><td>毒性溶液 (紅菇)</td><td>毒性精華 (洋蔥)</td></tr>
+          <tr><td>蜘蛛網 / 啤酒花</td><td>減速粉末</td><td>減速溶液 (啤酒花)</td><td>減速精華 (蜘蛛網)</td></tr>
+          <tr><td>蜂蠟 / 脂肪</td><td>—</td><td>減速溶液</td><td>減速精華 (蜂蠟)</td></tr>
+          <tr><td>大麻 / 蜂蜜</td><td>加速粉末</td><td>加速溶液</td><td>加速精華 (限大麻)</td></tr>
+          <tr><td>腸子 / 硫磺</td><td>生命粉末</td><td>—</td><td>—</td></tr>
+          <tr><td>腦髓 / 蛆 / 黃花</td><td>—</td><td>生命溶液</td><td>生命精華 (蛆、黃花)</td></tr>
+          <tr><td>蝙蝠翅膀 / 蛾</td><td>混亂粉末 (翅膀)</td><td>混亂溶液</td><td>混亂精華 (蛾)</td></tr>
+          <tr><td>骨頭 / 石灰石</td><td>白色粉末</td><td>—</td><td>—</td></tr>
+        </table>
+
+        <p><span class="highlight-text">二、核心重要藥劑合成配方：</span></p>
+        <ul>
+          <li><b>黑色顏料：</b>灰燼 + 水（或碳黑 + 油）。墨水原料。</li>
+          <li><b>提速藥水：</b>加速粉末 + 混亂溶液 + 血液。大幅提升跑圖速度。</li>
+          <li><b>酸液：</b>毒性粉末 + 混亂溶液。占星家任務與開箱必備。</li>
+          <li><b>鹼性注射液：</b>鹼性試劑 (生命粉末 + 毒性溶液 + 水) + 血液 + 水。</li>
+          <li><b>銀色注射液：</b>銀色長生不老藥 (銀粉 + 秩序溶液 + 生命精華) + 血液 + 水。</li>
+          <li><b>金色注射液：</b>金色長生不老藥 (金粉 + 毒性溶液 + 混亂精華) + 血液 + 水。</li>
+        </ul>
+
+        <p><span class="highlight-text">三、各鍊金素材來源、取得方式及刷新地點全清單：</span></p>
+        <table>
+          <tr><th>材料名稱</th><th>取得方式</th><th>具體刷新地點 / 獲取 NPC</th></tr>
+          <tr><td><b>作物廢料</b></td><td>收成農田作物時額外掉落</td><td>自家菜園 / 殭屍農場</td></tr>
+          <tr><td><b>南瓜 / 捲心菜 / 洋蔥 / 胡蘿蔔</b></td><td>農田種植採收，或直接購買</td><td>種子向村莊南邊<b>農夫</b>購買，於菜園種植</td></tr>
+          <tr><td><b>紅蘑菇 (毒蘑菇)</b></td><td>徒手野外採集</td><td>沼澤地帶、北方森林樹蔭下大量生長</td></tr>
+          <tr><td><b>黃花 / 白花</b></td><td>徒手野外採集</td><td>墓園四周草地、自家門前小徑（白天採集）</td></tr>
+          <tr><td><b>蛾 (Moths)</b></td><td>採集花朵機率抓取</td><td><b>夜間</b>採集野外花朵時機率獲得（需點昆蟲技能）</td></tr>
+          <tr><td><b>蝴蝶 (Butterflies)</b></td><td>採集花朵機率抓取</td><td><b>白天</b>採集野外花朵時機率獲得（需點昆蟲技能）</td></tr>
+          <tr><td><b>蛆 (Maggot)</b></td><td>堆肥箱分解殘留</td><td>在自家菜園堆肥箱放入作物廢料分解發酵後獲得</td></tr>
+          <tr><td><b>大麻 (Hemp)</b></td><td>種植或購買</td><td>村莊西南方<b>迪格 (Dig)</b>（流浪漢帳篷）處購買種子或成株</td></tr>
+          <tr><td><b>啤酒花 (Hops)</b></td><td>種植或向磨坊主購買</td><td>村莊北邊<b>磨坊主</b>處購買種子，女巫嶺/藤架種植</td></tr>
+          <tr><td><b>蜂蠟 / 蜂蜜</b></td><td>採集野生蜂窩，或自家養蜂</td><td>村莊北邊森林樹上的野生蜂窩，或向養蜂人購買</td></tr>
+          <tr><td><b>蜘蛛網</b></td><td>擊殺蜘蛛怪物掉落</td><td>地下迷宮（地牢）6～10層；女巫沼澤廢墟</td></tr>
+          <tr><td><b>蝙蝠翅膀</b></td><td>擊殺蝙蝠掉落</td><td><b>夜間</b>自家周圍樹林徘徊；地下迷宮 1～4 層</td></tr>
+          <tr><td><b>硫磺 (Sulfur)</b></td><td>擊殺高階魔物掉落</td><td>地下迷宮（地牢）6～10 層怪物掉落</td></tr>
+          <tr><td><b>石灰石 (Limestone)</b></td><td>用鐵鎬開採礦壁</td><td>西北<b>採石場</b>下方的石灰石礦壁</td></tr>
+          <tr><td><b>金粉 / 銀粉</b></td><td>鍊金軋機研磨金錠/銀錠</td><td>採石場開採或地牢 11～15 層開採金礦/銀礦後熔煉研磨</td></tr>
+          <tr><td><b>血液 / 脂肪 / 腸子 / 腦髓 / 骨頭</b></td><td>解剖屍體切除</td><td>停屍間解剖台（切除對應器官提取）</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 胡蘿蔔種子循環專題 -->
     <div class="card" data-cat="economy" data-keywords="胡蘿蔔 種子 買 循環 肥料 泥炭 農業天才 驢子 餵食 越種越多 自給自足">
       <div class="card-header">
         <div class="card-title-group">
@@ -224,7 +282,7 @@
       </div>
     </div>
 
-    <!-- 2. 教堂地下室最佳擺設（含 GitHub 直連圖） -->
+    <!-- 教堂地下室最佳擺設（含 GitHub 直連圖） -->
     <div class="card" data-cat="church" data-keywords="教堂地下室 推薦擺設 附圖 圖片 佈局 研究台 寫作書桌 鍊金工作台 研磨機 攪拌機 蒸餾器 捲軸架 建造模式 箱子 擺法">
       <div class="card-header">
         <div class="card-title-group">
@@ -264,7 +322,7 @@
       </div>
     </div>
 
-    <!-- 3. 原版一週六天官方對照表 -->
+    <!-- 原版一週六天官方對照表 -->
     <div class="card" data-cat="faq" data-keywords="NPC 日子 時間 星期幾 官方 正確 截圖 Pride Lust Gluttony Envy Wrath Sloth 驕傲 情慾 暴食 嫉妒 憤怒 懶惰 主教 查美 商人 老蛇 裁判官 審判官 占星家">
       <div class="card-header">
         <div class="card-title-group">
@@ -287,7 +345,7 @@
       </div>
     </div>
 
-    <!-- 4. 正北方山道落石瓦礫指南 -->
+    <!-- 正北方山道落石瓦礫指南 -->
     <div class="card" data-cat="faq" data-keywords="正北方 過不去 落石 瓦礫 滑坡 山壁 峽谷 清理 木楔 木板 簡單鐵件 採石場必經">
       <div class="card-header">
         <div class="card-title-group">
@@ -314,7 +372,7 @@
       </div>
     </div>
 
-    <!-- 5. 水與水桶取得方式 -->
+    <!-- 水與水桶取得方式 -->
     <div class="card" data-cat="faq" data-keywords="水 哪裡拿 哪裡取得 水井 水桶 水滴 背包 使用 分解 空桶 燒瓶 麵團 鍊金">
       <div class="card-header">
         <div class="card-title-group">
@@ -341,7 +399,7 @@
       </div>
     </div>
 
-    <!-- 6. 釘子與印章 -->
+    <!-- 釘子與印章 -->
     <div class="card" data-cat="faq" data-keywords="釘子 印章 鐵匠 皇家守衛 老蛇 偽造 鍛造 鐵錠 肉類 審批 哪裡拿 哪裡找">
       <div class="card-header">
         <div class="card-title-group">
@@ -365,7 +423,7 @@
       </div>
     </div>
 
-    <!-- 7. 解鎖鐵匠與進入地下室 -->
+    <!-- 解鎖鐵匠與進入地下室 -->
     <div class="card" data-cat="faq" data-keywords="解鎖鐵匠 史萊姆 鐵砧 熔爐 進入教堂地下室 地窖 捷徑 瓦礫 墓園5分 太陽日 怎麼進">
       <div class="card-header">
         <div class="card-title-group">
@@ -391,7 +449,7 @@
       </div>
     </div>
 
-    <!-- 8. 血書與死靈之書 -->
+    <!-- 血書與死靈之書 -->
     <div class="card" data-cat="faq" data-keywords="血書 死靈之書 沾血的書 老蛇 占星家 黑暗之書 人皮紙 血液 製作 怎麼做 達成">
       <div class="card-header">
         <div class="card-title-group">
@@ -416,7 +474,7 @@
       </div>
     </div>
 
-    <!-- 9. 教堂裝飾與佈道全攻略 -->
+    <!-- 教堂裝飾與佈道全攻略 -->
     <div class="card" data-cat="church" data-keywords="教堂裝飾 佈道 禱文 信仰 內部評分 講台 告解室 長椅 燭台 香爐 蠟燭 卓越信心 組合禱文 宣教 捐款 Pride 驕傲之日">
       <div class="card-header">
         <div class="card-title-group">
@@ -449,7 +507,7 @@
       </div>
     </div>
 
-    <!-- 10. 採石場前置條件與木橋修復 -->
+    <!-- 採石場前置條件與木橋修復 -->
     <div class="card" data-cat="faq" data-keywords="採石場 條件 前置 科技 木樑 複雜鐵件 鎬子 傳送石 木工 鍛造 圓鋸 避坑 木橋">
       <div class="card-header">
         <div class="card-title-group">
@@ -474,7 +532,7 @@
       </div>
     </div>
 
-    <!-- 11. 石橋通往哪裡與修復指南 -->
+    <!-- 石橋通往哪裡與修復指南 -->
     <div class="card" data-cat="faq" data-keywords="石橋 通往哪裡 損壞的石橋 沼澤 女巫 克洛索 止嗝草 鐵礦 泥炭 修復材料 側板 木板 釘子">
       <div class="card-header">
         <div class="card-title-group">
@@ -496,7 +554,7 @@
       </div>
     </div>
 
-    <!-- 12. 火葬場建造數量與消耗規則 -->
+    <!-- 火葬場建造數量與消耗規則 -->
     <div class="card" data-cat="faq" data-keywords="火葬場 建造 數量 四個 單獨 一個 槽位 木柴 消耗品 重複使用 柴堆 灰燼">
       <div class="card-header">
         <div class="card-title-group">
@@ -515,7 +573,7 @@
       </div>
     </div>
 
-    <!-- 13. 宣傳單製作全流程 -->
+    <!-- 宣傳單製作全流程 -->
     <div class="card" data-cat="faq" data-keywords="審判官 宣傳單 傳單 怎麼做 製作 書桌 作家 墨水 羽毛筆 乾淨紙張 10張">
       <div class="card-header">
         <div class="card-title-group">
@@ -535,7 +593,7 @@
       </div>
     </div>
 
-    <!-- 14. 全NPC六大任務鏈 -->
+    <!-- 全NPC六大任務鏈 -->
     <div class="card" data-cat="npc" data-keywords="主教 查美夫人 商人 老蛇 審判官 占星家 全任務 流程 神器 主線">
       <div class="card-header">
         <div class="card-title-group">
@@ -554,7 +612,7 @@
       </div>
     </div>
 
-    <!-- 15. 主線六大神器與傳送門 -->
+    <!-- 主線六大神器與傳送門 -->
     <div class="card" data-cat="mainquest" data-keywords="主線 道具 材料 獲得方式 製作方式 傳送門 六大物品 光明十字架 死刑犯契約 永恆之鏡 金色角 項鍊 永恆之鹽 發射器 槍管">
       <div class="card-header">
         <div class="card-title-group">
@@ -578,7 +636,7 @@
       </div>
     </div>
 
-    <!-- 16. 屍體解剖防腐數學全矩陣 -->
+    <!-- 屍體解剖防腐數學全矩陣 -->
     <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 16白 26白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏 範圍 小於等於2 大於等於2">
       <div class="card-header">
         <div class="card-title-group">
@@ -607,41 +665,7 @@
       </div>
     </div>
 
-    <!-- 17. 鍊金全拆解庫 -->
-    <div class="card" data-cat="alchemy" data-keywords="鍊金 原料 研磨 粉末 溶液 精華 黑色顏料 白色顏料 提速藥 酸 殭屍果汁 鹼性 金色 長生不老藥">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">鍊金原料全拆解對照與藥劑配方全表</span>
-          <span class="tag">鍊金拆解與全藥劑</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <table>
-          <tr><th>素材名稱</th><th>研磨機（產出粉末）</th><th>攪拌機（產出溶液）</th><th>蒸餾器（產出精華）</th></tr>
-          <tr><td>作物廢料 / 南瓜</td><td>健康粉末</td><td>—</td><td>健康精華 (限南瓜)</td></tr>
-          <tr><td>捲心菜 / 胡蘿蔔</td><td>健康粉末 (捲心菜)</td><td>健康溶液</td><td>—</td></tr>
-          <tr><td>紅蘑菇 / 洋蔥</td><td>毒性粉末</td><td>毒性溶液 (紅菇)</td><td>毒性精華 (洋蔥)</td></tr>
-          <tr><td>蜘蛛網 / 啤酒花</td><td>減速粉末</td><td>減速溶液 (啤酒花)</td><td>減速精華 (蜘蛛網)</td></tr>
-          <tr><td>蜂蠟 / 脂肪</td><td>—</td><td>減速溶液</td><td>減速精華 (蜂蠟)</td></tr>
-          <tr><td>大麻 / 蜂蜜</td><td>加速粉末</td><td>加速溶液</td><td>加速精華 (限大麻)</td></tr>
-          <tr><td>腸子 / 硫磺</td><td>生命粉末</td><td>—</td><td>—</td></tr>
-          <tr><td>腦髓 / 蛆 / 黃花</td><td>—</td><td>生命溶液</td><td>生命精華 (蛆、黃花)</td></tr>
-          <tr><td>蝙蝠翅膀 / 蛾</td><td>混亂粉末 (翅膀)</td><td>混亂溶液</td><td>混亂精華 (蛾)</td></tr>
-          <tr><td>骨頭 / 石灰石</td><td>白色粉末</td><td>—</td><td>—</td></tr>
-        </table>
-        <p><span class="highlight-text">★ 必備重要藥劑合成：</span></p>
-        <ul>
-          <li><b>黑色顏料：</b>灰燼 + 水（或碳黑 + 油）。墨水原料。</li>
-          <li><b>提速藥水：</b>加速粉末 + 混亂溶液 + 血液。大幅提升跑步速度。</li>
-          <li><b>酸液：</b>毒性粉末 + 混亂溶液。任務與開箱必備。</li>
-          <li><b>鹼性注射液：</b>鹼性試劑 (生命粉末+毒性溶液+水) + 血液 + 水。</li>
-          <li><b>金色注射液：</b>金色長生不老藥 (金粉+毒性溶液+混亂精華) + 血液 + 水。</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 18. 地牢 1-15 層與地圖捷徑 -->
+    <!-- 地牢 1-15 層與地圖捷徑 -->
     <div class="card" data-cat="dungeon" data-keywords="地牢 15層 血杯 骨頭鑰匙 怪物 鋼劍 鑽石 金礦 硫磺 銀礦 路障 採石場 捷徑">
       <div class="card-header">
         <div class="card-title-group">
@@ -661,7 +685,7 @@
       </div>
     </div>
 
-    <!-- 19. 農業經營與賺錢套路 -->
+    <!-- 農業經營與賺錢套路 -->
     <div class="card" data-cat="economy" data-keywords="賺錢 石墨 葡萄酒 蔬菜箱 貿易 肥料 泥炭 金幣 鐵匠 挖掘許可 埋葬證明">
       <div class="card-header">
         <div class="card-title-group">
