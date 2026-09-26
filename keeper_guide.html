@@ -25,6 +25,7 @@
       --red: #bf616a;
       --green: #a3be8c;
       --blue: #88c0d0;
+      --gold: #d08770;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
@@ -94,20 +95,63 @@
     th, td { border: 1px solid var(--card-border); padding: 6px; text-align: left; }
     th { background-color: var(--tag-bg); color: var(--highlight); }
     .empty-state { text-align: center; padding: 35px; color: var(--text-muted); display: none; }
+
+    /* 教堂擺設可視化框 */
+    .church-map {
+      background: #090a0d;
+      border: 1px dashed var(--accent);
+      border-radius: 8px;
+      padding: 10px;
+      margin: 8px 0;
+      font-family: monospace;
+      font-size: 0.76rem;
+      text-align: center;
+      line-height: 1.4;
+      color: var(--blue);
+    }
+    .church-map .altar {
+      display: inline-block;
+      padding: 4px 18px;
+      background: var(--tag-bg);
+      border: 1px solid var(--highlight);
+      color: var(--highlight);
+      font-weight: bold;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .church-grid {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .church-col {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .church-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 3px;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>玩家提問全收錄：水哪裡取得、北邊山道落石、採石場條件、石橋、火葬場數量、墨水筆、黑色顏料與鍊金全書</p>
+    <p>玩家提問全收錄：教堂裝飾與佈道、水哪裡取得、北邊山道落石、採石場條件、石橋、火葬場數量、墨水筆、黑色顏料與鍊金全書</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「水」、「水井」、「落石」、「採石場」、「木橋」、「石橋」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「教堂裝飾」、「佈道」、「禱文」、「水」、「落石」、「採石場」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
+      <button class="cat-btn" data-cat="church">教堂與佈道專題</button>
       <button class="cat-btn" data-cat="mainquest">主線道具與材料</button>
       <button class="cat-btn" data-cat="tech">七大科技與生產流水線</button>
       <button class="cat-btn" data-cat="npc">全NPC完整任務鏈</button>
@@ -119,6 +163,71 @@
   </div>
 
   <div class="guide-list" id="guideList">
+
+    <!-- FAQ -13: 教堂裝飾與佈道全攻略 -->
+    <div class="card" data-cat="church" data-keywords="教堂裝飾 佈道 禱文 信仰 內部評分 講台 告解室 長椅 燭台 香爐 蠟燭 卓越信心 組合禱文 太陽日 捐款">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">專題攻略：教堂內部裝飾擺設、評分衝高與全禱文佈道指引</span>
+          <span class="tag">教堂與佈道專題</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、核心公式機制：</span></p>
+        <ul>
+          <li><b>室內教堂評分：</b>決定佈道成功率，並決定噴出的<b>「紫色信仰光球數量」</b>。</li>
+          <li><b>室外墓園評分：</b>決定週日信徒給你的<b>「金錢打賞金額」</b>。</li>
+          <li><b>禱文推薦評分門檻：</b>若教堂分數低於禱文需求，佈道容易失敗（信徒嘆氣離場，只掉 1 信仰且無錢）。</li>
+        </ul>
+
+        <p><span class="highlight-text">二、大教堂內部最佳空間佈局示意圖：</span></p>
+        <div class="church-map">
+          <div>▲ 主教站立與講台區 ▲</div>
+          <div class="altar">【 講台 (Pulpit) 】</div>
+          <div class="church-grid">
+            <div class="church-col">
+              <div class="church-item">[左側香爐]</div>
+              <div class="church-item">[燭台 / 牆燈]</div>
+              <div class="church-item">[長椅 I / II]</div>
+              <div class="church-item">[長椅 I / II]</div>
+              <div class="church-item">[告解室 II]</div>
+            </div>
+            <div class="church-col">
+              <div class="church-item">[右側香爐]</div>
+              <div class="church-item">[燭台 / 牆燈]</div>
+              <div class="church-item">[長椅 I / II]</div>
+              <div class="church-item">[長椅 I / II]</div>
+              <div class="church-item">[告解室 II]</div>
+            </div>
+          </div>
+          <div style="margin-top:6px; color:var(--text-muted);">▼ 教堂大門入口 ▼</div>
+        </div>
+
+        <p><span class="highlight-text">三、關鍵裝飾物件評分加成表：</span></p>
+        <table>
+          <tr><th>建築設施</th><th>常規評分</th><th>點火額外加成</th><th>特殊功能</th></tr>
+          <tr><td><b>告解室 II</b></td><td><b>+5</b></td><td>—</td><td>信徒會自行懺悔，點擊直接獲得<b>信仰 + 故事</b></td></tr>
+          <tr><td><b>教堂長椅 II</b></td><td><b>+3</b></td><td>—</td><td>左右兩側排滿，性價比最高的常駐基礎分</td></tr>
+          <tr><td><b>大理石香爐</b></td><td><b>+3</b></td><td>點燃香精 <b>+7</b></td><td>週日佈道前點燃，限時大幅暴衝評分</td></tr>
+          <tr><td><b>壁掛燭台 / 燭台 II</b></td><td><b>+2</b></td><td>插白蠟燭 <b>+4~+6</b></td><td>插上蜂蠟或脂肪製作的蠟燭，佈道時生效</td></tr>
+          <tr><td><b>彩繪玻璃窗</b></td><td><b>+4</b></td><td>—</td><td>大教堂後期將破窗替換，永久加分</td></tr>
+        </table>
+
+        <p><span class="highlight-text">四、全階段實用禱文推薦（書桌合成）：</span></p>
+        <ol>
+          <li><b>前期過渡 —— 非正式祈禱 (Casual Prayer)：</b>
+            <br>主教免費贈送，要求評分 5，產出基礎信仰與零錢。
+          </li>
+          <li><b>中期核心印點機 —— 卓越信心禱文 (Prayer for Faith)：</b>
+            <br>要求評分 20 ~ 30。<b>信仰產出直接翻倍！</b>一次週日可入帳 30~50+ 信仰，解鎖科技與防腐必備。
+          </li>
+          <li><b>後期終極印鈔機 —— 卓越組合禱文 (Combo Prayer)：</b>
+            <br>要求評分 50 ~ 60+。<b>同時獲得翻倍信仰與巨額捐款！</b>後期墓園 200+ 分時，一次佈道可拿數枚金幣。
+          </li>
+        </ol>
+      </div>
+    </div>
 
     <!-- FAQ -12: 水與水桶取得方式 -->
     <div class="card" data-cat="faq" data-keywords="水 哪裡拿 哪裡取得 水井 水桶 水滴 背包 使用 分解 空桶 燒瓶 麵團 鍊金">
