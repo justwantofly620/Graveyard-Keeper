@@ -6,11 +6,6 @@
   <meta name="referrer" content="no-referrer">
   <title>守墓人 (Graveyard Keeper) 攻略大全百科庫</title>
   
-  <link rel="icon" type="image/png" href="icon.png">
-  <link rel="apple-touch-icon" href="icon.png">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  
   <style>
     :root {
       --bg: #0d0f14;
@@ -23,9 +18,6 @@
       --text-muted: #707b91;
       --highlight: #ebcb8b;
       --tag-bg: #1c2130;
-      --red: #bf616a;
-      --green: #a3be8c;
-      --blue: #88c0d0;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
@@ -96,7 +88,6 @@
     th { background-color: var(--tag-bg); color: var(--highlight); }
     .empty-state { text-align: center; padding: 35px; color: var(--text-muted); display: none; }
 
-    /* 附圖容器 */
     .guide-image-container {
       margin: 10px 0;
       text-align: center;
@@ -118,10 +109,6 @@
       color: var(--text-muted);
       margin-top: 6px;
     }
-    .image-caption a {
-      color: var(--accent-hover);
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
@@ -142,15 +129,13 @@
       <button class="cat-btn" data-cat="church">教堂與地窖專題</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
       <button class="cat-btn" data-cat="npc">全NPC完整任務鏈</button>
-      <button class="cat-btn" data-cat="mainquest">主線道具與材料</button>
       <button class="cat-btn" data-cat="corpse">解剖防腐與墓園評分</button>
-      <button class="cat-btn" data-cat="dungeon">地牢探索與地圖捷徑</button>
     </div>
   </div>
 
   <div class="guide-list" id="guideList">
 
-    <!-- 0. 高品質農作物提交專題（附農夫種子介面圖） -->
+    <!-- 0. 高品質農作物提交專題 -->
     <div class="card" data-cat="economy" data-keywords="高品質農作物 提交 商人 銀星 金星 捲心菜 胡蘿蔔 甜菜根 肥料 質量肥料 暴食之日 任務 蔬菜 附圖 照片">
       <div class="card-header">
         <div class="card-title-group">
@@ -162,10 +147,10 @@
       <div class="card-body">
         <div class="guide-image-container">
           <img class="guide-image" 
-               src="https://i.redd.it/rsi28f6jxfm41.jpg" 
-               alt="農夫種子商人交易介面" 
+               src="https://preview.redd.it/where-can-i-sell-any-crops-nobody-buys-them-v0-kk7vhg1qudwg1.png?auto=webp&s=b2b0ffbf322fca29eec0d7b46444f3fb157502a2" 
+               alt="農夫種子與作物星級介面" 
                onclick="window.open(this.src)">
-          <div class="image-caption">▲ 村莊農夫升級至 Tier II 後開始常駐販售各星級高階種子</div>
+          <div class="image-caption">▲ 農作物箱子與帶星級高階作物（銀星與金星標示）</div>
         </div>
 
         <p><span class="highlight-text">一、任務需求清單（商人 Gluttony Ὣ 暴食之日）：</span></p>
@@ -188,7 +173,7 @@
       </div>
     </div>
 
-    <!-- 1. 壓榨設施與油脂取得（附地窖壓榨機佈局圖） -->
+    <!-- 1. 壓榨設施與油脂取得 -->
     <div class="card" data-cat="tech" data-keywords="壓榨機 榨汁機 油 脂肪 大麻籽 地窖 葡萄酒 釀酒桶 藍圖 附圖 照片 配方">
       <div class="card-header">
         <div class="card-title-group">
@@ -198,14 +183,6 @@
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <div class="guide-image-container">
-          <img class="guide-image" 
-               src="https://preview.redd.it/opinions-on-cellar-layout-please-v0-gtm18208921a1.png?width=600&format=png&auto=webp&s=3a714bbad04a5268704f3b28d0ca403457a87add" 
-               alt="地窖壓榨機與酒桶擺設" 
-               onclick="window.open(this.src)">
-          <div class="image-caption">▲ 地窖建造模式：左側木質榨汁機（Vine press）與釀酒桶配置佈局</div>
-        </div>
-
         <p><span class="highlight-text">一、科技與建材：</span></p>
         <ul>
           <li><b>前置科技：</b>科技樹「農業/自然」分支解鎖<b>「釀酒 (Winemaking)」</b>（消耗 25 紅點 + 10 綠點）。</li>
@@ -222,7 +199,7 @@
       </div>
     </div>
 
-    <!-- 2. 葡萄園與女巫嶺地圖（附地圖圖解） -->
+    <!-- 2. 葡萄園與女巫嶺地圖 -->
     <div class="card" data-cat="economy" data-keywords="葡萄園 女巫嶺 葡萄種子 審判官 憤怒之日 地圖 位置 附圖 照片 燃燒的房子">
       <div class="card-header">
         <div class="card-title-group">
@@ -250,7 +227,7 @@
       </div>
     </div>
 
-    <!-- 3. 鍊金原料拆解與全藥劑（附官方配方總表） -->
+    <!-- 3. 鍊金配方全覽 -->
     <div class="card" data-cat="alchemy" data-keywords="鍊金 原料 配方表 總表 速查 黑色顏料 溶液 精華 粉末 附圖 照片 避坑 灰燼 水">
       <div class="card-header">
         <div class="card-title-group">
@@ -282,7 +259,7 @@
       </div>
     </div>
 
-    <!-- 4. 教堂地下室最佳擺設（附配置圖） -->
+    <!-- 4. 教堂地下室最佳擺設 -->
     <div class="card" data-cat="church" data-keywords="教堂地下室 推薦擺設 附圖 圖片 佈局 研究台 寫作書桌 鍊金工作台 研磨機 攪拌機 蒸餾器 捲軸架 建造模式 箱子 擺法">
       <div class="card-header">
         <div class="card-title-group">
@@ -304,28 +281,7 @@
       </div>
     </div>
 
-    <!-- 5. 全圖世界地圖導航（附全圖圖解） -->
-    <div class="card" data-cat="faq" data-keywords="世界地圖 全景 全地圖 區域 沼澤 採石場 村莊 燈塔 女巫嶺 附圖 照片 導航">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">地圖導航：守墓人世界大地圖全景與主要據點位置對照</span>
-          <span class="tag">必備問答速查</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <div class="guide-image-container">
-          <img class="guide-image" 
-               src="https://static.wikia.nocookie.net/graveyardkeeper_gamepedia_en/images/4/45/WorldMapSD_en.png/revision/latest/scale-to-width-down/1200?cb=20191115154904" 
-               alt="守墓人世界大地圖全貌" 
-               onclick="window.open(this.src)">
-          <div class="image-caption">▲ 守墓人世界大地圖（左側沼澤、西北採石場、中央城鎮、東側燈塔海灘）</div>
-        </div>
-        <p>掌握主要東西向大道與各 NPC 出現地點，搭配酒館購買的<b>傳送石</b>可大幅縮減跑圖時間。</p>
-      </div>
-    </div>
-
-    <!-- 6. 原版一週六天官方對照表 -->
+    <!-- 5. 原版一週六天官方對照表 -->
     <div class="card" data-cat="faq" data-keywords="NPC 日子 時間 星期幾 官方 正確 截圖 Pride Lust Gluttony Envy Wrath Sloth 驕傲 情慾 暴食 嫉妒 憤怒 懶惰 主教 查美 商人 老蛇 裁判官 審判官 占星家">
       <div class="card-header">
         <div class="card-title-group">
@@ -347,7 +303,7 @@
       </div>
     </div>
 
-    <!-- 7. 書寫材料專題 -->
+    <!-- 6. 書寫材料專題 -->
     <div class="card" data-cat="writing" data-keywords="書寫 材料 取得方式 生皮紙 乾淨紙張 羽毛 墨水 羽毛筆與墨水 宣傳單 故事 筆記 章節 軟封面 硬封面 書籍 禱文 配方">
       <div class="card-header">
         <div class="card-title-group">
@@ -369,7 +325,7 @@
       </div>
     </div>
 
-    <!-- 8. 全NPC六大任務鏈 -->
+    <!-- 7. 全NPC六大任務鏈 -->
     <div class="card" data-cat="npc" data-keywords="主教 查美夫人 商人 老蛇 審判官 占星家 全任務 流程 神器 主線">
       <div class="card-header">
         <div class="card-title-group">
@@ -379,12 +335,17 @@
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p>1. 主教（光明十字架） 2. 查美夫人（家族項鍊） 3. 商人（永恆之鹽） 4. 老蛇（永恆之鏡） 5. 審判官（死刑犯契約） 6. 占星家（金色角）。</p>
+        <p>1. <b>主教</b>：墓園評分達標 → 開放大教堂 → 交付雕像 → 取得光明十字架。</p>
+        <p>2. <b>查美夫人</b>：情慾日對話 → 送假珠寶/真珠寶 → 交付故事與香水 → 取得家族項鍊。</p>
+        <p>3. <b>商人</b>：交高品質作物 → 治癒打嗝 → 建立貿易外銷箱 → 取得永恆之鹽。</p>
+        <p>4. <b>老蛇</b>：嫉妒日地下道對話 → 送 5 信仰 → 交付死靈之書與吸血鬼之心 → 取得永恆之鏡。</p>
+        <p>5. <b>審判官</b>：憤怒日女巫嶺對話 → 送木柴與傳單 → 開放葡萄園與看守台 → 取得死刑犯契約。</p>
+        <p>6. <b>占星家</b>：懶惰日燈塔對話 → 送骷髏頭、日記與酸液 → 營救女兒 → 取得金色角。</p>
       </div>
     </div>
 
-    <!-- 9. 屍體解剖防腐數學全矩陣 -->
-    <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 16白 26白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏 範圍 小於等於2 大於等於2">
+    <!-- 8. 屍體解剖防腐數學全矩陣 -->
+    <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 16白 26白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏 範圍">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">屍體解剖與防腐室注射順序精算（必成 12~26 白骷髏）</span>
@@ -393,7 +354,14 @@
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p>注射順序：① 鹼性 (+1紅, +1白) → ② 膠水 (+1白) → ③ 銀色 (-1紅, +1白) → ④ 金色 (-2紅, +2白) → 手術拔血液與脂肪（各-1紅, +1白）。</p>
+        <p><span class="highlight-text">防腐注射與器官摘除最佳順序：</span></p>
+        <ol>
+          <li><b>① 鹼性注射液：</b>+1 紅骷髏、+1 白骷髏。</li>
+          <li><b>② 膠水注射液：</b>+1 白骷髏。</li>
+          <li><b>③ 銀色注射液：</b>-1 紅骷髏、+1 白骷髏。</li>
+          <li><b>④ 金色注射液：</b>-2 紅骷髏、+2 白骷髏。</li>
+          <li><b>⑤ 解剖切除血液與脂肪：</b>各 -1 紅骷髏、+1 白骷髏（洗除所有紅骷髏並轉為最大白骷髏）。</li>
+        </ol>
       </div>
     </div>
 
