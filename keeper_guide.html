@@ -18,6 +18,9 @@
       --text-muted: #707b91;
       --highlight: #ebcb8b;
       --tag-bg: #1c2130;
+      --red: #bf616a;
+      --green: #a3be8c;
+      --blue: #88c0d0;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
@@ -88,6 +91,7 @@
     th { background-color: var(--tag-bg); color: var(--highlight); }
     .empty-state { text-align: center; padding: 35px; color: var(--text-muted); display: none; }
 
+    /* 附圖容器樣式 */
     .guide-image-container {
       margin: 10px 0;
       text-align: center;
@@ -128,8 +132,6 @@
       <button class="cat-btn" data-cat="alchemy">鍊金拆解與全藥劑</button>
       <button class="cat-btn" data-cat="church">教堂與地窖專題</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
-      <button class="cat-btn" data-cat="npc">全NPC完整任務鏈</button>
-      <button class="cat-btn" data-cat="corpse">解剖防腐與墓園評分</button>
     </div>
   </div>
 
@@ -185,15 +187,15 @@
       <div class="card-body">
         <p><span class="highlight-text">一、科技與建材：</span></p>
         <ul>
-          <li><b>前置科技：</b>科技樹「農業/自然」分支解鎖<b>「釀酒 (Winemaking)」</b>（消耗 25 紅點 + 10 綠點）。</li>
+          <li><b>前置科技：</b>科技樹「農業/自然」分支解鎖<b><span>釀酒 (Winemaking)</span></b>（消耗 25 紅點 + 10 綠點）。</li>
           <li><b>建造位置：</b>自家小屋下方的地窖（Cellar），點擊藍圖台建造。</li>
           <li><b>所需材料：</b>木板 × 12 + 簡單鐵件 × 4 + 木棒 × 6。</li>
         </ul>
 
         <p><span class="highlight-text">二、壓榨油的配方：</span></p>
         <ul>
-          <li><b>脂肪路線：</b>脂肪 × 5 $\rightarrow$ 油 × 1（解剖屍體提取）。</li>
-          <li><b>大麻籽路線：</b>大麻籽 × 4 $\rightarrow$ 油 × 1（流浪漢迪格購買種子壓榨）。</li>
+          <li><b>脂肪路線：</b>脂肪 × 5 → 油 × 1（解剖屍體提取）。</li>
+          <li><b>大麻籽路線：</b>大麻籽 × 4 → 油 × 1（流浪漢迪格購買種子壓榨）。</li>
           <li><i>前期替代：亦可直接向村莊西南方的流浪漢迪格直接買小瓶現成油。</i></li>
         </ul>
       </div>
@@ -219,9 +221,9 @@
 
         <p><span class="highlight-text">一、葡萄園解鎖流程：</span></p>
         <ol>
-          <li>每週<b>憤怒之日 ♁</b>（週五）前往女巫嶺山頂找審判官。</li>
+          <li>每週<b><span>憤怒之日 ♁</span></b>（週五）前往女巫嶺山頂找審判官。</li>
           <li>完成初次委託（送 20 塊木柴與 10 份宣傳單，並觀看一次火刑）。</li>
-          <li>審判官會正式將山腰下的<b>葡萄園</b>權限贈送給你使用。</li>
+          <li>審判官會正式將山腰下的<b><span>葡萄園</span></b>權限贈送給你使用。</li>
           <li>搭建葡萄藤架，將向商人（二級商店）買來的葡萄種子種下即可釀造葡萄酒。</li>
         </ol>
       </div>
@@ -246,7 +248,7 @@
         </div>
 
         <p><span class="highlight-text">一、黑色顏料避坑須知：</span></p>
-        <p>在鍊金工作台放「灰燼 + 水」會產出<b>生命的黏液（生命溶液）</b>，因為灰燼屬於生命系屬性，水會將其萃取為溶液。黑色顏料的正確合成組合只有：<b>灰燼 + 油</b> 或 <b>石墨 + 水</b>。</p>
+        <p>在鍊金工作台放「灰燼 + 水」會產出<b><span>生命的黏液（生命溶液）</span></b>，因為灰燼屬於生命系屬性，水會將其萃取為溶液。黑色顏料的正確合成組合只有：<b><span>灰燼 + 油</span></b> 或 <b><span>石墨 + 水</span></b>。</p>
 
         <p><span class="highlight-text">二、核心藥劑合成公式：</span></p>
         <ul>
@@ -277,7 +279,7 @@
                onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/gh/justwantofly620/Graveyard-Keeper@main/1534857823701_217_279.png';">
           <div class="image-caption">▲ 官方建造模式推薦擺設圖（鍊金台 I 與 II 並排保留）</div>
         </div>
-        <p>中央為主幹道教堂工作台與寫作桌；左側為研究台與研磨區；右側排滿書架收納；南邊保留 <b>鍊金台 I 與 II 並排</b> 以及 3 台蒸餾器。</p>
+        <p>中央為主幹道教堂工作台與寫作桌；左側為研究台與研磨區；右側排滿書架收納；南邊保留 <b><span>鍊金台 I 與 II 並排</span></b> 以及 3 台蒸餾器。</p>
       </div>
     </div>
 
@@ -322,46 +324,6 @@
           <tr><td><b>墨水瓶</b></td><td>教堂工作台</td><td>錐形燒瓶 × 1 + 黑色顏料 × 1</td><td>黑色顏料在鍊金台用「灰燼+油」或「石墨+水」合成；占星家常駐販售。</td></tr>
           <tr><td><b>羽毛筆與墨水</b></td><td>教堂工作台</td><td>羽毛 × 3 + 墨水瓶 × 1</td><td>書寫必備工具（有耐久度）；亦可直接找占星家購買。</td></tr>
         </table>
-      </div>
-    </div>
-
-    <!-- 7. 全NPC六大任務鏈 -->
-    <div class="card" data-cat="npc" data-keywords="主教 查美夫人 商人 老蛇 審判官 占星家 全任務 流程 神器 主線">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">主線任務：遊戲六大核心 NPC 全階段任務鏈彙整</span>
-          <span class="tag">全NPC完整任務鏈</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <p>1. <b>主教</b>：墓園評分達標 → 開放大教堂 → 交付雕像 → 取得光明十字架。</p>
-        <p>2. <b>查美夫人</b>：情慾日對話 → 送假珠寶/真珠寶 → 交付故事與香水 → 取得家族項鍊。</p>
-        <p>3. <b>商人</b>：交高品質作物 → 治癒打嗝 → 建立貿易外銷箱 → 取得永恆之鹽。</p>
-        <p>4. <b>老蛇</b>：嫉妒日地下道對話 → 送 5 信仰 → 交付死靈之書與吸血鬼之心 → 取得永恆之鏡。</p>
-        <p>5. <b>審判官</b>：憤怒日女巫嶺對話 → 送木柴與傳單 → 開放葡萄園與看守台 → 取得死刑犯契約。</p>
-        <p>6. <b>占星家</b>：懶惰日燈塔對話 → 送骷髏頭、日記與酸液 → 營救女兒 → 取得金色角。</p>
-      </div>
-    </div>
-
-    <!-- 8. 屍體解剖防腐數學全矩陣 -->
-    <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 16白 26白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏 範圍">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">屍體解剖與防腐室注射順序精算（必成 12~26 白骷髏）</span>
-          <span class="tag">解剖防腐與墓園評分</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <p><span class="highlight-text">防腐注射與器官摘除最佳順序：</span></p>
-        <ol>
-          <li><b>① 鹼性注射液：</b>+1 紅骷髏、+1 白骷髏。</li>
-          <li><b>② 膠水注射液：</b>+1 白骷髏。</li>
-          <li><b>③ 銀色注射液：</b>-1 紅骷髏、+1 白骷髏。</li>
-          <li><b>④ 金色注射液：</b>-2 紅骷髏、+2 白骷髏。</li>
-          <li><b>⑤ 解剖切除血液與脂肪：</b>各 -1 紅骷髏、+1 白骷髏（洗除所有紅骷髏並轉為最大白骷髏）。</li>
-        </ol>
       </div>
     </div>
 
