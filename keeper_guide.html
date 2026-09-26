@@ -128,18 +128,18 @@
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>全問題完整收錄：官方原版六日行事曆、地下室完整擺設(附圖)、釘子印章、水、落石、全任務鏈、解剖防腐與鍊金</p>
+    <p>全系統收錄：各類素材加工配方、官方六日行事曆、地下室擺設圖、種子循環、解剖防腐與主線全攻略</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「地下室擺設」、「Pride」、「釘子」、「解剖」、「水」、「落石」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「材料作法」、「木樑」、「鐵件」、「Pride」、「胡蘿蔔」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
+      <button class="cat-btn" data-cat="tech">材料作法與加工配方</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
       <button class="cat-btn" data-cat="church">教堂與地窖專題</button>
       <button class="cat-btn" data-cat="npc">全NPC完整任務鏈</button>
       <button class="cat-btn" data-cat="mainquest">主線道具與材料</button>
-      <button class="cat-btn" data-cat="tech">七大科技與生產流水線</button>
       <button class="cat-btn" data-cat="corpse">解剖防腐與墓園評分</button>
       <button class="cat-btn" data-cat="alchemy">鍊金拆解與全藥劑</button>
       <button class="cat-btn" data-cat="dungeon">地牢探索與地圖捷徑</button>
@@ -149,30 +149,82 @@
 
   <div class="guide-list" id="guideList">
 
-    <!-- 1. 遊戲原版一週六天官方正確對照表 -->
-    <div class="card" data-cat="faq" data-keywords="NPC 日子 時間 星期幾 官方 正確 截圖 Pride Lust Gluttony Envy Wrath Sloth 驕傲 情慾 暴食 嫉妒 憤怒 懶惰 主教 查美 商人 老蛇 裁判官 審判官 占星家">
+    <!-- 0. 各材料核心作法大全 -->
+    <div class="card" data-cat="tech" data-keywords="材料作法 製作方式 配方 鐵件 複雜鐵件 木樑 木板 木楔 鋼錠 鐵錠 玻璃 燒瓶 紙張 墨水 雕像 修理包">
       <div class="card-header">
         <div class="card-title-group">
-          <span class="card-title">常見問答：【遊戲原版權威】一週六天官方日曆、圖標與NPC出現完全對照表</span>
-          <span class="tag">必備問答速查</span>
+          <span class="card-title">核心專題：常用基礎材料與加工配件完整製作全表</span>
+          <span class="tag">材料作法與加工配方</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p><span class="highlight-text">遊戲原版嚴格按以下 6 天順序循環輪替：</span></p>
+        <p><span class="highlight-text">一、木材加工系列（工作地點：自家院子木工台 / 圓鋸）</span></p>
         <table>
-          <tr><th>英文名稱</th><th>中文名稱</th><th>官方圖示特徵</th><th>出現 NPC</th><th>出現地點與事件說明</th></tr>
-          <tr><td><b>1. Pride</b></td><td><b>驕傲之日</b></td><td>☀️ 紫底金色太陽</td><td><b>主教 (Bishop)</b></td><td>出現在教堂門口。若修復教堂，此日可宣教。</td></tr>
-          <tr><td><b>2. Lust</b></td><td><b>情慾之日</b></td><td>♀ 紅底女性符號</td><td><b>查美夫人 (Ms. Charm)</b></td><td>下午至夜間出現在死馬酒館唱歌。</td></tr>
-          <tr><td><b>3. Gluttony</b></td><td><b>暴食之日</b></td><td>Ὣ 橘底雙角/錢包紋</td><td><b>商人 (Merchant)</b></td><td>出現在死馬酒館南側馬車旁。</td></tr>
-          <tr><td><b>4. Envy</b></td><td><b>嫉妒之日</b></td><td>♉ 綠底公牛角圖標</td><td><b>老蛇 (Snake)</b></td><td>夜間出現在教堂地下暗道/地窖鐵柵欄處。</td></tr>
-          <tr><td><b>5. Wrath</b></td><td><b>憤怒之日</b></td><td>♁ 棕底帶十字架之圓</td><td><b>審判官 / 裁判官 (Inquisitor)</b></td><td>出現在女巫嶺審判刑台。</td></tr>
-          <tr><td><b>6. Sloth</b></td><td><b>懶惰之日</b></td><td>🌙 藍底金色新月</td><td><b>占星家 (Astrologer)</b></td><td>出現在最東邊海邊燈塔旁。</td></tr>
+          <tr><th>產出物品</th><th>所需工作台</th><th>消耗原料</th><th>用途說明</th></tr>
+          <tr><td><b>側板 (Flitch)</b></td><td>鋸馬 / 圓鋸</td><td>原木 × 1</td><td>石橋修復、基礎木製品、箱子材料</td></tr>
+          <tr><td><b>木板 (Wooden plank)</b></td><td>圓鋸 / 木質工作台</td><td>側板 × 1</td><td>大量路障、建築、木圍欄必備</td></tr>
+          <tr><td><b>木楔 (Wooden wedge)</b></td><td>木工台 / 圓鋸</td><td>木板 × 1 或 側板 × 1</td><td>開路瓦礫、地下室通道、固定結構</td></tr>
+          <tr><td><b>木樑 (Wooden beam)</b></td><td>圓鋸 / 木工台 II</td><td>木板 × 1 + 木楔 × 1</td><td>修復木橋、二級建築、採石場起重機</td></tr>
+          <tr><td><b>木柴 / 木塊 (Wood billet)</b></td><td>斧頭砍柴架</td><td>原木 × 1</td><td>火葬柴堆（每次8個）、爐火燃料</td></tr>
+        </table>
+
+        <p><span class="highlight-text">二、金屬鍛造系列（工作地點：自家院子熔爐 / 鐵砧）</span></p>
+        <table>
+          <tr><th>產出物品</th><th>所需工作台</th><th>消耗原料</th><th>用途說明</th></tr>
+          <tr><td><b>鐵錠 (Iron ingot)</b></td><td>熔爐 I / II</td><td>鐵礦石 × 1 + 燃料</td><td>所有金屬工具與五金的基礎</td></tr>
+          <tr><td><b>釘子 (Nails) × 6</b></td><td>鐵砧（木質 / 鐵）</td><td>鐵錠 × 1</td><td>全期通用基礎建材</td></tr>
+          <tr><td><b>簡單鐵件 (Simple iron parts) × 4</b></td><td>鐵砧</td><td>鐵錠 × 1</td><td>箱子、路障、二級加工設施核心件</td></tr>
+          <tr><td><b>複雜鐵件 (Complex iron parts) × 2</b></td><td>鐵砧 II</td><td>鐵錠 × 1 + 簡單鐵件 × 1</td><td>北部木橋、高級機械、告解室等</td></tr>
+          <tr><td><b>鋼錠 (Steel ingot)</b></td><td>高級熔爐</td><td>鐵錠 × 2 + 煤炭 × 4</td><td>鋼鎬、鋼劍、大理石雕刻工具</td></tr>
+          <tr><td><b>鋼件 (Steel parts) × 2</b></td><td>鐵砧 II</td><td>鋼錠 × 1</td><td>頂級工具、科技發射器與槍管零件</td></tr>
+        </table>
+
+        <p><span class="highlight-text">三、石材與玻璃系列（工作地點：石工台 / 熔爐）</span></p>
+        <table>
+          <tr><th>產出物品</th><th>所需工作台</th><th>消耗原料</th><th>用途說明</th></tr>
+          <tr><td><b>石材修整塊 (Shaped stone)</b></td><td>石材切割機</td><td>石材原料 × 1</td><td>石墓碑、石圍欄、墓園道路鋪設</td></tr>
+          <tr><td><b>大理石修整塊 (Carved marble)</b></td><td>石工台 II</td><td>大理石 × 1 + 信仰 × 1</td><td>大理石雕像、大教堂擴建任務</td></tr>
+          <tr><td><b>錐形燒瓶 (Conical flask) × 3</b></td><td>熔爐 II</td><td>河流沙子 × 2 + 水滴 × 1</td><td>所有鍊金藥劑、注射液調配必備容器</td></tr>
+          <tr><td><b>拋光鏡片 (Polished lens)</b></td><td>珠寶工作台</td><td>玻璃 × 1 + 研磨膏</td><td>占星家任務、望遠鏡與傳送門鏡片</td></tr>
+        </table>
+
+        <p><span class="highlight-text">四、紙張與寫作系列（工作地點：教堂地下室教堂工作台 / 書桌）</span></p>
+        <table>
+          <tr><th>產出物品</th><th>所需工作台</th><th>消耗原料</th><th>用途說明</th></tr>
+          <tr><td><b>生皮紙 (Pigskin paper) × 4</b></td><td>教堂工作台</td><td>屍體皮膚 × 1</td><td>製作乾淨紙張的主要材料</td></tr>
+          <tr><td><b>乾淨紙張 (Clean paper) × 4</b></td><td>教堂工作台</td><td>生皮紙 × 1（或蝙蝠翅膀）</td><td>撰寫宣傳單、筆記、禱文基礎</td></tr>
+          <tr><td><b>羽毛筆與墨水</b></td><td>教堂工作台</td><td>羽毛 × 3 + 墨水瓶 × 1</td><td>寫作與繪製宣傳單必備工具（有耐久）</td></tr>
+          <tr><td><b>章節 (Chapter)</b></td><td>書桌</td><td>筆記 × 3 + 信仰 × 1</td><td>合成軟封面/硬封面書本必備中間件</td></tr>
         </table>
       </div>
     </div>
 
-    <!-- 2. 教堂地下室最佳擺設（含 GitHub 直連圖與防盜鏈修復） -->
+    <!-- 1. 胡蘿蔔種子循環專題 -->
+    <div class="card" data-cat="economy" data-keywords="胡蘿蔔 種子 買 循環 肥料 泥炭 農業天才 驢子 餵食 越種越多 自給自足">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：胡蘿蔔種子只能用買的嗎？如何實現無限自給自足？</span>
+          <span class="tag">農業經營與賺錢套路</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">結論：不是只能用買的！只要掌握肥料機制，就能「越種越多」徹底告別花錢。</span></p>
+        <ol>
+          <li><b>初始啟動：</b>初次只能在村莊南邊向<b>農夫 (Farmer)</b> 購買一兩批（種下一壟田需 4 顆種子）。</li>
+          <li><b>白嫖種子的關鍵 —— 施用肥料：</b>
+            <br>• <b>不施肥：</b>採收時通常只掉落 3～4 顆種子，可能持平或虧本。
+            <br>• <b>施用泥炭 (Peat)：</b>用作物廢料在堆肥箱發酵取得，施肥後種子回本率大幅提升。
+            <br>• <b>施用生長增強劑 / 質量肥料 (Quality Fertilizer)：</b>採收時一壟田會噴出 <b>4～6 顆種子</b>，收穫量直接大於消耗量，種子源源不絕！
+          </li>
+          <li><b>農業天賦加成：</b>在農業科技樹點出「農業專精/農業天才」，全作物收穫量與種子掉落率全面上升。</li>
+          <li><b>後期殭屍農場：</b>指派殭屍到田裡工作，會自動維持種子收放循環，自動把胡蘿蔔送入地窖供驢子吃。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 2. 教堂地下室最佳擺設（含 GitHub 直連圖） -->
     <div class="card" data-cat="church" data-keywords="教堂地下室 推薦擺設 附圖 圖片 佈局 研究台 寫作書桌 鍊金工作台 研磨機 攪拌機 蒸餾器 捲軸架 建造模式 箱子 擺法">
       <div class="card-header">
         <div class="card-title-group">
@@ -212,7 +264,30 @@
       </div>
     </div>
 
-    <!-- 3. 正北方山道落石瓦礫指南 -->
+    <!-- 3. 原版一週六天官方對照表 -->
+    <div class="card" data-cat="faq" data-keywords="NPC 日子 時間 星期幾 官方 正確 截圖 Pride Lust Gluttony Envy Wrath Sloth 驕傲 情慾 暴食 嫉妒 憤怒 懶惰 主教 查美 商人 老蛇 裁判官 審判官 占星家">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">常見問答：【遊戲原版權威】一週六天官方日曆、圖標與NPC出現完全對照表</span>
+          <span class="tag">必備問答速查</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">遊戲原版嚴格按以下 6 天順序循環輪替：</span></p>
+        <table>
+          <tr><th>英文名稱</th><th>中文名稱</th><th>官方圖示特徵</th><th>出現 NPC</th><th>出現地點與事件說明</th></tr>
+          <tr><td><b>1. Pride</b></td><td><b>驕傲之日</b></td><td>☀️ 紫底金色太陽</td><td><b>主教 (Bishop)</b></td><td>出現在教堂門口。若修復教堂，此日可宣教。</td></tr>
+          <tr><td><b>2. Lust</b></td><td><b>情慾之日</b></td><td>♀ 紅底女性符號</td><td><b>查美夫人 (Ms. Charm)</b></td><td>下午至夜間出現在死馬酒館唱歌。</td></tr>
+          <tr><td><b>3. Gluttony</b></td><td><b>暴食之日</b></td><td>Ὣ 橘底雙角/錢包紋</td><td><b>商人 (Merchant)</b></td><td>出現在死馬酒館南側馬車旁。</td></tr>
+          <tr><td><b>4. Envy</b></td><td><b>嫉妒之日</b></td><td>♉ 綠底公牛角圖標</td><td><b>老蛇 (Snake)</b></td><td>夜間出現在教堂地下暗道/地窖鐵柵欄處。</td></tr>
+          <tr><td><b>5. Wrath</b></td><td><b>憤怒之日</b></td><td>♁ 棕底帶十字架之圓</td><td><b>審判官 / 裁判官 (Inquisitor)</b></td><td>出現在女巫嶺審判刑台。</td></tr>
+          <tr><td><b>6. Sloth</b></td><td><b>懶惰之日</b></td><td>🌙 藍底金色新月</td><td><b>占星家 (Astrologer)</b></td><td>出現在最東邊海邊燈塔旁。</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4. 正北方山道落石瓦礫指南 -->
     <div class="card" data-cat="faq" data-keywords="正北方 過不去 落石 瓦礫 滑坡 山壁 峽谷 清理 木楔 木板 簡單鐵件 採石場必經">
       <div class="card-header">
         <div class="card-title-group">
@@ -239,7 +314,7 @@
       </div>
     </div>
 
-    <!-- 4. 水與水桶取得方式 -->
+    <!-- 5. 水與水桶取得方式 -->
     <div class="card" data-cat="faq" data-keywords="水 哪裡拿 哪裡取得 水井 水桶 水滴 背包 使用 分解 空桶 燒瓶 麵團 鍊金">
       <div class="card-header">
         <div class="card-title-group">
@@ -266,7 +341,7 @@
       </div>
     </div>
 
-    <!-- 5. 釘子與印章 -->
+    <!-- 6. 釘子與印章 -->
     <div class="card" data-cat="faq" data-keywords="釘子 印章 鐵匠 皇家守衛 老蛇 偽造 鍛造 鐵錠 肉類 審批 哪裡拿 哪裡找">
       <div class="card-header">
         <div class="card-title-group">
@@ -290,7 +365,7 @@
       </div>
     </div>
 
-    <!-- 6. 解鎖鐵匠與進入地下室 -->
+    <!-- 7. 解鎖鐵匠與進入地下室 -->
     <div class="card" data-cat="faq" data-keywords="解鎖鐵匠 史萊姆 鐵砧 熔爐 進入教堂地下室 地窖 捷徑 瓦礫 墓園5分 太陽日 怎麼進">
       <div class="card-header">
         <div class="card-title-group">
@@ -316,7 +391,7 @@
       </div>
     </div>
 
-    <!-- 7. 血書與死靈之書 -->
+    <!-- 8. 血書與死靈之書 -->
     <div class="card" data-cat="faq" data-keywords="血書 死靈之書 沾血的書 老蛇 占星家 黑暗之書 人皮紙 血液 製作 怎麼做 達成">
       <div class="card-header">
         <div class="card-title-group">
@@ -341,7 +416,7 @@
       </div>
     </div>
 
-    <!-- 8. 教堂裝飾與佈道全攻略 -->
+    <!-- 9. 教堂裝飾與佈道全攻略 -->
     <div class="card" data-cat="church" data-keywords="教堂裝飾 佈道 禱文 信仰 內部評分 講台 告解室 長椅 燭台 香爐 蠟燭 卓越信心 組合禱文 宣教 捐款 Pride 驕傲之日">
       <div class="card-header">
         <div class="card-title-group">
@@ -374,7 +449,7 @@
       </div>
     </div>
 
-    <!-- 9. 採石場前置條件與木橋修復 -->
+    <!-- 10. 採石場前置條件與木橋修復 -->
     <div class="card" data-cat="faq" data-keywords="採石場 條件 前置 科技 木樑 複雜鐵件 鎬子 傳送石 木工 鍛造 圓鋸 避坑 木橋">
       <div class="card-header">
         <div class="card-title-group">
@@ -399,7 +474,7 @@
       </div>
     </div>
 
-    <!-- 10. 石橋通往哪裡與修復指南 -->
+    <!-- 11. 石橋通往哪裡與修復指南 -->
     <div class="card" data-cat="faq" data-keywords="石橋 通往哪裡 損壞的石橋 沼澤 女巫 克洛索 止嗝草 鐵礦 泥炭 修復材料 側板 木板 釘子">
       <div class="card-header">
         <div class="card-title-group">
@@ -421,7 +496,7 @@
       </div>
     </div>
 
-    <!-- 11. 火葬場建造數量與消耗規則 -->
+    <!-- 12. 火葬場建造數量與消耗規則 -->
     <div class="card" data-cat="faq" data-keywords="火葬場 建造 數量 四個 單獨 一個 槽位 木柴 消耗品 重複使用 柴堆 灰燼">
       <div class="card-header">
         <div class="card-title-group">
@@ -440,7 +515,7 @@
       </div>
     </div>
 
-    <!-- 12. 宣傳單製作全流程 -->
+    <!-- 13. 宣傳單製作全流程 -->
     <div class="card" data-cat="faq" data-keywords="審判官 宣傳單 傳單 怎麼做 製作 書桌 作家 墨水 羽毛筆 乾淨紙張 10張">
       <div class="card-header">
         <div class="card-title-group">
@@ -460,7 +535,26 @@
       </div>
     </div>
 
-    <!-- 13. 主線六大神器與傳送門 -->
+    <!-- 14. 全NPC六大任務鏈 -->
+    <div class="card" data-cat="npc" data-keywords="主教 查美夫人 商人 老蛇 審判官 占星家 全任務 流程 神器 主線">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">主線任務：遊戲六大核心 NPC 全階段任務鏈彙整</span>
+          <span class="tag">全NPC完整任務鏈</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">1. 主教 (Bishop - Pride ☀️)：</span>修復墓園(+5) → 20碗魚湯 → 升級教堂(+30/+20) → 平民/公民身份 → 大教堂(+100/+50及大理石雕像) → 貴族身份+金雕像+香爐 → 獲得<b>光明十字架</b>。</p>
+        <p><span class="highlight-text">2. 查美夫人 (Ms. Charm - Lust ♀)：</span>交5枚假金幣 → 詩人情書 → 女巫香水 → 打造珠寶(金錠+鑽石) → 動用貴族特權獲准個人劇院 → 獲得<b>家族項鍊</b>。</p>
+        <p><span class="highlight-text">3. 商人 (Merchant - Gluttony Ὣ)：</span>交12金星捲心菜/胡蘿蔔/甜菜 → 採集止嗝草解毒 → 買1金商業許可證 → 建立蔬菜箱出口流水線 → 贖回傳家首飾 → 獲得<b>永恆之鹽</b>。</p>
+        <p><span class="highlight-text">4. 老蛇 (Snake - Envy ♉)：</span>交5信仰 → 給守墓人日記 → 取回死靈之書 → 合成骨頭鑰匙開地牢 → 取得血杯(第5層) → 獻祭深色心臟 → 獲得<b>永恆之鏡</b>。</p>
+        <p><span class="highlight-text">5. 審判官 (Inquisitor - Wrath ♁)：</span>運20木柴+10宣傳單 → 擺攤賣5漢堡+5啤酒兩次火刑 → 抓捕偷窺者 → 解鎖暗黑器官切除 → 防守密室擊退衛兵 → 獲得<b>死刑犯契約</b>。</p>
+        <p><span class="highlight-text">6. 占星家 (Astrologer - Sloth 🌙)：</span>給紙筆墨水(獲贈25藍點) → 取回日記 → 鍊金酸液開箱 → 寫作銀星/金星書籍 → 調查身世與父女和解 → 獲得<b>金色角</b>。</p>
+      </div>
+    </div>
+
+    <!-- 15. 主線六大神器與傳送門 -->
     <div class="card" data-cat="mainquest" data-keywords="主線 道具 材料 獲得方式 製作方式 傳送門 六大物品 光明十字架 死刑犯契約 永恆之鏡 金色角 項鍊 永恆之鹽 發射器 槍管">
       <div class="card-header">
         <div class="card-title-group">
@@ -484,7 +578,7 @@
       </div>
     </div>
 
-    <!-- 14. 屍體解剖防腐數學全矩陣 -->
+    <!-- 16. 屍體解剖防腐數學全矩陣 -->
     <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 16白 26白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏 範圍 小於等於2 大於等於2">
       <div class="card-header">
         <div class="card-title-group">
@@ -513,7 +607,7 @@
       </div>
     </div>
 
-    <!-- 15. 鍊金全拆解庫 -->
+    <!-- 17. 鍊金全拆解庫 -->
     <div class="card" data-cat="alchemy" data-keywords="鍊金 原料 研磨 粉末 溶液 精華 黑色顏料 白色顏料 提速藥 酸 殭屍果汁 鹼性 金色 長生不老藥">
       <div class="card-header">
         <div class="card-title-group">
@@ -547,7 +641,7 @@
       </div>
     </div>
 
-    <!-- 16. 地牢 1-15 層與地圖捷徑 -->
+    <!-- 18. 地牢 1-15 層與地圖捷徑 -->
     <div class="card" data-cat="dungeon" data-keywords="地牢 15層 血杯 骨頭鑰匙 怪物 鋼劍 鑽石 金礦 硫磺 銀礦 路障 採石場 捷徑">
       <div class="card-header">
         <div class="card-title-group">
@@ -567,7 +661,7 @@
       </div>
     </div>
 
-    <!-- 17. 農業經營與賺錢套路 -->
+    <!-- 19. 農業經營與賺錢套路 -->
     <div class="card" data-cat="economy" data-keywords="賺錢 石墨 葡萄酒 蔬菜箱 貿易 肥料 泥炭 金幣 鐵匠 挖掘許可 埋葬證明">
       <div class="card-header">
         <div class="card-title-group">
