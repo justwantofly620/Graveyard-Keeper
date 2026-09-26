@@ -128,14 +128,15 @@
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>全系統收錄：各類素材加工配方、鍊金原料取得地點、官方六日行事曆、地下室擺設圖、解剖防腐與主線全攻略</p>
+    <p>全系統收錄：書寫全材料及配方、鍊金原料地點、官方六日行事曆、地下室擺設圖、解剖防腐與主線全攻略</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「鍊金材料」、「地點」、「硫磺」、「木樑」、「胡蘿蔔」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「書寫材料」、「生皮紙」、「羽毛筆」、「墨水」、「硫磺」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
       <button class="cat-btn" data-cat="tech">材料作法與加工配方</button>
+      <button class="cat-btn" data-cat="writing">書寫系統與禱文製作</button>
       <button class="cat-btn" data-cat="alchemy">鍊金拆解與全藥劑</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
       <button class="cat-btn" data-cat="church">教堂與地窖專題</button>
@@ -149,7 +150,49 @@
 
   <div class="guide-list" id="guideList">
 
-    <!-- 0. 各材料核心作法大全 -->
+    <!-- 0. 各種書寫材料及取得方式專題 -->
+    <div class="card" data-cat="writing" data-keywords="書寫 材料 取得方式 生皮紙 乾淨紙張 羽毛 墨水 羽毛筆與墨水 宣傳單 故事 筆記 章節 軟封面 硬封面 書籍 禱文 配方">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">核心專題：各種書寫材料、製作配方、取得途徑與全禱文寫作</span>
+          <span class="tag">書寫系統與禱文製作</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">一、書寫基礎耗材製作與取得表：</span></p>
+        <table>
+          <tr><th>耗材名稱</th><th>製作設備</th><th>配方消耗</th><th>取得方式與替代來源</th></tr>
+          <tr><td><b>生皮紙 (Pigskin paper) × 4</b></td><td>教堂工作台</td><td>皮膚 × 1</td><td>解剖屍體剝下皮膚；或在工作台用 <b>蝙蝠翅膀 × 4</b> 製作。</td></tr>
+          <tr><td><b>乾淨紙張 (Clean paper) × 4</b></td><td>教堂工作台</td><td>生皮紙 × 1</td><td>用生皮紙裁剪；亦可月亮日向燈塔<b>占星家</b>購買現成。</td></tr>
+          <tr><td><b>羽毛 (Feather)</b></td><td>—</td><td>—</td><td>村莊雞舍周圍拾取；向農夫妻子或燈塔占星家購買。</td></tr>
+          <tr><td><b>墨水瓶 (Ink)</b></td><td>教堂工作台</td><td>錐形燒瓶 × 1 + 黑色顏料 × 1</td><td>黑色顏料在鍊金台用「灰燼+水」合成；占星家常駐販售。</td></tr>
+          <tr><td><b>羽毛筆與墨水 (Ink and feather)</b></td><td>教堂工作台</td><td>羽毛 × 3 + 墨水瓶 × 1</td><td>書寫必備工具（有耐久度）；亦可直接找占星家購買。</td></tr>
+        </table>
+
+        <p><span class="highlight-text">二、書寫構件與進階書籍裝訂（寫作書桌 / 工作台）：</span></p>
+        <table>
+          <tr><th>書寫構件</th><th>製作設備</th><th>所需材料</th><th>核心用途與星級說明</th></tr>
+          <tr><td><b>宣傳單 (Flyer) × 5</b></td><td>寫作書桌</td><td>乾淨紙張 × 1 + 羽毛筆與墨水 × 1</td><td>審判官任務（需要 10 份）、宣傳佈道使用。</td></tr>
+          <tr><td><b>故事 (Story)</b></td><td>書桌 / 告解室</td><td>靈感 / 對話記錄</td><td>酒館找詩人交流、解任務取得；告解室信徒懺悔掉落。</td></tr>
+          <tr><td><b>筆記 (Notes)</b></td><td>寫作書桌</td><td>乾淨紙張 × 3 + 羽毛筆墨水 × 1 + 故事 × 1</td><td>分為銅、銀、金星（受作家技能與書桌等級影響）。</td></tr>
+          <tr><td><b>章節 (Chapter)</b></td><td>寫作書桌</td><td>筆記 × 3 + 信仰 × 1</td><td>合成書籍與禱文組件，品質取決於 3 份筆記星級。</td></tr>
+          <tr><td><b>軟封面 (Soft cover)</b></td><td>教堂工作台</td><td>乾淨紙張 × 2 + 生皮紙 × 1</td><td>裝訂銅星、銀星書籍與中階禱文。</td></tr>
+          <tr><td><b>硬封面 (Hard cover)</b></td><td>教堂工作台</td><td>軟封面 × 1 + 鞣革 × 1 + 信仰 × 1</td><td>裝訂金星書籍與終極組合禱文。</td></tr>
+          <tr><td><b>書籍 (Book)</b></td><td>寫作書桌</td><td>章節 × 1 + 封面（軟/硬）× 1</td><td>占星家任務必備（銀/金星書）；研讀獲海量藍點。</td></tr>
+        </table>
+
+        <p><span class="highlight-text">三、各類禱文（祈禱詞）書寫合成公式（寫作書桌）：</span></p>
+        <ul>
+          <li><b>非正式祈禱 (Casual Prayer)：</b>乾淨紙張 × 1 + 信仰 × 1（開局基礎禱文）。</li>
+          <li><b>卓越信心禱文 (Prayer for Faith)：</b>章節 × 1 + 軟封面 × 1 + 信仰 × 2（信仰產出直接翻倍！）。</li>
+          <li><b>卓越捐贈禱文 (Prayer for Donations)：</b>章節 × 1 + 軟封面 × 1 + 信仰 × 2（信徒金錢打賞大幅暴增）。</li>
+          <li><b>卓越組合禱文 (Combo Prayer)：</b>書籍 × 1 + 硬封面 × 1 + 信仰 × 3（同時獲得翻倍信仰與巨額打賞）。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 1. 各材料核心作法大全 -->
     <div class="card" data-cat="tech" data-keywords="材料作法 製作方式 配方 鐵件 複雜鐵件 木樑 木板 木楔 鋼錠 鐵錠 玻璃 燒瓶 紙張 墨水 雕像 修理包">
       <div class="card-header">
         <div class="card-title-group">
@@ -188,19 +231,10 @@
           <tr><td><b>錐形燒瓶 (Conical flask) × 3</b></td><td>熔爐 II</td><td>河流沙子 × 2 + 水滴 × 1</td><td>所有鍊金藥劑、注射液調配必備容器</td></tr>
           <tr><td><b>拋光鏡片 (Polished lens)</b></td><td>珠寶工作台</td><td>玻璃 × 1 + 研磨膏</td><td>占星家任務、望遠鏡與傳送門鏡片</td></tr>
         </table>
-
-        <p><span class="highlight-text">四、紙張與寫作系列（工作地點：教堂地下室教堂工作台 / 書桌）</span></p>
-        <table>
-          <tr><th>產出物品</th><th>所需工作台</th><th>消耗原料</th><th>用途說明</th></tr>
-          <tr><td><b>生皮紙 (Pigskin paper) × 4</b></td><td>教堂工作台</td><td>屍體皮膚 × 1</td><td>製作乾淨紙張的主要材料</td></tr>
-          <tr><td><b>乾淨紙張 (Clean paper) × 4</b></td><td>教堂工作台</td><td>生皮紙 × 1（或蝙蝠翅膀）</td><td>撰寫宣傳單、筆記、禱文基礎</td></tr>
-          <tr><td><b>羽毛筆與墨水</b></td><td>教堂工作台</td><td>羽毛 × 3 + 墨水瓶 × 1</td><td>寫作與繪製宣傳單必備工具（有耐久）</td></tr>
-          <tr><td><b>章節 (Chapter)</b></td><td>書桌</td><td>筆記 × 3 + 信仰 × 1</td><td>合成軟封面/硬封面書本必備中間件</td></tr>
-        </table>
       </div>
     </div>
 
-    <!-- 鍊金原料拆解與全藥劑 + 下方加入取得方式及地點 -->
+    <!-- 2. 鍊金原料拆解與全藥劑 + 取得地點表 -->
     <div class="card" data-cat="alchemy" data-keywords="鍊金 原料 研磨 粉末 溶液 精華 黑色顏料 白色顏料 提速藥 酸 鹼性 金色 取得方式 地點 掉落 硫磺 蛆 蜘蛛網 蝴蝶 蛾 啤酒花 大麻 蜂蠟">
       <div class="card-header">
         <div class="card-title-group">
@@ -258,7 +292,7 @@
       </div>
     </div>
 
-    <!-- 胡蘿蔔種子循環專題 -->
+    <!-- 3. 胡蘿蔔種子循環專題 -->
     <div class="card" data-cat="economy" data-keywords="胡蘿蔔 種子 買 循環 肥料 泥炭 農業天才 驢子 餵食 越種越多 自給自足">
       <div class="card-header">
         <div class="card-title-group">
@@ -282,7 +316,7 @@
       </div>
     </div>
 
-    <!-- 教堂地下室最佳擺設（含 GitHub 直連圖） -->
+    <!-- 4. 教堂地下室最佳擺設（含 GitHub 直連圖） -->
     <div class="card" data-cat="church" data-keywords="教堂地下室 推薦擺設 附圖 圖片 佈局 研究台 寫作書桌 鍊金工作台 研磨機 攪拌機 蒸餾器 捲軸架 建造模式 箱子 擺法">
       <div class="card-header">
         <div class="card-title-group">
@@ -322,7 +356,7 @@
       </div>
     </div>
 
-    <!-- 原版一週六天官方對照表 -->
+    <!-- 5. 原版一週六天官方對照表 -->
     <div class="card" data-cat="faq" data-keywords="NPC 日子 時間 星期幾 官方 正確 截圖 Pride Lust Gluttony Envy Wrath Sloth 驕傲 情慾 暴食 嫉妒 憤怒 懶惰 主教 查美 商人 老蛇 裁判官 審判官 占星家">
       <div class="card-header">
         <div class="card-title-group">
@@ -345,7 +379,7 @@
       </div>
     </div>
 
-    <!-- 正北方山道落石瓦礫指南 -->
+    <!-- 6. 正北方山道落石瓦礫指南 -->
     <div class="card" data-cat="faq" data-keywords="正北方 過不去 落石 瓦礫 滑坡 山壁 峽谷 清理 木楔 木板 簡單鐵件 採石場必經">
       <div class="card-header">
         <div class="card-title-group">
@@ -372,7 +406,7 @@
       </div>
     </div>
 
-    <!-- 水與水桶取得方式 -->
+    <!-- 7. 水與水桶取得方式 -->
     <div class="card" data-cat="faq" data-keywords="水 哪裡拿 哪裡取得 水井 水桶 水滴 背包 使用 分解 空桶 燒瓶 麵團 鍊金">
       <div class="card-header">
         <div class="card-title-group">
@@ -399,7 +433,7 @@
       </div>
     </div>
 
-    <!-- 釘子與印章 -->
+    <!-- 8. 釘子與印章 -->
     <div class="card" data-cat="faq" data-keywords="釘子 印章 鐵匠 皇家守衛 老蛇 偽造 鍛造 鐵錠 肉類 審批 哪裡拿 哪裡找">
       <div class="card-header">
         <div class="card-title-group">
@@ -423,7 +457,7 @@
       </div>
     </div>
 
-    <!-- 解鎖鐵匠與進入地下室 -->
+    <!-- 9. 解鎖鐵匠與進入地下室 -->
     <div class="card" data-cat="faq" data-keywords="解鎖鐵匠 史萊姆 鐵砧 熔爐 進入教堂地下室 地窖 捷徑 瓦礫 墓園5分 太陽日 怎麼進">
       <div class="card-header">
         <div class="card-title-group">
@@ -449,7 +483,7 @@
       </div>
     </div>
 
-    <!-- 血書與死靈之書 -->
+    <!-- 10. 血書與死靈之書 -->
     <div class="card" data-cat="faq" data-keywords="血書 死靈之書 沾血的書 老蛇 占星家 黑暗之書 人皮紙 血液 製作 怎麼做 達成">
       <div class="card-header">
         <div class="card-title-group">
@@ -474,7 +508,7 @@
       </div>
     </div>
 
-    <!-- 教堂裝飾與佈道全攻略 -->
+    <!-- 11. 教堂裝飾與佈道全攻略 -->
     <div class="card" data-cat="church" data-keywords="教堂裝飾 佈道 禱文 信仰 內部評分 講台 告解室 長椅 燭台 香爐 蠟燭 卓越信心 組合禱文 宣教 捐款 Pride 驕傲之日">
       <div class="card-header">
         <div class="card-title-group">
@@ -507,7 +541,7 @@
       </div>
     </div>
 
-    <!-- 採石場前置條件與木橋修復 -->
+    <!-- 12. 採石場前置條件與木橋修復 -->
     <div class="card" data-cat="faq" data-keywords="採石場 條件 前置 科技 木樑 複雜鐵件 鎬子 傳送石 木工 鍛造 圓鋸 避坑 木橋">
       <div class="card-header">
         <div class="card-title-group">
@@ -532,7 +566,7 @@
       </div>
     </div>
 
-    <!-- 石橋通往哪裡與修復指南 -->
+    <!-- 13. 石橋通往哪裡與修復指南 -->
     <div class="card" data-cat="faq" data-keywords="石橋 通往哪裡 損壞的石橋 沼澤 女巫 克洛索 止嗝草 鐵礦 泥炭 修復材料 側板 木板 釘子">
       <div class="card-header">
         <div class="card-title-group">
@@ -554,7 +588,7 @@
       </div>
     </div>
 
-    <!-- 火葬場建造數量與消耗規則 -->
+    <!-- 14. 火葬場建造數量與消耗規則 -->
     <div class="card" data-cat="faq" data-keywords="火葬場 建造 數量 四個 單獨 一個 槽位 木柴 消耗品 重複使用 柴堆 灰燼">
       <div class="card-header">
         <div class="card-title-group">
@@ -573,7 +607,7 @@
       </div>
     </div>
 
-    <!-- 宣傳單製作全流程 -->
+    <!-- 15. 宣傳單製作全流程 -->
     <div class="card" data-cat="faq" data-keywords="審判官 宣傳單 傳單 怎麼做 製作 書桌 作家 墨水 羽毛筆 乾淨紙張 10張">
       <div class="card-header">
         <div class="card-title-group">
@@ -593,7 +627,7 @@
       </div>
     </div>
 
-    <!-- 全NPC六大任務鏈 -->
+    <!-- 16. 全NPC六大任務鏈 -->
     <div class="card" data-cat="npc" data-keywords="主教 查美夫人 商人 老蛇 審判官 占星家 全任務 流程 神器 主線">
       <div class="card-header">
         <div class="card-title-group">
@@ -612,7 +646,7 @@
       </div>
     </div>
 
-    <!-- 主線六大神器與傳送門 -->
+    <!-- 17. 主線六大神器與傳送門 -->
     <div class="card" data-cat="mainquest" data-keywords="主線 道具 材料 獲得方式 製作方式 傳送門 六大物品 光明十字架 死刑犯契約 永恆之鏡 金色角 項鍊 永恆之鹽 發射器 槍管">
       <div class="card-header">
         <div class="card-title-group">
@@ -636,7 +670,7 @@
       </div>
     </div>
 
-    <!-- 屍體解剖防腐數學全矩陣 -->
+    <!-- 18. 屍體解剖防腐數學全矩陣 -->
     <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 16白 26白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏 範圍 小於等於2 大於等於2">
       <div class="card-header">
         <div class="card-title-group">
@@ -665,7 +699,7 @@
       </div>
     </div>
 
-    <!-- 地牢 1-15 層與地圖捷徑 -->
+    <!-- 19. 地牢 1-15 層與地圖捷徑 -->
     <div class="card" data-cat="dungeon" data-keywords="地牢 15層 血杯 骨頭鑰匙 怪物 鋼劍 鑽石 金礦 硫磺 銀礦 路障 採石場 捷徑">
       <div class="card-header">
         <div class="card-title-group">
@@ -685,7 +719,7 @@
       </div>
     </div>
 
-    <!-- 農業經營與賺錢套路 -->
+    <!-- 20. 農業經營與賺錢套路 -->
     <div class="card" data-cat="economy" data-keywords="賺錢 石墨 葡萄酒 蔬菜箱 貿易 肥料 泥炭 金幣 鐵匠 挖掘許可 埋葬證明">
       <div class="card-header">
         <div class="card-title-group">
