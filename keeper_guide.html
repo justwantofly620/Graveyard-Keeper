@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="referrer" content="no-referrer">
-  <title>守墓人 (Graveyard Keeper) 攻略大全百科庫</title>
+  <title>守墓人 (Graveyard Keeper) 攻略大全百科庫 (完整終極版)</title>
   
   <style>
     :root {
@@ -20,7 +20,6 @@
       --tag-bg: #1c2130;
       --red: #bf616a;
       --green: #a3be8c;
-      --blue: #88c0d0;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
@@ -91,7 +90,6 @@
     th { background-color: var(--tag-bg); color: var(--highlight); }
     .empty-state { text-align: center; padding: 35px; color: var(--text-muted); display: none; }
 
-    /* 附圖容器樣式 */
     .guide-image-container {
       margin: 10px 0;
       text-align: center;
@@ -119,30 +117,32 @@
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>全系統實機附圖：高星作物、壓榨機擺設、鍊金全配方表、葡萄園地圖、地下室最佳佈局</p>
+    <p>全系統實機附圖：高星作物、壓榨機擺設、鍊金配方、地下室佈局、解剖防腐數學與全NPC任務鏈</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「高品質農作物」、「壓榨機」、「鍊金配方」、「葡萄園」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「高品質農作物」、「防腐」、「鍊金配方」、「任務」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
-      <button class="cat-btn" data-cat="economy">農業經營與賺錢套路</button>
-      <button class="cat-btn" data-cat="tech">材料作法與加工配方</button>
-      <button class="cat-btn" data-cat="writing">書寫系統與禱文製作</button>
-      <button class="cat-btn" data-cat="alchemy">鍊金拆解與全藥劑</button>
-      <button class="cat-btn" data-cat="church">教堂與地窖專題</button>
-      <button class="cat-btn" data-cat="faq">必備問答速查</button>
+      <button class="cat-btn" data-cat="economy">農業經營與賺錢</button>
+      <button class="cat-btn" data-cat="tech">材料與加工</button>
+      <button class="cat-btn" data-cat="alchemy">鍊金與藥劑</button>
+      <button class="cat-btn" data-cat="church">教堂與地窖</button>
+      <button class="cat-btn" data-cat="corpse">解剖與防腐</button>
+      <button class="cat-btn" data-cat="npc">全NPC任務鏈</button>
+      <button class="cat-btn" data-cat="faq">地圖與問答</button>
+      <button class="cat-btn" data-cat="writing">書寫與禱文</button>
     </div>
   </div>
 
   <div class="guide-list" id="guideList">
 
-    <!-- 0. 高品質農作物提交專題 -->
+    <!-- 1. 高品質農作物 -->
     <div class="card" data-cat="economy" data-keywords="高品質農作物 提交 商人 銀星 金星 捲心菜 胡蘿蔔 甜菜根 肥料 質量肥料 暴食之日 任務 蔬菜 附圖 照片">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">核心專題：商人「高品質農作物」任務提交方法與銀星作物速產</span>
-          <span class="tag">農業經營與賺錢套路</span>
+          <span class="tag">農業經營與賺錢</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
@@ -154,7 +154,6 @@
                onclick="window.open(this.src)">
           <div class="image-caption">▲ 農作物箱子與帶星級高階作物（銀星與金星標示）</div>
         </div>
-
         <p><span class="highlight-text">一、任務需求清單（商人 Gluttony Ὣ 暴食之日）：</span></p>
         <ul>
           <li><b>銀星捲心菜 (Silver Cabbage) × 5</b></li>
@@ -162,51 +161,46 @@
           <li><b>銀星甜菜根 (Silver Beetroot) × 5</b></li>
           <li><i>註：金星品質亦可交付替代，無星與銅星無法提交。</i></li>
         </ul>
-
         <p><span class="highlight-text">二、穩定產出銀星/金星作物的技巧：</span></p>
         <ol>
-          <li><b>施用質量肥料 (Quality Fertilizer)：</b>解鎖農業科技，播種前對田地施用「質量肥料 I」，能將無星或銅星種子在採收時機率升級為銀星作物。</li>
-          <li><b>升星循環：</b>採收銀星作物時會噴出銀星種子，再施用肥料即可滾動出金星種子與金星作物。</li>
-          <li><b>農夫商店升級：</b>在村莊南邊農夫處大量交易提升等級至 Tier 2，可直接購買帶星級的高品質種子。</li>
+          <li><b>施肥升星：</b>解鎖農業科技，播種前施用「質量肥料 I」，能將無星或銅星種子在採收時機率升級為銀星作物。</li>
+          <li><b>種子循環：</b>採收銀星作物會噴出銀星種子，持續施肥即可滾動出金星種子。</li>
+          <li><b>農夫商店：</b>村莊南邊農夫處大量交易提升至 Tier 2，可直接購買帶星級的高品質種子。</li>
         </ol>
-
-        <p><span class="highlight-text">三、交付步驟：</span></p>
-        <p>備妥作物放入背包，於暴食之日（週三）到死馬酒館南側與商人交談點擊任務交付即可。完成後解鎖商人家傳首飾贖回與貿易外銷流水線。</p>
       </div>
     </div>
 
-    <!-- 1. 壓榨設施與油脂取得 -->
+    <!-- 2. 壓榨設施與油脂 -->
     <div class="card" data-cat="tech" data-keywords="壓榨機 榨汁機 油 脂肪 大麻籽 地窖 葡萄酒 釀酒桶 藍圖 附圖 照片 配方">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">核心專題：葡萄壓榨機建造、地窖擺設與油脂提煉全指南</span>
-          <span class="tag">材料作法與加工配方</span>
+          <span class="tag">材料與加工</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
         <p><span class="highlight-text">一、科技與建材：</span></p>
         <ul>
-          <li><b>前置科技：</b>科技樹「農業/自然」分支解鎖<b><span>釀酒 (Winemaking)</span></b>（消耗 25 紅點 + 10 綠點）。</li>
+          <li><b>前置科技：</b>科技樹「農業/自然」分支解鎖<b>釀酒 (Winemaking)</b>。</li>
           <li><b>建造位置：</b>自家小屋下方的地窖（Cellar），點擊藍圖台建造。</li>
           <li><b>所需材料：</b>木板 × 12 + 簡單鐵件 × 4 + 木棒 × 6。</li>
         </ul>
-
         <p><span class="highlight-text">二、壓榨油的配方：</span></p>
         <ul>
           <li><b>脂肪路線：</b>脂肪 × 5 → 油 × 1（解剖屍體提取）。</li>
-          <li><b>大麻籽路線：</b>大麻籽 × 4 → 油 × 1（流浪漢迪格購買種子壓榨）。</li>
-          <li><i>前期替代：亦可直接向村莊西南方的流浪漢迪格直接買小瓶現成油。</i></li>
+          <li><b>大麻籽路線：</b>大麻籽 × 4 → 油 × 1（向流浪漢迪格購買種子）。</li>
+          <li><i>前期替代：亦可直接向村莊西南方的流浪漢迪格花銅幣購買小瓶現成油。</i></li>
         </ul>
       </div>
     </div>
 
-    <!-- 2. 葡萄園與女巫嶺地圖 -->
-    <div class="card" data-cat="economy" data-keywords="葡萄園 女巫嶺 葡萄種子 審判官 憤怒之日 地圖 位置 附圖 照片 燃燒的房子">
+    <!-- 3. 女巫嶺與葡萄園地圖 -->
+    <div class="card" data-cat="faq" data-keywords="葡萄園 女巫嶺 葡萄種子 審判官 憤怒之日 地圖 位置 附圖 照片">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">地圖導航：女巫嶺位置、審判官刑台與專屬葡萄園解鎖</span>
-          <span class="tag">農業經營與賺錢套路</span>
+          <span class="tag">地圖與問答</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
@@ -218,23 +212,20 @@
                onclick="window.open(this.src)">
           <div class="image-caption">▲ 自家東側岔路上坡直通女巫嶺（Witch Hill），山腳下即為葡萄園（Vineyard）</div>
         </div>
-
-        <p><span class="highlight-text">一、葡萄園解鎖流程：</span></p>
         <ol>
-          <li>每週<b><span>憤怒之日 ♁</span></b>（週五）前往女巫嶺山頂找審判官。</li>
+          <li>每週<b>憤怒之日 ♁</b>前往女巫嶺山頂找審判官。</li>
           <li>完成初次委託（送 20 塊木柴與 10 份宣傳單，並觀看一次火刑）。</li>
-          <li>審判官會正式將山腰下的<b><span>葡萄園</span></b>權限贈送給你使用。</li>
-          <li>搭建葡萄藤架，將向商人（二級商店）買來的葡萄種子種下即可釀造葡萄酒。</li>
+          <li>審判官會正式將山腰下的<b>葡萄園</b>贈送給你使用，搭建藤架即可種植向商人買來的葡萄種子。</li>
         </ol>
       </div>
     </div>
 
-    <!-- 3. 鍊金配方全覽 -->
-    <div class="card" data-cat="alchemy" data-keywords="鍊金 原料 配方表 總表 速查 黑色顏料 溶液 精華 粉末 附圖 照片 避坑 灰燼 水">
+    <!-- 4. 鍊金配方 -->
+    <div class="card" data-cat="alchemy" data-keywords="鍊金 原料 配方表 總表 速查 黑色顏料 溶液 精華 粉末 附圖 照片 避坑 灰燼 水 酸液 注射液">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">鍊金原料全拆解對照、藥劑配方速查表與顏料避坑須知</span>
-          <span class="tag">鍊金拆解與全藥劑</span>
+          <span class="tag">鍊金與藥劑</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
@@ -246,27 +237,25 @@
                onclick="window.open(this.src)">
           <div class="image-caption">▲ 官方鍊金配方全覽速查總表（點擊可放大查看原圖）</div>
         </div>
-
         <p><span class="highlight-text">一、黑色顏料避坑須知：</span></p>
-        <p>在鍊金工作台放「灰燼 + 水」會產出<b><span>生命的黏液（生命溶液）</span></b>，因為灰燼屬於生命系屬性，水會將其萃取為溶液。黑色顏料的正確合成組合只有：<b><span>灰燼 + 油</span></b> 或 <b><span>石墨 + 水</span></b>。</p>
-
+        <p>工作台放「灰燼 + 水」會產出<b>生命的黏液</b>（因灰燼屬生命系）。黑色顏料的正確合成組合只有：<b>灰燼 + 油</b> 或 <b>石墨 + 水</b>。</p>
         <p><span class="highlight-text">二、核心藥劑合成公式：</span></p>
         <ul>
-          <li><b>黑色顏料：</b>灰燼 + 油（或石墨 + 水）。墨水原料。</li>
-          <li><b>提速藥水：</b>加速粉末 + 混亂溶液 + 血液。大幅提升跑圖速度。</li>
-          <li><b>酸液：</b>毒性粉末 + 混亂溶液。占星家任務與開箱必備。</li>
+          <li><b>黑色顏料：</b>灰燼 + 油（或石墨 + 水）。墨水核心原料。</li>
+          <li><b>提速藥水：</b>加速粉末 + 混亂溶液 + 血液。</li>
+          <li><b>酸液：</b>毒性粉末 + 混亂溶液。</li>
           <li><b>鹼性注射液：</b>鹼性試劑 (生命粉末 + 毒性溶液 + 水) + 血液 + 水。</li>
           <li><b>金色注射液：</b>金色長生不老藥 (金粉 + 毒性溶液 + 混亂精華) + 血液 + 水。</li>
         </ul>
       </div>
     </div>
 
-    <!-- 4. 教堂地下室最佳擺設 -->
-    <div class="card" data-cat="church" data-keywords="教堂地下室 推薦擺設 附圖 圖片 佈局 研究台 寫作書桌 鍊金工作台 研磨機 攪拌機 蒸餾器 捲軸架 建造模式 箱子 擺法">
+    <!-- 5. 教堂地下室 -->
+    <div class="card" data-cat="church" data-keywords="教堂地下室 推薦擺設 附圖 圖片 佈局 研究台 寫作書桌 鍊金工作台 研磨機 攪拌機 蒸餾器 捲軸架 建造模式 箱子">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">專題攻略：教堂地下室最優分區擺設與避坑佈局（附實機配置圖）</span>
-          <span class="tag">教堂與地窖專題</span>
+          <span class="tag">教堂與地窖</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
@@ -277,52 +266,113 @@
                alt="教堂地下室最佳擺設圖" 
                onclick="window.open(this.src)"
                onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/gh/justwantofly620/Graveyard-Keeper@main/1534857823701_217_279.png';">
-          <div class="image-caption">▲ 官方建造模式推薦擺設圖（鍊金台 I 與 II 並排保留）</div>
+          <div class="image-caption">▲ 官方建造模式推薦擺設圖（點擊放大）</div>
         </div>
-        <p>中央為主幹道教堂工作台與寫作桌；左側為研究台與研磨區；右側排滿書架收納；南邊保留 <b><span>鍊金台 I 與 II 並排</span></b> 以及 3 台蒸餾器。</p>
+        <p>佈局重點：中央為主幹道教堂工作台與寫作桌；左側為研究台與研磨區；右側排滿書架與捲軸架收納；南邊務必保留 <b>鍊金台 I 與 II 並排</b> 的空間，並靠牆放置 3 台蒸餾器。</p>
       </div>
     </div>
 
-    <!-- 5. 原版一週六天官方對照表 -->
-    <div class="card" data-cat="faq" data-keywords="NPC 日子 時間 星期幾 官方 正確 截圖 Pride Lust Gluttony Envy Wrath Sloth 驕傲 情慾 暴食 嫉妒 憤怒 懶惰 主教 查美 商人 老蛇 裁判官 審判官 占星家">
+    <!-- 6. 屍體防腐與解剖 (完整精確版) -->
+    <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 16白 26白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏 範圍 小於等於 大於等於">
       <div class="card-header">
         <div class="card-title-group">
-          <span class="card-title">常見問答：【遊戲原版權威】一週六天官方日曆、圖標與NPC出現完全對照表</span>
-          <span class="tag">必備問答速查</span>
+          <span class="card-title">核心精算：屍體解剖與防腐室注射 12 白 0 紅黃金 SOP</span>
+          <span class="tag">解剖與防腐</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
+        <p><span class="highlight-text">一、各器官切除精確數值變動：</span></p>
+        <table>
+          <tr><th>切除部位</th><th>紅骷髏</th><th>白骷髏</th><th>核心用途</th></tr>
+          <tr><td><b>血液 (Blood)</b></td><td style="color:var(--green)">-1</td><td style="color:var(--green)">+1</td><td>調配藥劑、顏料、注射液</td></tr>
+          <tr><td><b>脂肪 (Fat)</b></td><td style="color:var(--green)">-1</td><td style="color:var(--green)">+1</td><td>提煉油脂、製作白蠟燭</td></tr>
+          <tr><td><b>皮膚 (Skin)</b></td><td style="color:var(--red)">+1</td><td style="color:var(--red)">-1</td><td>製作生皮紙（非做紙勿拔）</td></tr>
+          <tr><td><b>頭骨 (Skull)</b></td><td style="color:var(--red)">+1</td><td>0</td><td>用於手動增加紅骷髏數量</td></tr>
+        </table>
+
+        <p><span class="highlight-text">二、標準 12 白 0 紅必成注射 SOP（無 DLC）：</span></p>
+        <ol>
+          <li><b>精確篩選屍體：</b>送來的屍體天生<b>白骷髏 ≥ 4 顆</b>，且<b>紅骷髏必須在 2 ～ 4 顆之間</b>（若 $< 2$ 顆，金銀針無法吸收足額紅骷髏；若 $> 4$ 顆，最終無法清零）。</li>
+          <li><b>切勿提前動刀，先依序注入：</b>
+            <br>① <b>鹼性注射液</b> (+1紅, +1白)
+            <br>② <b>膠水注射液</b> (+1白)
+            <br>③ <b>銀色注射液</b> (-1紅, +1白)
+            <br>④ <b>金色注射液</b> (-2紅, +2白)
+          </li>
+          <li><b>上手術台切除：</b>拔掉 <b>血液</b> (-1紅, +1白) 和 <b>脂肪</b> (-1紅, +1白)。</li>
+        </ol>
+        <p><i>應變技巧：若初始只有 1 紅，先拔掉頭骨 (+1紅) 補足；若初始有 5 紅，先打酸液注射液 (-1紅, -1白) 扣減。</i></p>
+      </div>
+    </div>
+
+    <!-- 7. 全NPC任務鏈 (完整展開版) -->
+    <div class="card" data-cat="npc" data-keywords="主教 查美夫人 商人 老蛇 審判官 占星家 全任務 流程 神器 主線 光明十字架 家族項鍊 永恆之鹽 永恆之鏡 死刑犯契約 金色角">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">主線通關：遊戲六大核心 NPC 全階段任務鏈與神器取得</span>
+          <span class="tag">全NPC任務鏈</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><b>1. 主教 (Bishop) - 光明十字架：</b>提升墓園評分至 +5 開放教堂 → 評分 +30 與提供陶瓷碗 → 評分 +50 升級大教堂 → 交付金星大理石雕像與晉升貴族資格 → 取得光明十字架。</li>
+          <li><b>2. 查美夫人 (Ms. Charm) - 家族項鍊：</b>證明自己 (給 5 信仰) → 找老蛇討回假硬幣 → 給予真珠寶首飾 → 取得貴族證明與創作動人情歌 → 取得家族項鍊。</li>
+          <li><b>3. 商人 (Merchant) - 永恆之鹽：</b>交付高品質農作物 → 治癒他的打嗝 (草藥或驚嚇) → 開放貿易物流箱 → 舉辦 5 次金星晚宴推廣 → 取得永恆之鹽。</li>
+          <li><b>4. 老蛇 (Snake) - 永恆之鏡：</b>交出 5 信仰 → 給予地牢鑰匙與血桶 → 交付死靈之書 (找占星家拿) → 取得吸血鬼之心與升級黑暗祭壇 → 取得永恆之鏡。</li>
+          <li><b>5. 審判官 (Inquisitor) - 死刑犯契約：</b>給予 20 木柴與 10 傳單 → 開放葡萄園 → 供應金星啤酒與葡萄酒 → 建立看守帳篷與小吃攤 → 交付黑暗器官 → 取得死刑犯契約。</li>
+          <li><b>6. 占星家 (Astrologer) - 金色角：</b>給予骷髏頭 → 尋找老蛇的日記 → 交付酸液與修復工具 → 取得貴族證明並協助營救女兒 (查美夫人) → 取得金色角。</li>
+        </ul>
+        <p><i>備註：將此六大神器組合至女巫嶺北方的古老傳送門，即可通關遊戲。</i></p>
+      </div>
+    </div>
+
+    <!-- 8. 世界地圖與NPC日曆 -->
+    <div class="card" data-cat="faq" data-keywords="世界地圖 全景 全地圖 日曆 時間 星期幾 官方 截圖 Pride Lust Gluttony Envy Wrath Sloth">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">基本常識：世界大地圖導航與一週六天官方 NPC 日曆表</span>
+          <span class="tag">地圖與問答</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <div class="guide-image-container">
+          <img class="guide-image" 
+               src="https://static.wikia.nocookie.net/graveyardkeeper_gamepedia_en/images/4/45/WorldMapSD_en.png/revision/latest/scale-to-width-down/1200?cb=20191115154904" 
+               alt="守墓人世界大地圖全貌" 
+               onclick="window.open(this.src)">
+        </div>
         <table>
           <tr><th>英文名稱</th><th>中文名稱</th><th>官方圖示</th><th>出現 NPC</th><th>出現地點與事件</th></tr>
           <tr><td><b>1. Pride</b></td><td><b>驕傲之日</b></td><td>☀️ 紫底金色太陽</td><td><b>主教 (Bishop)</b></td><td>教堂門口，可進行每週宣教</td></tr>
           <tr><td><b>2. Lust</b></td><td><b>情慾之日</b></td><td>♀ 紅底女性符號</td><td><b>查美夫人 (Ms. Charm)</b></td><td>死馬酒館下午至夜間唱歌</td></tr>
-          <tr><td><b>3. Gluttony</b></td><td><b>暴食之日</b></td><td>Ὣ 橘底錢包符號</td><td><b>商人 (Merchant)</b></td><td>死馬酒館南側馬車旁（交高品質作物/買葡萄種子）</td></tr>
+          <tr><td><b>3. Gluttony</b></td><td><b>暴食之日</b></td><td>Ὣ 橘底錢包符號</td><td><b>商人 (Merchant)</b></td><td>死馬酒館南側馬車旁 (貿易與種子)</td></tr>
           <tr><td><b>4. Envy</b></td><td><b>嫉妒之日</b></td><td>♉ 綠底公牛角圖標</td><td><b>老蛇 (Snake)</b></td><td>夜間出現在教堂地下暗道</td></tr>
-          <tr><td><b>5. Wrath</b></td><td><b>憤怒之日</b></td><td>♁ 棕底十字符號</td><td><b>審判官 (Inquisitor)</b></td><td>女巫嶺火刑台（領取葡萄園權限）</td></tr>
-          <tr><td><b>6. Sloth</b></td><td><b>懶惰之日</b></td><td>🌙 藍底金色新月</td><td><b>占星家 (Astrologer)</b></td><td>海邊燈塔旁，販售紙筆墨水與書籍</td></tr>
+          <tr><td><b>5. Wrath</b></td><td><b>憤怒之日</b></td><td>♁ 棕底十字符號</td><td><b>審判官 (Inquisitor)</b></td><td>女巫嶺火刑台 (領取葡萄園權限)</td></tr>
+          <tr><td><b>6. Sloth</b></td><td><b>懶惰之日</b></td><td>🌙 藍底金色新月</td><td><b>占星家 (Astrologer)</b></td><td>海邊燈塔旁，販售紙筆與書籍</td></tr>
         </table>
       </div>
     </div>
 
-    <!-- 6. 書寫材料專題 -->
-    <div class="card" data-cat="writing" data-keywords="書寫 材料 取得方式 生皮紙 乾淨紙張 羽毛 墨水 羽毛筆與墨水 宣傳單 故事 筆記 章節 軟封面 硬封面 書籍 禱文 配方">
+    <!-- 9. 書寫系統 -->
+    <div class="card" data-cat="writing" data-keywords="書寫 材料 取得方式 生皮紙 乾淨紙張 羽毛 墨水 羽毛筆 宣傳單 故事 筆記 章節 軟封面 硬封面 書籍 禱文">
       <div class="card-header">
         <div class="card-title-group">
-          <span class="card-title">核心專題：各種書寫材料、製作配方、取得途徑與全禱文寫作</span>
-          <span class="tag">書寫系統與禱文製作</span>
+          <span class="card-title">書寫系統：各種紙筆耗材、製作配方與取得途徑</span>
+          <span class="tag">書寫與禱文</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p><span class="highlight-text">一、書寫基礎耗材製作表：</span></p>
         <table>
           <tr><th>耗材名稱</th><th>製作設備</th><th>配方消耗</th><th>取得方式與替代來源</th></tr>
-          <tr><td><b>生皮紙 × 4</b></td><td>教堂工作台</td><td>皮膚 × 1</td><td>解剖屍體剝下皮膚；或在工作台用 <b>蝙蝠翅膀 × 4</b> 製作。</td></tr>
-          <tr><td><b>乾淨紙張 × 4</b></td><td>教堂工作台</td><td>生皮紙 × 1</td><td>用生皮紙裁剪；亦可月亮日向燈塔<b>占星家</b>購買現成。</td></tr>
-          <tr><td><b>羽毛</b></td><td>—</td><td>—</td><td>村莊雞舍周圍拾取；向農夫妻子或燈塔占星家購買。</td></tr>
-          <tr><td><b>墨水瓶</b></td><td>教堂工作台</td><td>錐形燒瓶 × 1 + 黑色顏料 × 1</td><td>黑色顏料在鍊金台用「灰燼+油」或「石墨+水」合成；占星家常駐販售。</td></tr>
-          <tr><td><b>羽毛筆與墨水</b></td><td>教堂工作台</td><td>羽毛 × 3 + 墨水瓶 × 1</td><td>書寫必備工具（有耐久度）；亦可直接找占星家購買。</td></tr>
+          <tr><td><b>生皮紙 × 4</b></td><td>教堂工作台</td><td>皮膚 × 1</td><td>解剖屍體剝下皮膚；或用 <b>蝙蝠翅膀 × 4</b> 製作。</td></tr>
+          <tr><td><b>乾淨紙張 × 4</b></td><td>教堂工作台</td><td>生皮紙 × 1</td><td>用生皮紙裁剪；亦可向燈塔<b>占星家</b>購買。</td></tr>
+          <tr><td><b>羽毛</b></td><td>—</td><td>—</td><td>村莊雞舍周圍拾取；向農夫妻子或占星家購買。</td></tr>
+          <tr><td><b>墨水瓶</b></td><td>教堂工作台</td><td>錐形燒瓶 + 黑色顏料</td><td>占星家常駐販售；或自行鍊金調配顏料合成。</td></tr>
+          <tr><td><b>羽毛筆與墨水</b></td><td>教堂工作台</td><td>羽毛 × 3 + 墨水瓶 × 1</td><td>書寫必備工具 (有耐久度)；亦可找占星家買現成。</td></tr>
         </table>
       </div>
     </div>
