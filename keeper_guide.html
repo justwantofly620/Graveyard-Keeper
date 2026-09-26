@@ -95,31 +95,39 @@
     th { background-color: var(--tag-bg); color: var(--highlight); }
     .empty-state { text-align: center; padding: 35px; color: var(--text-muted); display: none; }
 
-    .church-map {
-      background: #090a0d; border: 1px dashed var(--accent);
-      border-radius: 8px; padding: 10px; margin: 8px 0;
-      font-family: monospace; font-size: 0.76rem; text-align: center;
-      line-height: 1.4; color: var(--blue);
+    /* 附圖樣式 */
+    .guide-image-container {
+      margin: 10px 0;
+      text-align: center;
+      background: #090a0d;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 6px;
     }
-    .church-map .altar {
-      display: inline-block; padding: 4px 18px; background: var(--tag-bg);
-      border: 1px solid var(--highlight); color: var(--highlight);
-      font-weight: bold; border-radius: 4px; margin-bottom: 8px;
+    .guide-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+      margin: 0 auto;
+      cursor: zoom-in;
     }
-    .church-grid { display: flex; justify-content: space-around; gap: 10px; margin-top: 4px; }
-    .church-col { display: flex; flex-direction: column; gap: 6px; flex: 1; }
-    .church-item { background: var(--card-bg); border: 1px solid var(--card-border); padding: 3px; border-radius: 4px; }
+    .image-caption {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>玩家提問全收錄：教堂地下室擺設、六日官方行事曆、教堂裝飾與佈道、水取得、北邊山道落石、採石場與全任務</p>
+    <p>玩家提問全收錄：教堂地下室擺設(附圖)、六日原版行事曆、教堂裝飾與佈道、水取得、北邊山道落石、採石場與全任務</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「地下室擺設」、「鍊金台」、「研究台」、「Pride」、「水」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「地下室擺設」、「鍊金台」、「Pride」、「水」、「落石」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部攻略</button>
       <button class="cat-btn" data-cat="faq">必備問答速查</button>
@@ -136,52 +144,36 @@
 
   <div class="guide-list" id="guideList">
 
-    <!-- FAQ -15: 教堂地下室最佳擺設 -->
-    <div class="card" data-cat="church" data-keywords="教堂地下室 推薦擺設 佈局 研究台 寫作書桌 鍊金工作台 研磨機 攪拌機 蒸餾器 捲軸架 箱子 擺法">
+    <!-- FAQ -15: 教堂地下室最佳擺設（含 GitHub 實機圖） -->
+    <div class="card" data-cat="church" data-keywords="教堂地下室 推薦擺設 附圖 佈局 研究台 寫作書桌 鍊金工作台 研磨機 攪拌機 蒸餾器 捲軸架 建造模式 箱子 擺法">
       <div class="card-header">
         <div class="card-title-group">
-          <span class="card-title">專題攻略：教堂地下室最優分區擺設與避坑佈局指南</span>
+          <span class="card-title">專題攻略：教堂地下室最優分區擺設與避坑佈局（附實機配置圖）</span>
           <span class="tag">教堂與地窖專題</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p><span class="highlight-text">一、兩大核心功能分區規劃：</span></p>
-        <p>地下室面積固定，後期大型設施多，推薦將動線分為<b>「右上研究與寫作區」</b>與<b>「左下鍊金全套實驗區」</b>：</p>
-        
-        <div class="church-map">
-          <div>[教堂入口階梯] ──► 進入地下室</div>
-          <div class="church-grid">
-            <div class="church-col">
-              <div class="church-item"><b>【鍊金實驗區】</b></div>
-              <div class="church-item">鍊金工作台 I & II</div>
-              <div class="church-item">手動攪拌機 & 研磨機</div>
-              <div class="church-item">鍊金蒸餾器 (1~2台)</div>
-              <div class="church-item">專屬素材儲物箱 (2~3個)</div>
-            </div>
-            <div class="church-col">
-              <div class="church-item"><b>【研究與寫作區】</b></div>
-              <div class="church-item">研究台 (分解與刷藍點)</div>
-              <div class="church-item">寫作書桌 (製書與宣傳單)</div>
-              <div class="church-item">教堂工作台 (削皮做紙)</div>
-              <div class="church-item">捲軸架 / 書籍箱</div>
-            </div>
-          </div>
-          <div style="margin-top:6px; color:var(--text-muted);">◄── 通往自家地窖與老蛇密室捷徑</div>
+        <p><span class="highlight-text">一、官方建造模式推薦擺設圖：</span></p>
+        <div class="guide-image-container">
+          <img class="guide-image" src="https://raw.githubusercontent.com/justwantofly620/Graveyard-Keeper/main/1534857823701_217_279.png" alt="教堂地下室最佳擺設圖" onclick="window.open(this.src)">
+          <div class="image-caption">▲ 點擊圖片可直接開啟原圖放大查看各槽位對應設施</div>
         </div>
 
-        <p><span class="highlight-text">二、核心設備擺設清單：</span></p>
+        <p><span class="highlight-text">二、圖解核心佈局說明：</span></p>
         <ul>
-          <li><b>寫作區必備：</b><b>研究台</b> × 1、<b>寫作書桌</b> × 1~2、<b>教堂工作台</b> × 1、<b>捲軸架</b> × 1。</li>
-          <li><b>鍊金區必備（關鍵）：</b>
-            <br>• <b>鍊金工作台 I 與 II 必須同時保留！</b>（I 級做雙材料如顏料/酸液，II 級做三材料如金銀防腐液，配方不共通，切勿拆除 I 級）。
-            <br>• <b>研磨機</b> × 1、<b>手動攪拌機</b> × 1、<b>鍊金蒸餾器</b> × 1~2。
-            <br>• <b>鍊金專用箱 × 2~3：</b>鍊金台會自動調用箱內素材，粉末/溶液/精華全扔箱子，操作免背包負擔。
+          <li><b>中央主幹道：</b>教堂工作台與寫作桌子（I/II）並排在中通道中央，兼顧進出便利與做紙、寫書需求[cite: 3]。</li>
+          <li><b>左側研究與加工區：</b>研究台緊靠西側，周圍排滿捲架與鍊金架（存放未研究素材與紙張）[cite: 3]；北側擺放<b>鍊金軋機（研磨機）</b>與鍊金架[cite: 3]；中央下凹處放置<b>手動攪拌機</b>[cite: 3]。</li>
+          <li><b>右側藏書走廊：</b>通往東邊的走廊兩側全部擺放<b>書架 / 滾架</b>，可提供極大容量收納筆記、章節、信仰與各階書籍[cite: 3]。</li>
+          <li><b>南邊全套鍊金核心槽位：</b>
+            <br>• 左下角密集擺放<b>4 個鍊金架</b>[cite: 3]。
+            <br>• 底部並排擺放 <b>3 台蒸餾體（蒸餾器）</b>[cite: 3]。
+            <br>• 右下角並排擺放 <b>2 台鍊金台（I 級與 II 級各一台）</b>，確保雙材料與三材料藥劑都能即時調配[cite: 3]。
           </li>
         </ul>
 
-        <p><span class="highlight-text">三、最佳動線技巧：</span></p>
-        <p>務必優先用「木楔×2、木板×4、簡單鐵件×4」挖通左下側通往<b>自家地窖的通道</b>。院子抽的水滴、採收的農作物直接走地窖進地下室，完全不需繞路戶外。</p>
+        <p><span class="highlight-text">三、避坑關鍵提醒：</span></p>
+        <p>很多玩家升級科技後會把「鍊金台 I」拆掉，<b>千萬不要拆！</b>黑色顏料、止血藥、酸液等雙材料配方只能在 I 級台製作，必須像圖中一樣將 <b>鍊金台 I 與 II 並排保留</b>[cite: 3]！</p>
       </div>
     </div>
 
@@ -195,15 +187,15 @@
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p><span class="highlight-text">遊戲原版嚴格按以下 6 天順序循環輪替[span_0](start_span)[span_0](end_span)：</span></p>
+        <p><span class="highlight-text">遊戲原版嚴格按以下 6 天順序循環輪替[cite: 2]：</span></p>
         <table>
           <tr><th>英文名稱</th><th>中文名稱</th><th>官方圖示特徵</th><th>出現 NPC</th><th>出現地點與事件說明</th></tr>
-          <tr><td><b>1. Pride</b></td><td><b>驕傲之日</b></td><td>☀️ 紫底金色太陽</td><td><b>主教 (Bishop)</b></td><td>出現在教堂門口。若修復教堂，此日可宣教[span_1](start_span)[span_1](end_span)。</td></tr>
-          <tr><td><b>2. Lust</b></td><td><b>情慾之日</b></td><td>♀ 紅底女性符號</td><td><b>查美夫人 (Ms. Charm)</b></td><td>下午至夜間出現在酒館唱歌[span_2](start_span)[span_2](end_span)。</td></tr>
-          <tr><td><b>3. Gluttony</b></td><td><b>暴食之日</b></td><td>Ὣ 橘底雙角/錢包紋</td><td><b>商人 (Merchant)</b></td><td>出現在死馬酒館南側馬車旁[span_3](start_span)[span_3](end_span)。</td></tr>
-          <tr><td><b>4. Envy</b></td><td><b>嫉妒之日</b></td><td>♉ 綠底公牛角圖標</td><td><b>老蛇 (Snake)</b></td><td>夜間出現在地窖/地下通道鐵柵欄處[span_4](start_span)[span_4](end_span)。</td></tr>
-          <tr><td><b>5. Wrath</b></td><td><b>憤怒之日</b></td><td>♁ 棕底帶十字架之圓</td><td><b>審判官 / 裁判官 (Inquisitor)</b></td><td>出現在女巫嶺審判刑台[span_5](start_span)[span_5](end_span)。</td></tr>
-          <tr><td><b>6. Sloth</b></td><td><b>懶惰之日</b></td><td>🌙 藍底金色新月</td><td><b>占星家 (Astrologer)</b></td><td>出現在最東邊海邊燈塔旁[span_6](start_span)[span_6](end_span)。</td></tr>
+          <tr><td><b>1. Pride</b></td><td><b>驕傲之日</b></td><td>☀️ 紫底金色太陽</td><td><b>主教 (Bishop)</b></td><td>出現在教堂門口。若修復教堂，此日可宣教[cite: 2]。</td></tr>
+          <tr><td><b>2. Lust</b></td><td><b>情慾之日</b></td><td>♀ 紅底女性符號</td><td><b>查美夫人 (Ms. Charm)</b></td><td>下午至夜間出現在死馬酒館唱歌[cite: 2]。</td></tr>
+          <tr><td><b>3. Gluttony</b></td><td><b>暴食之日</b></td><td>Ὣ 橘底雙角/錢包紋</td><td><b>商人 (Merchant)</b></td><td>出現在死馬酒館南側馬車旁[cite: 2]。</td></tr>
+          <tr><td><b>4. Envy</b></td><td><b>嫉妒之日</b></td><td>♉ 綠底公牛角圖標</td><td><b>老蛇 (Snake)</b></td><td>夜間出現在教堂地下暗道/地窖鐵柵欄處[cite: 2]。</td></tr>
+          <tr><td><b>5. Wrath</b></td><td><b>憤怒之日</b></td><td>♁ 棕底帶十字架之圓</td><td><b>審判官 / 裁判官 (Inquisitor)</b></td><td>出現在女巫嶺審判刑台[cite: 2]。</td></tr>
+          <tr><td><b>6. Sloth</b></td><td><b>懶惰之日</b></td><td>🌙 藍底金色新月</td><td><b>占星家 (Astrologer)</b></td><td>出現在最東邊海邊燈塔旁[cite: 2]。</td></tr>
         </table>
       </div>
     </div>
@@ -218,7 +210,7 @@
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p>現身時間：每週<b>驕傲之日 (Pride) ☀️ 白天</b>（教堂門口）。此日為唯一可宣教的日子[span_7](start_span)[span_7](end_span)。</p>
+        <p>現身時間：每週<b>驕傲之日 (Pride) ☀️ 白天</b>（教堂門口）。此日為唯一可宣教的日子[cite: 2]。</p>
         <ol>
           <li><b>墓園修繕 (+5)：</b>拔除雜草、用木質修理工具修復損壞墓碑，評分達到 +5，主教揭幕教堂並任命你為牧師。</li>
           <li><b>20 碗優質魚湯：</b>向老漁夫學釣魚，做出 20 碗魚湯（或直接交付 4 條金星鯛魚）。</li>
@@ -241,7 +233,7 @@
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p>現身時間：每週<b>情慾之日 (Lust) ♀ 下午至夜間</b>（死馬酒館內部舞台/包廂唱歌）[span_8](start_span)[span_8](end_span)。</p>
+        <p>現身時間：每週<b>情慾之日 (Lust) ♀ 下午至夜間</b>（死馬酒館內部舞台/包廂唱歌）[cite: 2]。</p>
         <ol>
           <li><b>交付 5 枚假金幣：</b>請地下室老蛇代為製作假硬幣交給她。</li>
           <li><b>詩人情書：</b>找酒館門口的詩人代寫情書（需給詩人提供酒或毒蘑菇酒提神）。</li>
@@ -263,7 +255,7 @@
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p>現身時間：每週<b>暴食之日 (Gluttony) Ὣ 白天</b>（死馬酒館南側馬車旁）[span_9](start_span)[span_9](end_span)。</p>
+        <p>現身時間：每週<b>暴食之日 (Gluttony) Ὣ 白天</b>（死馬酒館南側馬車旁）[cite: 2]。</p>
         <ol>
           <li><b>借款與農作物：</b>交付 12 個金星捲心菜、12 個胡蘿蔔、12 個甜菜給商人。</li>
           <li><b>治癒打嗝頑疾：</b>前往女巫沼澤採集「止嗝草」，調製成解藥交給商人飲用。</li>
@@ -285,7 +277,7 @@
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p>現身時間：每週<b>嫉妒之日 (Envy) ♉ 夜間</b>（教堂地下暗道/地窖鐵柵欄處）[span_10](start_span)[span_10](end_span)。</p>
+        <p>現身時間：每週<b>嫉妒之日 (Envy) ♉ 夜間</b>（教堂地下暗道/地窖鐵柵欄處）[cite: 2]。</p>
         <ol>
           <li><b>交付 5 點信仰：</b>展示神職實力，老蛇好感上升並為你打開鐵柵欄門。</li>
           <li><b>交付守墓人日記：</b>將占星家遺失的日記交給老蛇閱讀。</li>
@@ -308,7 +300,7 @@
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p>現身時間：每週<b>憤怒之日 (Wrath) ♁ 白天</b>（女巫嶺火刑台）[span_11](start_span)[span_11](end_span)。</p>
+        <p>現身時間：每週<b>憤怒之日 (Wrath) ♁ 白天</b>（女巫嶺火刑台）[cite: 2]。</p>
         <ol>
           <li><b>整修審判嶺刑場：</b>運送 20 份木柴至女巫嶺，並在地下室案台製作 10 份宣傳單交給他。</li>
           <li><b>開設小吃攤：</b>在刑場旁建造小吃攤，提供 5 瓶金星啤酒與 5 個漢堡，舉辦兩次火刑觀禮活動。</li>
@@ -330,7 +322,7 @@
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p>現身時間：每週<b>懶惰之日 (Sloth) 🌙 白天</b>（地圖最東邊海邊燈塔旁）[span_12](start_span)[span_12](end_span)。</p>
+        <p>現身時間：每週<b>懶惰之日 (Sloth) 🌙 白天</b>（地圖最東邊海邊燈塔旁）[cite: 2]。</p>
         <ol>
           <li><b>提供紙筆：</b>給予 1 個羽毛筆墨水與 1 張乾淨紙張，占星家贈送 25 點初始藍點。</li>
           <li><b>尋找日記：</b>要求前往地下密室從老蛇手中取回守墓人日記。</li>
@@ -356,7 +348,7 @@
         <p><span class="highlight-text">一、核心公式機制：</span></p>
         <ul>
           <li><b>室內教堂評分：</b>決定佈道成功率，並決定噴出的<b>「紫色信仰光球數量」</b>。</li>
-          <li><b>室外墓園評分：</b>決定每週<b>驕傲之日 (Pride) ☀️</b> 信徒給你的<b>「金錢打賞金額」</b>[span_13](start_span)[span_13](end_span)。</li>
+          <li><b>室外墓園評分：</b>決定每週<b>驕傲之日 (Pride) ☀️</b> 信徒給你的<b>「金錢打賞金額」</b>[cite: 2]。</li>
           <li><b>禱文推薦評分門檻：</b>若教堂分數低於禱文需求，佈道容易失敗（信徒嘆氣離場，只掉 1 信仰且無錢）。</li>
         </ul>
         <p><span class="highlight-text">二、全階段實用禱文推薦：</span></p>
