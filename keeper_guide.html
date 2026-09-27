@@ -92,26 +92,27 @@
     .guide-image-container { margin: 10px 0; text-align: center; background: #090a0d; border: 1px solid var(--card-border); border-radius: 8px; padding: 8px; }
     .guide-image { max-width: 100%; height: auto; border-radius: 6px; display: block; margin: 0 auto; cursor: zoom-in; }
     .image-caption { font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; }
+    .item-icon { display: inline-block; width: 16px; height: 16px; vertical-align: middle; margin-right: 4px; background-size: cover; }
   </style>
 </head>
 <body>
 
   <header>
     <h1>守墓人 (Graveyard Keeper) 攻略大全百科庫</h1>
-    <p>全系統實機附圖：從新手開局、體力管理到全自動化、暗黑器官與防腐精算</p>
+    <p>全系統實機附圖：開局教學、農業肥料配方、完美防腐注射液、暗黑器官與全自動化</p>
   </header>
 
   <div class="controls-container">
-    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「殭屍」、「果汁」、「心臟」、「食物」、「傳送石」...">
+    <input type="text" id="searchInput" class="search-box" placeholder="全庫搜尋：如「注射液」、「肥料」、「殭屍」、「果汁」、「心臟」...">
     <div class="categories-bar" id="categoryBar">
       <button class="cat-btn active" data-cat="all">全部</button>
       <button class="cat-btn" data-cat="basic">開局與基礎解鎖</button>
-      <button class="cat-btn" data-cat="economy">食物與經營賺錢</button>
+      <button class="cat-btn" data-cat="economy">食物、肥料與經營</button>
       <button class="cat-btn" data-cat="church">教堂與地窖專題</button>
       <button class="cat-btn" data-cat="tech">材料作法與加工</button>
       <button class="cat-btn" data-cat="alchemy">鍊金拆解與藥劑</button>
       <button class="cat-btn" data-cat="writing">書寫與禱文製作</button>
-      <button class="cat-btn" data-cat="corpse">防腐與殭屍自動化</button>
+      <button class="cat-btn" data-cat="corpse">注射液、防腐與殭屍</button>
       <button class="cat-btn" data-cat="npc">全NPC任務與地圖</button>
     </div>
   </div>
@@ -183,7 +184,7 @@
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">體力管理：前期至後期最高CP值食物與料理推薦</span>
-          <span class="tag">食物與經營賺錢</span>
+          <span class="tag">食物、肥料與經營</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
@@ -202,7 +203,7 @@
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">賺錢套路：各階段賺錢方法與「挖掘許可」的真實功用</span>
-          <span class="tag">食物與經營賺錢</span>
+          <span class="tag">食物、肥料與經營</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
@@ -219,20 +220,36 @@
       </div>
     </div>
 
-    <!-- 6. 高品質農作物 -->
-    <div class="card" data-cat="economy" data-keywords="高品質農作物 提交 商人 銀星 金星 捲心菜 胡蘿蔔 甜菜根 肥料 質量肥料 暴食之日">
+    <!-- 6. 農業進階：全階肥料詳細做法 (NEW) -->
+    <div class="card" data-cat="economy" data-keywords="肥料 質量肥料 泥炭 生長促進劑 風味促進劑 鍊金 配方 金星 銀星 做法 製作">
       <div class="card-header">
         <div class="card-title-group">
-          <span class="card-title">核心專題：商人「高品質農作物」任務與銀星作物速產</span>
-          <span class="tag">食物與經營賺錢</span>
+          <span class="card-title">農業進階：全階肥料詳細做法（提升金銀星作物必備）</span>
+          <span class="tag">食物、肥料與經營</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
       <div class="card-body">
-        <p><span class="highlight-text">商人任務需求（暴食之日交付）：</span></p>
-        <p>5 顆銀星捲心菜 + 5 顆銀星胡蘿蔔 + 5 顆銀星甜菜根（金星亦可替代）。</p>
-        <p><span class="highlight-text">穩定產出技巧：</span></p>
-        <p>解鎖農業科技，播種前對田地施用「質量肥料 I」，能將無星種子升級為銀星作物。採收銀星作物時會噴出銀星種子，持續施肥即可滾動出金星種子。農夫商店升級至 Tier 2 後也可直接購買帶星種子。</p>
+        <p>想穩定種出銀星與金星作物，你必須學會合成<b>「質量肥料 (Quality Fertilizer)」</b>。肥料的合成需要結合農田的堆肥與地下室的鍊金工作台：</p>
+        
+        <p><span class="highlight-text">步驟一：獲取基底「泥炭」</span></p>
+        <p>在菜園建造<b>堆肥桶 (Compost Heap)</b>，放入 8 個農作物廢料（Harvest waste），一段時間後即可收成數個<b>泥炭 (Peat)</b>與蛆蟲。</p>
+
+        <p><span class="highlight-text">步驟二：在鍊金工作台提煉「促進劑」</span></p>
+        <p>在地下室的<b>鍊金工作台 II</b> 調配以下藥劑：</p>
+        <ul>
+          <li>🧪 <b>生長促進劑 (Growth Enhancer)：</b> <br>配方 ＝ 灰燼 (Ash) ＋ 生命精華 (Life extract)</li>
+          <li>🧪 <b>風味促進劑 (Flavor Enhancer)：</b> <br>配方 ＝ 灰燼 (Ash) ＋ 毒性精華 (Toxic extract) ＋ 生命精華 (Life extract)</li>
+        </ul>
+        <p><i>註：灰燼來自火化屍體；生命精華需將心臟或黃花放入攪拌機；毒性精華需將洋蔥放入攪拌機。</i></p>
+
+        <p><span class="highlight-text">步驟三：在教堂工作台合成最終肥料</span></p>
+        <p>拿著泥炭與促進劑，到地下室的<b>教堂工作台 (Church Workbench)</b> 合成：</p>
+        <table>
+          <tr><th>肥料名稱</th><th>合成配方</th><th>效果</th></tr>
+          <tr><td><b>質量肥料 I</b> (銀星)</td><td>泥炭 × 10 ＋ 生長促進劑 × 10</td><td>提升農作物產出銀星的機率</td></tr>
+          <tr><td><b>質量肥料 II</b> (金星)</td><td>泥炭 × 10 ＋ 風味促進劑 × 10</td><td>大幅提升農作物產出金星的機率</td></tr>
+        </table>
       </div>
     </div>
 
@@ -305,18 +322,92 @@
         <ul>
           <li><b>提速藥水：</b>加速粉末 + 混亂溶液 + 血液。</li>
           <li><b>酸液：</b>毒性粉末 + 混亂溶液。</li>
-          <li><b>鹼性注射液：</b>鹼性試劑 (生命粉末 + 毒性溶液 + 水) + 血液 + 水。</li>
-          <li><b>金色注射液：</b>金色長生不老藥 (金粉 + 毒性溶液 + 混亂精華) + 血液 + 水。</li>
         </ul>
       </div>
     </div>
 
-    <!-- 11. 器官用途 (心臟/大腦/腸子) -->
+    <!-- 11. 防腐進階：全防腐注射液詳細做法 (NEW) -->
+    <div class="card" data-cat="corpse" data-keywords="注射液 防腐 膠水 鹼性 銀色 金色 長生不老藥 配方 做法 製作 圖文 錐形燒瓶 水">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">防腐進階：全注射液詳細做法與前置鍊金配方表</span>
+          <span class="tag">注射液、防腐與殭屍</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <div class="guide-image-container">
+          <img class="guide-image" 
+               src="https://static.wikia.nocookie.net/graveyardkeeper_gamepedia_en/images/e/ea/Gold_injection.png/revision/latest?cb=20180829141042" 
+               alt="金色注射液圖示" 
+               style="width: 60px; display: inline-block;"
+               onerror="this.style.display='none'">
+          <div class="image-caption">掌握注射液是洗白骷髏的唯一途徑</div>
+        </div>
+
+        <p>所有的防腐注射液（Injection）都需要在地下室的<b>教堂工作台 (Church Workbench)</b> 合成。合成的基礎公式永遠是：</p>
+        <p style="text-align:center; font-weight:bold; color:var(--highlight); background:rgba(255,255,255,0.05); padding:8px; border-radius:6px;">🧪 核心藥劑 ＋ 💧 水 × 1 ＋ 🫙 錐形燒瓶 × 1 ＝ 對應注射液</p>
+        
+        <p>以下是 12 白骨防腐精算所需的四支核心注射液，及其「核心藥劑」的鍊金調配配方：</p>
+
+        <table>
+          <tr>
+            <th width="28%">注射液名稱與效果</th>
+            <th width="28%">所需核心藥劑</th>
+            <th>核心藥劑的鍊金配方 (鍊金工作台)</th>
+          </tr>
+          <tr>
+            <td style="color:var(--text-main)"><b>鹼性注射液 (Lye)</b><br><span style="color:var(--red)">+1 紅</span> / <span style="color:var(--green)">+1 白</span></td>
+            <td>鹼性試劑 (Alkali)</td>
+            <td>生命粉末 ＋ 毒性溶液 ＋ 水</td>
+          </tr>
+          <tr>
+            <td style="color:var(--text-main)"><b>膠水注射液 (Glue)</b><br>0 紅 / <span style="color:var(--green)">+1 白</span></td>
+            <td>膠水 (Glue)</td>
+            <td>健康粉末 ＋ 生命溶液 ＋ 混亂精華</td>
+          </tr>
+          <tr>
+            <td style="color:var(--text-main)"><b>銀色注射液 (Silver)</b><br><span style="color:var(--green)">-1 紅</span> / <span style="color:var(--green)">+1 白</span></td>
+            <td>銀色長生不老藥</td>
+            <td>銀粉 ＋ 秩序溶液 ＋ 生命精華</td>
+          </tr>
+          <tr>
+            <td style="color:var(--text-main)"><b>金色注射液 (Gold)</b><br><span style="color:var(--green)">-2 紅</span> / <span style="color:var(--green)">+2 白</span></td>
+            <td>金色長生不老藥</td>
+            <td>金粉 ＋ 毒性溶液 ＋ 混亂精華</td>
+          </tr>
+        </table>
+        <p><i>💡 備註：水 (Water) 從井裡打水後在物品欄點擊使用即可獲得；錐形燒瓶 (Conical Flask) 需解鎖玻璃製造，用沙子在熔爐燒製玻璃，再於工作台敲出。</i></p>
+      </div>
+    </div>
+
+    <!-- 12. 屍體防腐精算 (12白金) -->
+    <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">核心精算：屍體防腐室注射 12 白 0 紅黃金 SOP</span>
+          <span class="tag">注射液、防腐與殭屍</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">器官切除變動：</span></p>
+        <p>血液/脂肪（無條件洗白：-1紅 +1白，必拔）；皮膚（+1紅 -1白，除非缺紙勿拔）；頭骨（+1紅）。</p>
+        <p><span class="highlight-text">12 白 0 紅必成注射 SOP：</span></p>
+        <ol>
+          <li>篩選天生白骷髏 ≥ 4，紅骷髏 2~4 的屍體。</li>
+          <li><b>先不動刀，依序打針：</b>① 鹼性注射液 (+1紅, +1白) ② 膠水注射液 (+1白) ③ 銀色注射液 (-1紅, +1白) ④ 金色注射液 (-2紅, +2白)。</li>
+          <li><b>上手術台切除：</b>拔掉血液與脂肪，徹底清空紅骨並拉滿白骨。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 13. 器官用途 (心臟/大腦/腸子) -->
     <div class="card" data-cat="corpse" data-keywords="器官 心臟 大腦 腸子 用途 黑暗心臟 生命粉末 生命精華 藍點 邪教徒">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">器官用途：心臟、大腦、腸子有什麼用？暗黑心臟怎麼拿？</span>
-          <span class="tag">防腐與殭屍自動化</span>
+          <span class="tag">注射液、防腐與殭屍</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
@@ -330,7 +421,46 @@
       </div>
     </div>
 
-    <!-- 12. 書寫科技與血書 -->
+    <!-- 14. 殭屍製造與果汁 -->
+    <div class="card" data-cat="corpse" data-keywords="殭屍 製造 果汁 復活台 岡特 殭屍果汁 自動化 白骷髏 信仰">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">自動化專題：如何製造殭屍？果汁配方與工作效率機制</span>
+          <span class="tag">注射液、防腐與殭屍</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">解鎖與製造條件：</span></p>
+        <ul>
+          <li>推進老蛇地窖任務打開鐵門，與牆上的殭屍<b>岡特 (Gunter)</b> 對話解鎖「復活」科技。</li>
+          <li>在太平間建造「復活台」。</li>
+          <li>準備 <b>殭屍果汁</b>（配方：健康粉末 + 血液）與 <b>10 點信仰</b>，對屍體進行復活。</li>
+        </ul>
+        <p><span class="highlight-text">殭屍效率機制（重要）：</span></p>
+        <p>殭屍的採石、伐木、搬運效率完全取決於<b>「白骷髏的數量」</b>。紅骷髏沒有任何負面影響。復活前請務必幫屍體打滿防腐針並拔掉血液/脂肪，把白骨撐到最大，產出的殭屍勞工效率才會最高。</p>
+      </div>
+    </div>
+
+    <!-- 15. 殭屍物流與全自動化 -->
+    <div class="card" data-cat="corpse" data-keywords="殭屍 物流 搬運 採石場 伐木場 自動化 路線 箱子">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">自動化進階：建立殭屍物流與採石場/農場全自動產線</span>
+          <span class="tag">注射液、防腐與殭屍</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><b>殭屍採石場與礦場（左上角）：</b>放置殭屍去開採鐵礦與大理石。必須在該區域建立「殭屍搬運站」，並安排殭屍背負資源，他會自動把礦石一路搬回你家院子。</li>
+          <li><b>殭屍農場：</b>解鎖高級農業後，可以在田地建立殭屍菜園，放入種子後殭屍會自動種菜與收成。</li>
+          <li><b>搬運配置：</b>搬運殭屍的行走速度受到白骷髏數量影響，前期屍體素質差可先拿來做搬運工，高白骨的優質屍體拿去挖礦。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 16. 書寫科技與血書 -->
     <div class="card" data-cat="writing" data-keywords="書寫 材料 取得方式 生皮紙 羽毛 墨水 血書 死靈之書 藍點 解鎖">
       <div class="card-header">
         <div class="card-title-group">
@@ -353,7 +483,7 @@
       </div>
     </div>
 
-    <!-- 13. 暗黑器官與邪教徒技能 -->
+    <!-- 17. 暗黑器官與邪教徒技能 -->
     <div class="card" data-cat="npc" data-keywords="暗黑器官 黑暗心臟 審判官 邪教徒 技能 隱藏數值 娛樂計程車 任務">
       <div class="card-header">
         <div class="card-title-group">
@@ -365,13 +495,13 @@
       <div class="card-body">
         <ul>
           <li><b>審判官任務：</b>推進到中後期，審判官會要求你尋找「黑暗心臟」、「黑暗大腦」與「黑暗腸子」各一個，以證明暗黑魔法的存在。</li>
-          <li><b>邪教徒 (Cultist) 技能：</b>要穩定取得黑暗器官，你必須在審判官任務線後半段解鎖「邪教徒」技能。這個神級技能解鎖後，當你把屍體放上手術台，就能<b>直接看透心臟、大腦、腸子隱藏的紅/白骷髏數值</b>。</li>
+          <li><b>邪教徒 (Cultist) 技能：</b>要穩定取得黑暗器官，你必須解鎖「邪教徒」技能。這能讓你把屍體放上手術台時，<b>直接看透心臟、大腦、腸子隱藏的紅/白骷髏數值</b>。</li>
           <li>擁有邪教徒技能後，拔掉紅骷髏器官保留白骷髏器官，就能100%做出完美的白骨屍體，不再需要盲猜。</li>
         </ul>
       </div>
     </div>
 
-    <!-- 14. 六大NPC任務鏈 -->
+    <!-- 18. 六大NPC任務鏈 -->
     <div class="card" data-cat="npc" data-keywords="主教 查美夫人 商人 老蛇 審判官 占星家 全任務 神器 日曆 星期">
       <div class="card-header">
         <div class="card-title-group">
@@ -392,7 +522,7 @@
       </div>
     </div>
 
-    <!-- 15. 世界地圖與女巫嶺 -->
+    <!-- 19. 世界地圖與女巫嶺 -->
     <div class="card" data-cat="npc" data-keywords="地圖 葡萄園 女巫嶺 審判官 憤怒之日 位置 沼澤 採石場">
       <div class="card-header">
         <div class="card-title-group">
@@ -405,16 +535,16 @@
         <p><span class="highlight-text">女巫嶺與葡萄園：</span></p>
         <p>自家東側岔路上坡直通女巫嶺。每週憤怒之日找審判官完成初次委託（20 木柴+10 傳單），他會把山腰的葡萄園贈送給你，用來種植商人賣的葡萄種子。</p>
         <p><span class="highlight-text">地圖大分區：</span></p>
-        <p>左側為沼澤（採集鐵礦、黏土、女巫小屋）；西北為採石場（喪屍無限挖鐵與大理石）；中央為城鎮；東側為燈塔與海灘。</p>
+        <p>左側為沼澤；西北為採石場（喪屍無限挖鐵與大理石）；中央為城鎮；東側為燈塔與海灘。</p>
       </div>
     </div>
 
-    <!-- 16. 墓園評分用途 -->
+    <!-- 20. 墓園評分用途 -->
     <div class="card" data-cat="corpse" data-keywords="墓園評分 用途 主教 任務 佈道 金錢 解鎖空間">
       <div class="card-header">
         <div class="card-title-group">
           <span class="card-title">評分系統：墓園評分（Graveyard Rating）的核心用途</span>
-          <span class="tag">防腐與殭屍自動化</span>
+          <span class="tag">注射液、防腐與殭屍</span>
         </div>
         <span class="arrow-icon">▼</span>
       </div>
@@ -424,66 +554,6 @@
           <li><b>推進主教任務：</b>達到 +5 開放教堂；達到 +30、+100 等級，主教才會同意擴建教堂並解鎖貴族資格。</li>
           <li><b>解鎖墓地空間：</b>達標後，墓園周圍原本被路障堵住的區域會逐步解鎖。</li>
         </ol>
-      </div>
-    </div>
-
-    <!-- 17. 屍體防腐精算 (12白金) -->
-    <div class="card" data-cat="corpse" data-keywords="解剖 防腐 完美屍體 12白 鹼性 膠水 銀 金 注射順序 墓穴評分 紅骷髏">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">核心精算：屍體防腐室注射 12 白 0 紅黃金 SOP</span>
-          <span class="tag">防腐與殭屍自動化</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <p><span class="highlight-text">器官切除變動：</span></p>
-        <p>血液/脂肪（無條件洗白：-1紅 +1白，必拔）；皮膚（+1紅 -1白，除非缺紙勿拔）；頭骨（+1紅）。</p>
-        <p><span class="highlight-text">12 白 0 紅必成注射 SOP：</span></p>
-        <ol>
-          <li>篩選天生白骷髏 ≥ 4，紅骷髏 2~4 的屍體。</li>
-          <li><b>先不動刀，依序打針：</b>① 鹼性注射液 (+1紅, +1白) ② 膠水注射液 (+1白) ③ 銀色注射液 (-1紅, +1白) ④ 金色注射液 (-2紅, +2白)。</li>
-          <li><b>上手術台切除：</b>拔掉血液與脂肪，徹底清空紅骨並拉滿白骨。</li>
-        </ol>
-      </div>
-    </div>
-
-    <!-- 18. 殭屍製造與果汁 -->
-    <div class="card" data-cat="corpse" data-keywords="殭屍 製造 果汁 復活台 岡特 殭屍果汁 自動化 白骷髏 信仰">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">自動化專題：如何製造殭屍？果汁配方與工作效率機制</span>
-          <span class="tag">防腐與殭屍自動化</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <p><span class="highlight-text">解鎖與製造條件：</span></p>
-        <ul>
-          <li>推進老蛇地窖任務打開鐵門，與牆上的殭屍<b>岡特 (Gunter)</b> 對話解鎖「復活」科技。</li>
-          <li>在太平間建造「復活台」。</li>
-          <li>準備 <b>殭屍果汁</b>（配方：健康粉末 + 血液）與 <b>10 點信仰</b>，對屍體進行復活。</li>
-        </ul>
-        <p><span class="highlight-text">殭屍效率機制（重要）：</span></p>
-        <p>殭屍的採石、伐木、搬運效率完全取決於<b>「白骷髏的數量」</b>。紅骷髏沒有任何負面影響。復活前請務必幫屍體打滿防腐針並拔掉血液/脂肪，把白骨撐到最大，產出的殭屍勞工效率才會最高。</p>
-      </div>
-    </div>
-
-    <!-- 19. 殭屍物流與全自動化 -->
-    <div class="card" data-cat="corpse" data-keywords="殭屍 物流 搬運 採石場 伐木場 自動化 路線 箱子">
-      <div class="card-header">
-        <div class="card-title-group">
-          <span class="card-title">自動化進階：建立殭屍物流與採石場/農場全自動產線</span>
-          <span class="tag">防腐與殭屍自動化</span>
-        </div>
-        <span class="arrow-icon">▼</span>
-      </div>
-      <div class="card-body">
-        <ul>
-          <li><b>殭屍採石場與礦場（左上角）：</b>放置殭屍去開採鐵礦與大理石。必須在該區域建立「殭屍搬運站（Zombie Logistics）」，並安排一隻殭屍背負資源。他會自動把開採出來的礦石一路搬回你家院子的庫存箱子中。</li>
-          <li><b>殭屍農場：</b>解鎖高級農業後，可以在田地建立殭屍菜園，放入種子後殭屍會自動種菜與收成。</li>
-          <li><b>搬運配置：</b>搬運殭屍的行走速度受到白骷髏數量影響（白骷髏越多跑越快），如果前期屍體素質差，可以先拿來做搬運工，高白骨的優質屍體拿去挖礦或農耕。</li>
-        </ul>
       </div>
     </div>
 
