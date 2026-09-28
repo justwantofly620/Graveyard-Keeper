@@ -626,6 +626,103 @@
         </table>
       </div>
     </div>
+    
+    <!-- 前面保留原有的 1-9 卡片 (已省略多餘重複程式碼，保持原樣) -->
+    
+    <!-- === 鍊金新增擴充：基礎材料系統 === -->
+    <div class="card" data-cat="alchemy" data-keywords="鍊金 研磨機 攪拌機 蒸餾器 粉末 溶液 精華 特殊液體 水 血液 油 酒精">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">鍊金基礎：粉末、溶液、精華與四大特殊液體</span>
+          <span class="tag">鍊金系統與藥水</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">三大物理加工設備：</span></p>
+        <ul>
+          <li><b>手搖研磨機 (Hand Mixer)：</b> 專門把材料磨成 <b>粉末 (Powder)</b>。</li>
+          <li><b>手搖攪拌機 (Blender)：</b> 專門把材料打成 <b>溶液 (Solution)</b>。</li>
+          <li><b>蒸餾器 (Distillation Cube)：</b> 專門把材料蒸餾成 <b>精華 (Extract)</b>。</li>
+        </ul>
+        <p><span class="highlight-text">四大特殊液體 (重要)：</span></p>
+        <p>在鍊金配方中，有四種特殊液體可以「強制取代」原本粉末或溶液的欄位。這四種液體為：<b>水 (Water)</b>、<b>血液 (Blood)</b>、<b>油/種子油 (Oil)</b>、<b>酒精 (Alcohol)</b>。例如「清新劑」就是用「油」來當作粉末欄位的材料。</p>
+      </div>
+    </div>
+
+    <!-- === 鍊金新增擴充：常用藥劑配方 === -->
+    <div class="card" data-cat="alchemy" data-keywords="藥水 治療藥水 能量藥水 提速藥水 殭屍果汁 黑色顏料 防護藥水 鍊金配方">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">實用藥劑：全日常藥水、果汁與顏料鍊金配方表</span>
+          <span class="tag">鍊金系統與藥水</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p>除了防腐與肥料外的「常用消耗型藥水」，大部分於 <b>一級鍊金工作台 (Alchemy Workbench I)</b> 製作。其合成邏輯為：粉末 (或特殊液體) ＋ 溶液 (或特殊液體)。</p>
+        
+        <table>
+          <tr><th width="30%">物品名稱</th><th>鍊金配方 (一級鍊金台 / 二級鍊金台)</th></tr>
+          <tr>
+            <td style="color:var(--highlight)"><b>治療藥水</b> (補血)</td>
+            <td>生命粉末 ＋ 健康溶液<br><i>(或 健康粉末 ＋ 混亂溶液)</i></td>
+          </tr>
+          <tr>
+            <td style="color:var(--highlight)"><b>能量藥水</b> (補體力)</td>
+            <td>加速粉末 ＋ 減速溶液<br><i>(或 減速粉末 ＋ 加速溶液)</i></td>
+          </tr>
+          <tr>
+            <td style="color:var(--green)"><b>提速藥水</b> (跑圖神藥)</td>
+            <td>加速粉末 ＋ 混亂溶液 ＋ 血液 <i>(需二級鍊金台)</i></td>
+          </tr>
+          <tr>
+            <td><b>防護藥水</b> (下地牢用)</td>
+            <td>秩序粉末 ＋ 減速溶液</td>
+          </tr>
+          <tr>
+            <td><b>黑色顏料</b> (寫作耗材)</td>
+            <td>灰燼 ＋ 種子油 (油)<br><i>(或 石墨 ＋ 水)</i></td>
+          </tr>
+          <tr>
+            <td><b>殭屍果汁</b> (復活殭屍)</td>
+            <td>健康粉末 ＋ 血液</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- === 鍊金新增擴充：清新劑與薰香 === -->
+    <div class="card" data-cat="alchemy" data-keywords="清新劑 薰香 薰香爐 教堂評分 秩序溶液 油 種子油 Freshener Incense">
+      <div class="card-header">
+        <div class="card-title-group">
+          <span class="card-title">清新劑與薰香：清新劑怎麼做？有什麼真實用途？</span>
+          <span class="tag">鍊金系統與藥水</span>
+        </div>
+        <span class="arrow-icon">▼</span>
+      </div>
+      <div class="card-body">
+        <p><span class="highlight-text">什麼是清新劑 (Freshener)？：</span></p>
+        <p>清新劑是一種特殊的鍊金產物，它<b>不能用來喝</b>，也無法提供任何角色 Buff。它唯一的用途是作為製作「薰香 (Incense)」的核心前置材料。</p>
+
+        <p><span class="highlight-text">清新劑的製作配方：</span></p>
+        <ul>
+          <li><b>製作地點：</b> 一級鍊金工作台 (Alchemy Workbench I)。</li>
+          <li><b>放入左側 (粉末欄位)：</b> 油 (Oil / 種子油)。</li>
+          <li><b>放入右側 (溶液欄位)：</b> 秩序溶液 (Order Solution，可由白花打汁取得)。</li>
+          <li><i>註：因為「油」是特殊液體，所以在配方中取代了原本粉末的位置，很多新手會卡在這裡放不進去。</i></li>
+        </ul>
+
+        <p><span class="highlight-text">清新劑的使用方法與薰香爐：</span></p>
+        <ol>
+          <li>帶著做好的「清新劑」，前往教堂地下室的 <b>教堂工作台 (Church Workbench)</b>。</li>
+          <li>將清新劑製作成 <b>薰香 (Incense)</b>。</li>
+          <li>回到教堂內部大廳，在兩側牆上建造 <b>薰香爐 (Incense Burner)</b>。</li>
+          <li><b>佈道前夕：</b> 將薰香放入薰香爐並點燃。這會<b>暫時大幅提升教堂內部的評分 (Church Rating)</b>。</li>
+          <li><b>效果：</b> 教堂評分越高，信徒給的金錢越多，信仰掉落量也越大；更是保證金星與銀星高等禱文佈道成功（不失敗）的最重要輔助手段！</li>
+        </ol>
+      </div>
+    </div>
 
 
   </div>
